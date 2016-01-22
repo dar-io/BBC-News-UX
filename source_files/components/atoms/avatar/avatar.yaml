@@ -1,3 +1,0 @@
-name: avatar
-dependencies:
-  css: [atoms/avatar/avatar.css]

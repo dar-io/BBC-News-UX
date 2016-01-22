@@ -1,9 +1,0 @@
-{% if include.set %}
-  <span class="label label--icon {{ include.label-classes }}">
-    {% include atoms/icon.html classes=include.icon-classes set=include.set name=include.name %}
-  </span>
-{% else %}
-  <span class="label {{ include.label-classes }}">
-    {{ include.text | default: "Featured" }}
-  </span>
-{% endif %}
