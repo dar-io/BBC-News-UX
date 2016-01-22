@@ -1,0 +1,65 @@
+- grid:
+  title: "Layout"
+  atoms:
+    - title: "Grid"
+      desc: "A collection of atoms, which make up the Grid abstraction."
+      path: "atoms/grid_collection.html"
+
+- colour:
+  title: "Colour"
+  atoms:
+    - title: "Palette"
+      desc: "A collection of Colour atoms."
+      path: "atoms/colour_collection.html"
+
+
+- typography:
+  title: "Typography"
+  atoms:
+    - title: "Fonts"
+      desc: "A collection of Font atoms."
+      path: "atoms/font_collection.html"
+
+    - title: "Scale"
+      desc: "A collection of atoms that determine Typographic Scale."
+      path: "atoms/typographic-scale_collection.html"
+
+
+- microcopy:
+  title: "Microcopy"
+  atoms:
+    - title: "Label"
+      desc: ""
+      path: "atoms/label.html"
+
+
+- lists:
+  title: "Lists"
+  atoms:
+    - title: "Nav"
+      desc: "A collection of Nav styles"
+      path: "atoms/nav_collection.html"
+
+
+- media:
+  title: "Media"
+  atoms:
+    - title: "Image"
+      desc: ""
+      path: "atoms/image.html"
+
+    - title: "Avatar"
+      desc: "A figure representing a particular person."
+      path: "atoms/avatar.html"
+
+
+- icon:
+  title: "Iconography"
+  atoms:
+    - title: "Icons"
+      desc: ""
+      path: "atoms/icon_collection.html"
+
+    - title: "Branch"
+      desc: "Used to separate related links from above content."
+      path: "atoms/branch.html"

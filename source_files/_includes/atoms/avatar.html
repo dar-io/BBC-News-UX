@@ -1,0 +1,3 @@
+{% include cldr/baseurl.html %}
+{% capture default_src %}{{ baseurl }}/img/atoms/avatar/default.png{% endcapture %}
+<img class="avatar" src="{{ include.src | default: default_src }}" alt="" height="" width="" />

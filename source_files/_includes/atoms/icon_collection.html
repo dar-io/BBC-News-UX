@@ -1,0 +1,43 @@
+{% include cldr/baseurl.html %}
+
+<ul class="cldr__tabs js-tabs" data-tab-group="icons">
+  <li class="cldr__tab--active"><a href="#">Core</a></li>
+  <li><a href="#">Media</a></li>
+  <li><a href="#">Social</a></li>
+</ul>
+<div class="cldr__tab-panels" data-tab-group="icons">
+
+  <div class="cldr__tab-panel cldr__tab-panel--active">
+    <div class="cldr__icons grid">
+      {% for icon in site.data.icons-core %}
+        <div class="cldr__icon__group grid__item one-quarter g3--one-sixth g4--one-eighth g5--one-twelfth">
+          {% include atoms/icon.html classes="cldr__icon" set="core" name=icon.id %}
+          <p>{{ icon.id }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="cldr__tab-panel">
+    <div class="cldr__icons grid">
+      {% for icon in site.data.icons-media %}
+        <div class="cldr__icon__group grid__item one-quarter g3--one-sixth g4--one-eighth g5--one-twelfth">
+          {% include atoms/icon.html classes="cldr__icon" set="media" name=icon.id %}
+          <p>{{ icon.id }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="cldr__tab-panel">
+    <div class="cldr__icons grid">
+      {% for icon in site.data.icons-social %}
+        <div class="cldr__icon__group grid__item one-quarter g3--one-sixth g4--one-eighth g5--one-twelfth">
+          {% include atoms/icon.html classes="cldr__icon" set="social" name=icon.id %}
+          <p>{{ icon.id }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>

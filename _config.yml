@@ -1,0 +1,26 @@
+# _config.yml
+#
+
+source: source_files
+destination: distribute
+
+exclude:
+  - sass
+  - components
+
+keep_files:
+  - css
+
+timezone: Europe/London
+
+
+# http://jch.penibelst.de/
+#
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+  ignore:
+    envs: []

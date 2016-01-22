@@ -1,0 +1,15 @@
+<ul class="metadata">
+  <li class="metadata__time">
+    {{#time}}
+      {{> icon}} {{duration}}
+    {{/time}}
+  </li>
+  <li class="metadata__section">
+    <a href="#">{{section}}</a>
+  </li>
+  <li class="metadata__comments">
+    {{#comments}}
+      {{> icon}} {{count}}
+    {{/comments}}
+  </li>
+</ul>

@@ -1,0 +1,11 @@
+<ul class="metadata">
+  <li class="metadata__time">
+    {% include atoms/icon.html classes="icon--type" set="core" name="duration" %} {{ include.time | default: "13m" }}
+  </li>
+  <li class="metadata__section">
+    <a href="#">{{ include.section | default: "Science &amp; Environment" }}</a>
+  </li>
+  <li class="metadata__comments">
+    {% include atoms/icon.html classes="icon--type" set="social" name="comments" %} 1279
+  </li>
+</ul>

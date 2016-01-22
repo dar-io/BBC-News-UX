@@ -1,0 +1,8 @@
+.DS_Store
+
+node_modules/
+.publish/
+source_files/css/
+
+.jekyll-metadata
+distribute/

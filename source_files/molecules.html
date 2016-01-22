@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<h1 class="cldr__h">Molecules</h1>
+
+<h2 class="cldr__h">Content</h2>
+
+<div class="cldr__molecule">
+  <h3 class="cldr__h">Contributor</h3>
+  <p>An attribution.</p>
+  <div class="cldr__molecule__view">
+    <div class="cldr__molecule__view__body">
+      {% include_chintz contributor %}
+    </div>
+  </div>
+</div>
+
+<div class="cldr__molecule">
+  <h3 class="cldr__h">Metadata</h3>
+  <p>A set of data that gives information about other data.</p>
+  <div class="cldr__molecule__view">
+    <div class="cldr__molecule__view__body">
+      {% include_chintz metadata %}
+    </div>
+  </div>
+</div>
+
+<div class="cldr__molecule">
+  <h3 class="cldr__h">See-Also</h3>
+  <p>A stacked list of links providing onward journeys related to above content.</p>
+  <div class="cldr__molecule__view">
+    <div class="cldr__molecule__view__body">
+      {% include molecules/see-also.html %}
+    </div>
+  </div>
+</div>
+
+<h2 class="cldr__h">Units</h2>
+
+{% include cldr/baseurl.html %}
+{% capture thumb %}{{ baseurl }}/img/molecules/promo/large-hadron-collider.jpg{% endcapture %}
+
+<div class="cldr__molecule">
+  <h3 class="cldr__h">Promo</h3>
+  <p>A unit that promotes and drives onward journeys.</p>
+  <div class="cldr__molecule__view">
+    <div class="cldr__molecule__view__body cldr__molecule__view__body--promo">
+      {% include molecules/promo.html thumb=thumb label="Featured" contributor="john_simpson" %}
+    </div>
+  </div>
+</div>

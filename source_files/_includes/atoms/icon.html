@@ -1,0 +1,6 @@
+{% include cldr/baseurl.html %}
+<div class="icon {{ include.classes }}">
+  <svg>
+    <use xlink:href="{{ baseurl }}/img/atoms/icons/icons-{{ include.set | default: 'core' }}.svg#gel-icon-{{ include.name | default: 'duration' }}"></use>
+  </svg>
+</div>
