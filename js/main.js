@@ -54,3 +54,13 @@
 
   $(Cldr.init);
 })(this, jQuery);
+
+
+
+
+// hover link
+
+$('.faux-block-link').hover(
+       function(){ $(this).addClass('faux-block-link--hover') },
+       function(){ $(this).removeClass('faux-block-link--hover') }
+)
