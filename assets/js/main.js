@@ -64,3 +64,20 @@ $('.faux-block-link').hover(
        function(){ $(this).addClass('faux-block-link--hover') },
        function(){ $(this).removeClass('faux-block-link--hover') }
 )
+
+
+
+//tabs
+
+
+  $('.tabs .tab__item').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.tabs .tab__item').removeClass('current');
+    $('.tab__item--content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+  })
+
+
