@@ -1,0 +1,18 @@
+.movement {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    margin: 0 auto;
+
+    border-style: solid;
+    border-color: $sp-c-silver;
+    border-width: 1px 0;
+}
+
+.movement--up {
+    @include arrow(top, 5px, $nw-green)
+}
+
+.movement--down {
+    @include arrow(bottom, 5px, $news-brand-red)
+}

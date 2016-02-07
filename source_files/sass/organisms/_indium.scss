@@ -1,0 +1,61 @@
+///*--------------------------------------------*\
+//    # INDIUM USED MOSTLY FOR TOPIC COLLECTIONS
+//\*--------------------------------------------*/
+
+
+.indium__summary{
+  color: $summary-copy;
+}
+
+.indium--wrap{
+  margin-top: $gel-spacing-unit;
+  background-color: #f2f2f2;
+ @include mq($from:gel-bp-xs) {
+  padding-top: double($gel-spacing-unit);
+  padding-bottom:double($gel-spacing-unit);
+}
+ @include mq($from:gel-bp-xxl) {
+  padding-top: double($gel-spacing-unit);
+  padding-bottom:double($gel-spacing-unit);
+}
+}
+.indium__lead-promo{
+  @include flex(1, 1, 100%);
+   @include flex-direction(row);
+  .indium__media{
+    position:relative;
+    @include mq($from:gel-bp-xxl) {
+    display: inline-block;
+    float: right;
+   }
+  }
+  .indium__body{
+    display: inline-block;
+    vertical-align: top;
+     @include mq($from:gel-bp-m, $until:gel-bp-l) {
+      .gel-double-pica-bold{font-size:18px; line-height:22px; letter-spacing:normal;}
+    }
+  }
+}
+
+  .indium__item--1 .indium--slot{
+
+   @include flex-display;
+    @include flex(1, 1, 100%);
+    @include flex-direction(row);
+    @include flex-justify(space-between);
+}
+
+  .indium--slot{
+    background-color: #fff;
+  }
+
+  .indium__body{
+    @include flex-display;
+    @include flex(1, 1, 100%);
+    flex-direction: column;
+  }
+  .indium__meta{
+    position: absolute;
+    bottom: 0;
+  }

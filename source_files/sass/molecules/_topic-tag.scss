@@ -1,0 +1,23 @@
+.topic-tag__list-item{
+  margin-right: $gel-spacing-unit;
+  margin-top: $gel-spacing-unit;
+
+  &:last-child{
+  margin-right: 0;
+  }
+  .topic-tag__name:hover{
+    background: #fff;
+    color: #000;
+  }
+}
+
+.topic-tag__name{
+  border: 1px solid #000;
+  padding: halve($gel-spacing-unit) $gel-spacing-unit;
+  display: block;
+}
+
+
+.topic-tag__plus-add-button{
+  display: inline-table;
+}

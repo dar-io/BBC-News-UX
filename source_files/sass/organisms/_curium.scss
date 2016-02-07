@@ -1,0 +1,465 @@
+///*------------------------------------*\
+//    # CURIUM USED FOR TOP STORIES
+//\*------------------------------------*/
+
+
+
+/**
+* The reverse variant of 'curium' By default a
+* stacked layout with the image above the content,
+* from medium (600px) it is all inline.
+*/
+  .curium--reverse {
+    @include flex-direction(column);
+    @include mq($from:gel-bp-m) {
+      @include flex-direction(row);
+    }
+    .curium__media {
+      width: 100%;
+      margin-bottom: $gel-spacing-unit;
+
+      @include mq($from:gel-bp-m) {
+        margin-bottom: 0;
+      }
+    }
+    .curium__body {
+      width: 100%;
+      min-height: initial;
+    }
+  }
+
+
+///*------------------------------------*\
+//    # RIVER DISPLAYS HEADLINES ONLY
+//\*------------------------------------*/
+
+.curium__river {
+
+  .curium__meta {
+      margin-top: $gel-spacing-unit;
+
+      @include mq($from:gel-bp-m) {
+        margin-top: $gel-spacing-unit;
+      }
+    }
+
+  .curium__item--river{
+    padding-top: $gel-spacing-unit;
+    padding-bottom: $gel-spacing-unit;
+  }
+
+  @include mq($from:gel-bp-m, $until:gel-bp-l) {
+    .curium__item--river {
+      margin-bottom: 0;
+
+      .curium__media {
+        display: none;
+      }
+    }
+
+    .river__item--1,
+    .river__item--4,
+    .river__item--7,
+     {
+      &:before {
+        display: none;
+      }
+       &:after {
+        left: double($gel-spacing-unit) !important;
+      }
+    }
+
+    .river__item--1,
+    .river__item--2,
+    .river__item--3,
+    .river__item--4,
+    .river__item--5,
+    .river__item--6,
+    .river__item--7,
+    .river__item--8 {
+      &:before {
+        top: $gel-alt-spacing-unit;
+        bottom: $gel-alt-spacing-unit;
+      }
+      &:after {
+        left: 0px;
+      }
+    }
+  }
+
+    @include mq($from:gel-bp-m, $until:gel-bp-xxl) {
+    .river__item--1,
+    .river__item--2,
+    .river__item--3,
+    .river__item--4,
+    .river__item--5,
+    .river__item--6,
+    .river__item--7
+     {
+      &:before {
+        display: none;
+      }
+       &:after {
+        left: double($gel-spacing-unit) !important;
+      }
+    }
+
+
+    }
+
+  @include mq($from:gel-bp-xxl) {
+
+    .curium__item--river {
+      padding-bottom:$gel-alt-spacing-unit;
+      padding-top: $gel-alt-spacing-unit;
+      }
+    .river__item--1{
+      padding-top: 0px;
+    }
+    .river__item--1,
+    .river__item--2,
+    .river__item--3,
+    .river__item--4,
+    .river__item--5,
+    .river__item--6,
+    .river__item--7,
+    .river__item--8 {
+      &:before {
+        top: 0;
+        bottom: 0;
+        display: none;
+      }
+      &:after {
+
+        left: double($gel-alt-spacing-unit) !important;
+      }
+    }
+
+  }
+
+
+}
+
+///*------------------------------------*\
+//    # CURIUM ITEM STYLES
+//\*------------------------------------*/
+
+.curium--slot{
+  @include flex-display;
+  @include flex(1, 1, 100%);
+  flex-direction: column;
+}
+
+.curium__body{
+  @include flex-display;
+  @include flex(1);
+
+  @include flex-direction(column);
+  @include flex-justify(space-between);
+}
+.curium__summary{
+  color: $summary-copy;
+}
+
+.curium__meta {
+  margin-top: $gel-spacing-unit;
+
+  @include mq($from:gel-bp-m) {
+    margin-top: $gel-spacing-unit;
+  }
+}
+
+.curium__media{
+  display: block;
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.curium__item {
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-top: 0;
+    vertical-align: top;
+
+    &:before {
+      position: absolute;
+      right: 0;
+      top: 0;
+      left: $gel-spacing-unit;
+      display: block;
+      border: 0 solid $c-silver;
+      border-top-width: 1px;
+      content: '';
+    }
+
+    &.anfield__item--1 {
+      &:before {
+        display: none;
+      }
+    }
+
+    .curium__item--headline {
+      min-height: 74px;
+    }
+
+
+
+
+
+  @include mq($from:gel-bp-xs) {
+    @include flex-direction(row);
+    padding-bottom: double($gel-spacing-unit);
+
+    &:before {
+      top: $gel-spacing-unit;
+      right: auto;
+      bottom: $gel-spacing-unit;
+      left: $gel-spacing-unit;
+      border-top-width: 0;
+      border-left-width: 1px;
+      content: '';
+    }
+    &:after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      left: 0;
+      display: block;
+      border: 0 solid $c-silver;
+      border-top-width: 1px;
+      content: '';
+    }
+    &.curium__item--1 {
+      padding-top: 0;
+
+      &:after {
+        display: none;
+      }
+      &:before {
+        display: none;
+      }
+    }
+    &.curium__item--2,
+    &.curium__item--3,
+    &.curium__item--4,
+    &.curium__item--5,
+    &.curium__item--7, {
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+
+    &.curium__item--river {
+      .curium__media {
+        display: none;
+      }
+    }
+  }
+
+    @include mq($from:gel-bp-l) {
+
+      &.curium__item--2 {
+      padding-top: 0;
+      &:after {
+        display: none;
+      }
+      &:before {
+        display: none;
+        top: 0;
+      }
+    }
+
+}
+
+  @include mq($from:gel-bp-m, $until:gel-bp-xxl) {
+
+
+    &.curium__item--3 {
+      &:before {
+        display: none;
+      }
+      &:after {
+        left: 16px !important;
+      }
+    }
+  }
+
+
+  @include mq($from:gel-bp-xxl) {
+
+    padding-bottom: double($gel-alt-spacing-unit);
+
+    &:before {
+      top: $gel-alt-spacing-unit;
+      bottom: $gel-alt-spacing-unit;
+      left: $gel-alt-spacing-unit;
+    }
+    &.river__item--1 {
+      &:after {
+        display: none;
+      }
+    }
+
+    &.river__item--3 {
+      &:before {
+        display: none;
+      }
+      &:after {
+        left: double($gel-alt-spacing-unit) !important;
+      }
+    }
+
+  }
+}
+
+
+///*------------------------------------*\
+//    # LEAD PROMO
+//\*------------------------------------*/
+
+.curium__item .lead-promo{
+  @include mq($from:gel-bp-xs, $until:720px) {
+   .lead-promo__headline{
+      width: gel-columns(12/1) !important;
+      display: block !important;
+
+      .gel-double-pica-bold{font-size:32px; line-height:36px;}
+        margin-bottom: $gel-spacing-unit;
+    }
+    .lead-promo__summary{
+      margin-top: 0 !important;
+    }
+  }
+ }
+
+.lead-promo {
+  width: 100%;
+
+  @include mq($from:gel-bp-m) {
+
+    .lead-promo__headline{
+       display: inline-block;
+    }
+
+    .lead-promo__media {
+      width: gel-columns(2/3);
+      padding-left: $gel-spacing-unit;
+      float: right;
+      order: 1;
+    }
+    .lead-promo__body {
+      width: gel-columns(1/3);
+      float: left;
+      padding-right: $gel-alt-spacing-unit;
+    }
+  }
+
+  @include mq($from:gel-bp-xxl) {
+    @include flex-direction(row);
+     .lead-promo__media{
+      padding-left: $gel-alt-spacing-unit;
+     }
+  }
+
+}
+
+
+
+///*------------------------------------*\
+//    # INDEX ALSOS
+//\*------------------------------------*/
+
+.index-alsos__item{
+  padding-top: $gel-alt-spacing-unit;
+}
+
+
+
+///*------------------------------------*\
+//    # LEAD PROMO OVERLAY TEXT
+//\*------------------------------------*/
+
+
+@include mq($from:gel-bp-m, $until:gel-bp-xxl){
+
+.media-island{position:relative;}
+.lead-promo__content-wrapper{
+  padding-left:8px;
+  padding-bottom:8px;
+}
+.lead-promo__content-mask{
+  .curium__title a{color: #fff;}
+  position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    background-image: linear-gradient(to bottom,rgba(0,17,22,0) 0,rgba(0,17,22,.85) 100%);
+    background-size: contain;
+}
+}
+
+
+
+
+///*------------------------------------*\
+//    # FEATURED PROMO
+//\*------------------------------------*/
+
+
+  .featured{
+  @include flex-direction(column);
+  @include flex-display;
+  @include flex(1, 1, auto);
+  background-color: #000;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 310px;
+  }
+  .featured__content:before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image:linear-gradient(to bottom,rgba(0,17,22,0) 0,rgba(0,17,22,.95) 100%);
+    width: 100%;
+    z-index: 6;
+    bottom: 0;
+    height: 56%;
+  }
+
+  .featured__body{
+    width: 100%;
+    padding: 0 8px;
+    position:absolute;
+    bottom: 12px;
+    z-index: 10;
+  }
+
+  .featured__title{
+    a{color:$white;}
+  }
+  .featured__summary{
+    color: $white;
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+///*------------------------------------*\
+//    # BADGES / LABELS
+//\*------------------------------------*/
+
+
+.featured--label {
+    background-color: #BB1919;
+    display: table;
+    padding: 0.25em 0.45em 0.15em;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}

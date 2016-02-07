@@ -1,0 +1,228 @@
+// COLOUR
+// - Reds
+
+$news-brand-red:     #BB1919;
+$news-light-red:     #D03838;
+$newsbeat:           #4D2C7A;
+$sport:              #ffdf43;
+
+.negative{color:$news-brand-red;}
+
+// - Greys
+
+$body-copy:    #000;
+$summary-copy: #5a5a5a;
+$c-silver:     #DBDBDB;
+$keyline:      #DCDCDC;
+$mid-grey:     #B2B2B2;
+// - Blues
+
+$link:                  #222222;
+$link-hover:            #1167A8;
+$link-hover-dark-theme: #1167A8;
+$featured:              #2674A1;
+
+$featuredColour: #00FFBB;
+
+$standout--promo-h1:#fff;
+$standout--promo-bgcolor:#000;
+$standout--promo-gradient:#000;
+$standout--promo-fgcolour:#fff;
+
+// - Greens
+$nw-green: #18772E;
+.positive{ color:$nw-green;}
+
+///*------------------------------------*\
+//    # NEWS COLOURS
+//\*------------------------------------*/
+
+// Core Colours
+$nw-c-red: #bb1919;
+$nw-c-white: #fff;
+$nw-c-black: #1e1e1e;
+$nw-c-charcoal: #404040;
+
+// supporting colours
+$nw-c-dark-grey: #323232;
+$nw-c-grey: #808080;
+$nw-c-pale-grey: #dcdcdc;
+$nw-c-mist: #f2f2f2;
+
+// link colours
+$nw-c-dark-blue: #1167a8;
+
+
+
+
+///*------------------------------------*\
+//    # SPORT COLOURS
+//\*------------------------------------*/
+
+// Core Colours
+$sp-c-yellow: #ffdf43;
+$sp-c-white: #fff;
+$sp-c-black: #121212;
+$sp-c-charcoal: #404040;
+$sp-c-mortar: #5a5a5a;
+
+// supporting colours
+$sp-c-mine-shaft: #212121;
+$sp-c-silver: #dbdbdb;
+$sp-c-cloud: #ededed;
+$sp-c-mist: #f7f7f5;
+$sp-c-sunglow: #fddd2c;
+$sp-c-earls-green: #c6af36;
+
+// link colours
+$sp-c-dark-blue: #255aa9;
+$sp-c-sky-blue: #b6e1f9;
+
+// other products
+$sp-c-news-red: #bd1017;
+$sp-c-live-blue: #1169f6;
+$sp-c-live-blue-on-dark: #0186ff;
+
+// Other colours
+$sp-c-fern-green: #4f7929;
+$sp-c-monza-red: #d00;
+$sp-c-kelly-green: #44c424;
+$sp-c-science-blue: #0066c2;
+$sp-c-solitude-blue: #e5f2ff;
+
+// Stats colours
+$sp-c-stats-left: #2c7bb4;
+$sp-c-stats-right: #043d66;
+
+
+// Core Colours
+$c-sport-yellow: #ffdf43;
+$c-white: #fff;
+$c-black: #121212;
+$c-charcoal: #404040;
+$c-mortar: #5a5a5a;
+
+// supporting colours
+$c-mine-shaft: #212121;
+$c-silver: #dbdbdb;
+$c-cloud: #ededed;
+$c-mist: #f7f7f5;
+$c-sunglow: #fddd2c;
+$c-earls-green: #c6af36;
+
+// link colours
+$c-dark-blue: #255aa9;
+$c-sky-blue: #b6e1f9;
+
+// other products
+$c-news-red: #bd1017;
+$c-live-blue: #1169f6;
+$c-live-blue-on-dark: #0d8aff;
+// my bbc brand
+$c-lochmara: #007bc7;
+// my bbc cta
+$c-blue-ribbon: #006def;
+// my bbc cta-hover
+$c-science-blue: #005bc8;
+// my bbc add
+$c-astral: #3179b5;
+// my bbc add-hover
+$c-curious-blue: #3d91df;
+
+// Other colours
+$c-kelly-green: #44c424;
+$c-monza-red: #d00;
+$c-science-blue: #0066c2;
+$c-solitude-blue: #e5f2ff;
+
+// Stats colours
+$c-stats-left: #2c7bb4;
+$c-stats-right: #043d66;
+
+/**
+ * Legacy colours
+ */
+$sport-yellow: #ffdf43;
+$sport-green: #4f7929;
+$sport-live: $c-live-blue;
+$sport-live-on-dark: $c-live-blue-on-dark;
+$sport-live-active: $c-dark-blue;
+
+$summary-grey: $c-mortar;
+
+$white: $c-white;
+$black: #000;
+$lightest-grey: #f2f2f2;
+
+$keyline-colour: #edeceb;
+$link-colour: #295da8;
+$category-link-colour: #006d36;
+$news-red: #900;
+$gel-orange: #f6973a;
+$disclaimer-colour: #afafaf;
+
+$meta-pipe-colour: $c-silver; /* Note: these are taken from responsive news */
+$meta-text-colour: $summary-grey;
+
+$nav-blackish: $c-black;
+$nav-knocked-back-bg: #f1f1f1;
+$nav-knocked-back-text: $c-mortar;
+$nav-knocked-back-short-cut-colour: $c-silver;
+
+$promo-background-colour: $c-cloud;
+$promo-heading-colour: #333;
+$promo-item-title-colour: $c-black;
+$promo-summary-colour: $c-mortar;
+
+$timeline-disabled-text-colour: #999;
+
+/**
+ * Media icon colours
+ */
+$media-icon: $black;
+$media-icon--hover: $sport-yellow;
+
+$media-icon-live: $sport-live;
+$media-icon-live--hover: $sport-live-active;
+
+/**
+ * Social media colours
+ */
+$facebook: #3b5a99;
+$twitter: #20bfef;
+
+/**
+ * Sochi core colours
+ */
+$sochi-ice-blue: #e5f1f4;
+$sochi-blue: #398bb7;
+$sochi-dark-blue: #1c2d3d;
+$sochi-background-blue: #acc8d6;
+$sochi-orange: #e57700;
+$sochi-black: #141414;
+$sochi-dark-grey: #637582;
+$sochi-nav-knocked-back-bg: #f1f1f1;
+$sochi-nav-knocked-back-text: $c-mortar;
+
+/**
+ * World Cup Rio 2014 core colours
+ */
+$rio-2014-fun-green: #008428;
+$rio-2014-fun-green-dark: #007025;
+$rio-2014-tea-green: #daefc5;
+
+/**
+ * Commonwealth Games Glasgow 2014 core colours
+ */
+$glasgow-2014-tarawera: #0a3b54;
+$glasgow-2014-persian-green: #009797;
+$glasgow-2014-jagged-ice: #c2e2e9;
+$glasgow-2014-piper: #c44b26;
+
+$get-inspired-saffron: #f4bb2c;
+
+/**
+ * Fa cup 2014 core colours
+ */
+$fa-cup-2014-stratos: #000751;
+$fa-cup-2014-mariner: #1f72d1;

@@ -1,0 +1,38 @@
+<title>BBC News | {{ page.title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script>
+    var GEL = {
+        browser : {
+            isIE8: false
+        },
+        mustard : false
+    };
+</script>
+<!--[if IE 8]><script>GEL.browser.isIE8 = true;</script><![endif]-->
+<script>
+    GEL.mustard = (function () {
+        var enhanced = (
+            'addEventListener' in window &&
+            'querySelector' in window.document &&
+            'localStorage' in window
+        );
+        return (enhanced || GEL.browser.isIE8);
+    })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+<script>
+    if (GEL.mustard && GEL.browser.isIE8) {
+        document.write('<link rel="stylesheet" href="{{baseurl}}/assets/css/fixed.css" />');
+    } else if (GEL.mustard)  {
+        document.write('<link rel="stylesheet" href="{{baseurl}}/assets/css/core.css" />');
+    }
+</script>
+
+<noscript>
+    <link rel="stylesheet" href="{{baseurl}}/assets/css/core.css" />
+</noscript>
+
+{% include icons.html %}

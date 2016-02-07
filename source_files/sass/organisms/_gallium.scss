@@ -1,0 +1,12 @@
+///*------------------------------------*\
+//    # GALLIUM
+//\*------------------------------------*/
+
+
+.gallium__item{
+  flex-wrap: wrap;
+  padding-bottom: double($gel-spacing-unit);
+  @include mq($from:gel-bp-m) {
+    padding-bottom: double($gel-alt-spacing-unit);
+  }
+}

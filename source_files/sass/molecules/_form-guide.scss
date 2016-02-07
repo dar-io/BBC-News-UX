@@ -1,0 +1,40 @@
+.form-guide {
+    margin-left: $gel-alt-spacing-unit;
+}
+
+.form-guide__event {
+    display: inline-block;
+    width: $gel-spacing-unit;
+    height: $gel-spacing-unit;
+
+    margin-right: halve($gel-spacing-unit);
+
+    vertical-align: middle;
+
+    border-radius: 50%;
+
+    background-color: $sp-c-silver;
+
+    &:focus,
+    &:hover {
+        background-color: lighten($sp-c-silver, 5%);
+    }
+}
+
+.form-guide__event--won {
+    background-color: $sp-c-kelly-green;
+
+    &:focus,
+    &:hover {
+        background-color: lighten($sp-c-kelly-green, 5%);
+    }
+}
+
+.form-guide__event--lost {
+    background-color: $sp-c-monza-red;
+
+    &:focus,
+    &:hover {
+        background-color: lighten($sp-c-monza-red, 5%);
+    }
+}

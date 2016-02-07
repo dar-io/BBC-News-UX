@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    #TIMESTAMP
+\*------------------------------------*/
+
+$timestamp-color: $summary-copy !default;
+$timestamp-color--on-dark: $news-brand-red !default;
+
+/**
+ * We display times in various forms across the codebase
+ */
+.timestamp,
+%timestamp {
+    color: $timestamp-color;
+}
+
+.timestamp--on-dark {
+    color: $timestamp-color--on-dark;
+}
+
+/**
+ * 1. Force the icon to sit on the same vertical baseline as
+ *    the text
+ */
+.timestamp__icon,
+%timestamp__icon {
+    display: inline-block; /* [1] */
+    margin-right: halve($gel-spacing-unit);
+
+    vertical-align: bottom; /* [1] */
+}

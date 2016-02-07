@@ -1,0 +1,53 @@
+///*--------------------------------------------*\
+//    # erbium USED MOSTLY FOR TOPIC COLLECTIONS
+//\*--------------------------------------------*/
+
+.erbium--wrap{
+  margin-bottom: double($gel-alt-spacing-unit);
+}
+.erbium__summary{
+  color: $summary-copy;
+}
+
+
+.erbium__lead-promo{
+  @include flex(1, 1, 100%);
+  @include flex-direction(row);
+  @include flex-display;
+  .erbium__media{
+    position:relative;
+    @include mq($from:gel-bp-xxl) {
+    display: inline-block;
+    float: right;
+   }
+  }
+  .erbium__body{
+    display: inline-block;
+    vertical-align: top;
+     @include mq($from:gel-bp-m, $until:gel-bp-l) {
+      .gel-double-pica-bold{font-size:18px; line-height:22px; letter-spacing:normal;}
+    }
+  }
+}
+
+  .erbium__item--1 .erbium--slot{
+
+   @include flex-display;
+    @include flex(1, 1, 100%);
+    @include flex-direction(row);
+    @include flex-justify(space-between);
+}
+
+  .erbium--slot{
+    background-color: #fff;
+  }
+
+  .erbium__body{
+    @include flex-display;
+    @include flex(1, 1, 100%);
+    flex-direction: column;
+  }
+  .erbium__meta{
+    position: absolute;
+    bottom: 0;
+  }

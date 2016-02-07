@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    #LIST-INLINE
+\*------------------------------------*/
+
+$list-inline-divide-border-color: $sp-c-silver !default;
+
+/**
+ * The list-inline object simply displays a list of items in one line.
+ */
+.list-inline,
+%list-inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+}
+
+/**
+ * Comma delimited list to semantically mark up lists of tags, etc.
+ *
+ * N.B. This component requires that you remove the whitespace between LIs.
+ */
+.list-inline--delimited,
+%list-inline--delimited {
+    > li + li {
+        &:before {
+            content: ',\00A0';
+        }
+    }
+}
+
+/**
+ * Solid line divided list of items
+ */
+.list-inline--divided,
+%list-inline--divided {
+    > li {
+        margin-right: halve($gel-alt-spacing-unit);
+        margin-bottom: halve($gel-spacing-unit);
+        padding-right: halve($gel-alt-spacing-unit);
+        border-right: 1px solid $list-inline-divide-border-color;
+    }
+
+    > li:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: 0;
+    }
+ }
+
+ /**
+ * Solid line spaced list of items
+ */
+.list-inline--spaced,
+%list-inline--spaced {
+    > li {
+        margin-right: $gel-spacing-unit;
+        margin-bottom: halve($gel-spacing-unit);
+    }
+
+    > li:last-child {
+        margin-right: 0;
+    }
+ }

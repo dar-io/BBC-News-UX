@@ -1,0 +1,30 @@
+{
+  "name": "BBC Grandstand",
+  "homepage": "https://github.com/bbc-sport/morph-renderer",
+  "authors": [
+    "Shaun Bent <shaun.bent@bbc.co.uk>"
+  ],
+  "description": "The BBC Grandstand CSS Framework is used by Sport and Live components",
+  "main": "_grandstand.scss",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gs-sass-tools": "git@github.com:bbc/gs-sass-tools.git#^2.0.0"
+  },
+  "version": "1.9.0",
+  "_release": "1.9.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.9.0",
+    "commit": "b08f170c9ab4848ad4cab9bc3c87d853e0fbb320"
+  },
+  "_source": "git@github.com:bbc/bbc-grandstand.git",
+  "_target": "^1.0.0",
+  "_originalSource": "git@github.com:bbc/bbc-grandstand.git"
+}

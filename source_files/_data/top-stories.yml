@@ -1,0 +1,21 @@
+
+
+#BLOCK ONE
+- storieOne:
+    - animOrder:  "1"
+      image:    "http://ichef.bbci.co.uk/news/660/cpsprodpb/A780/production/_86908824_supporters.jpg"
+      livePostHeadline:    ""
+      headline: "Deselection fear hangs over Corbyn's critics"
+      synopsis: "Are we about to see a return to the Labour Party fratricide of the early 1980s, asks Shaun Ley."
+      hasLabel: ""
+      label:    ""
+      time:     "44m"
+      section:  "UK Politics"
+      path:     "atoms/time.html"
+      alsoOne:  " Peter Hook's Joy Division regrets"
+      alsoTwo:  " In pictures: New Order"
+
+      contributorAvatar:  "/img/atoms/avatar/default.png"
+      contributorName:    "Hugh Schofield"
+      contributorTitle:   "BBC News, Somerset"
+

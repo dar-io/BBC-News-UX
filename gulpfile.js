@@ -1,13 +1,13 @@
 // gulpfile.js
 //
 
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var sass        = require('gulp-sass');
-var prefix      = require('gulp-autoprefixer');
-var spawn       = require('child_process').spawn;
-var ghPages     = require('gulp-gh-pages');
-
+var gulp               = require('gulp');
+var browserSync        = require('browser-sync');
+var sass               = require('gulp-sass');
+var prefix             = require('gulp-autoprefixer');
+var spawn              = require('child_process').spawn;
+var ghPages            = require('gulp-gh-pages');
+var sourcemaps         = require('gulp-sourcemaps');
 
 // PATHS
 //
@@ -51,30 +51,41 @@ gulp.task('sass', function() {
 
   return gulp
     .src( source + '/sass/main.scss' )
+    .pipe(sourcemaps.init())
     .pipe(
       sass({ outputStyle: 'compressed' })
         .on('error', sass.logError)
     )
     .pipe( prefix() )
-    .pipe( gulp.dest( destination + '/css' ) )
+    .pipe( gulp.dest( destination + '/assets/css' ) )
     .pipe( browserSync.reload({ stream: true }) )
-    .pipe( gulp.dest( source + '/css' ) );
+    .pipe(sourcemaps.write('.'))
+    .pipe( gulp.dest( source + '/assets/css' ) );
 
 });
+
 
 // WATCH
 //
 
 gulp.task('watch', function() {
 
-  gulp.watch( source + '/sass/*.scss', ['sass'] );
+  gulp.watch([
+    '/bower_components/**/*.scss',
+    source + '/sass/**/*.scss'
+    ], ['sass']);
+
   gulp.watch([
     source + '/*.html',
     source + '/_data/*.yml',
     source + '/_includes/**/*.html',
     source + '/_layouts/*.html',
     source + '/img/**/*',
-    source + '/js/main.js'
+    source + '/js/main.js',
+    source + '/pages/**/*.html',
+    source + '/molecules/**/*.html',
+    source + '/organisms/**/*.html'
+
   ], ['jekyll-reload']);
 
 });

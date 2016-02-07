@@ -1,0 +1,36 @@
+///*------------------------------------*\
+//    # ARROW
+//\*------------------------------------*/
+
+// This simple mixin is used to generate the CSS needed to create a purely CSS
+// arrow.
+//
+// $arrow-direction: [top, right, bottom, left]
+// $arrow-size: [px/em/rem]
+// $arrow-color: [hex,rgb,rgba,hsl,hsla]
+@mixin arrow($arrow-direction, $arrow-size, $arrow-color) {
+    display: block;
+    width: 0;
+    height: 0;
+    border: $arrow-size solid transparent;
+
+    @if $arrow-direction == top {
+        border-top-width: 0;
+        border-bottom-color: $arrow-color;
+    }
+
+    @if $arrow-direction == right {
+        border-right-width: 0;
+        border-left-color: $arrow-color;
+    }
+
+    @if $arrow-direction == bottom {
+        border-bottom-width: 0;
+        border-top-color: $arrow-color;
+    }
+
+    @if $arrow-direction == left {
+        border-left-width: 0;
+        border-right-color: $arrow-color;
+    }
+}

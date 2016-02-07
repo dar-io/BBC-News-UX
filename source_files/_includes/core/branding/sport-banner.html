@@ -1,0 +1,25 @@
+<header class="global-header" data-istats-container="header">
+  <div class="global-header__wrap">
+    <a class="global-header__logo" data-istats-container="sport-logo" href="/">
+    <span class="global-header__font-icon"></span>
+    <span class="ico ico-sport global-header__image-icon"></span>
+    <span class="vh">BBC</span>
+
+    <span class="global-header__sport-text">Sport</span>
+
+    <span class="vh"> Home Page </span></a>
+
+    {% if page.global_header_beta_title %}
+    <a class="global-header__beta" href="/">{{page.global_header_beta_title}}</a>
+    {% endif %}
+
+    <a href="/" class="global-header__section">{{page.global_header_section}}</a>
+
+    <a class="global-header__all-sports-button" href="/sport/all-sports">
+      <span class="ico ico-burger global-header__burger"></span>
+      <span class="global-header__all-sports-text">All Sport</span>
+      <span class="global-header__acc-all-sports-enhanced vh">Open All Sport menu</span>
+    </a>
+
+  </div>
+</header>

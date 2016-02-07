@@ -1,0 +1,299 @@
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/**
+ * Various layout helpers to extend and override default
+ * grid layout. e.g. bleed into gutters
+ */
+/**
+ * Allow a component for bleed outside the grid container into the
+ * page gutters and no padding is required.
+ */
+%layout--full-width,
+.layout--full-width {
+    margin-left: -$gel-spacing-unit;
+    margin-right: -$gel-spacing-unit;
+
+    @if $enhanced {
+        @include mq($from: $gel-margin-change) {
+            margin-left: double(-$gel-spacing-unit);
+            margin-right: double(-$gel-spacing-unit);
+        }
+    }
+}
+
+
+/**
+ * Allow a component for bleed outside the grid container into the
+ * page gutters
+ */
+%layout--full-bleed,
+.layout--full-bleed {
+    @extend %layout--full-width;
+    padding-left: $gel-spacing-unit;
+    padding-right: $gel-spacing-unit;
+
+    @if $enhanced {
+        @include mq($from: $gel-margin-change) {
+            padding-left: double($gel-spacing-unit);
+            padding-right: double($gel-spacing-unit);
+        }
+    }
+}
+
+/**
+ * Allow a component for bleed outside the grid container at all breakpoints
+ * expect wide
+ */
+%layout--full-width-until-wide,
+.layout--full-width-until-wide {
+    @extend %layout--full-width;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-l) {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+/**
+ * Allow a component to bleed outside the grid container at all breakpoints
+ * expect wide
+ */
+%layout--full-bleed-until-wide,
+.layout--full-bleed-until-wide {
+    @extend %layout--full-bleed;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-l) {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+/**
+ * Allows a component to bleed outside the grid container on the left
+ * at wide
+ */
+%layout--bleed-left,
+.layout--bleed-left {
+    margin-left: -$gel-spacing-unit;
+
+    @if $enhanced {
+        @include mq($from: $gel-margin-change) {
+            margin-left: double(-$gel-spacing-unit);
+        }
+    }
+}
+
+/**
+ * Allows a component to bleed outside the grid container on the right
+ * at wide
+ */
+%layout--bleed-right,
+.layout--bleed-right {
+    margin-right: -$gel-spacing-unit;
+
+    @if $enhanced {
+        @include mq($from: $gel-margin-change) {
+            margin-right: double(-$gel-spacing-unit);
+        }
+    }
+}
+
+/**
+ * Allows a component to bleed outside the grid container on the left
+ * at wide only
+ */
+%layout--bleed-left-wide,
+.layout--bleed-left-wide {
+    @extend %layout--full-bleed;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-l) {
+            margin-right: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+/**
+ * Allows a component to bleed outside the grid container on the right
+ * at wide only
+ */
+%layout--bleed-right-wide,
+.layout--bleed-right-wide {
+    @extend %layout--full-bleed;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-l) {
+            margin-left: 0;
+            padding-left: 0;
+            padding-right: 0;
+
+            .layout--bleed-right-wide__inner {
+                padding-left: 12.5%;
+                padding-right: 12.5%;
+                margin-left: double(-$gel-spacing-unit);
+            }
+        }
+    }
+}
+
+/**
+ * On pages with span full-width (e.g. don't have the curtains) we don't want
+ * components to bleed to the edge at the large breakpoint, as there is no edge
+ * for them to bleed to.
+ *
+ * We're using the conditional to unset the bleed. When we move all our pages to being
+ * full-width we can remove this hack
+ *
+ * See: SPORTWS2-3882
+ */
+.main__slice--full-width {
+    %layout--bleed-right-wide,
+    .layout--bleed-right-wide {
+        @if $enhanced {
+            @include mq($from: gel-bp-l) {
+                margin-right: 0;
+
+                .layout--bleed-right-wide__inner {
+                    padding-left: double($gel-spacing-unit);
+                    padding-right: double($gel-spacing-unit);
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Allows a component to bleed outside the grid container on the right
+ * at wide only and keep gutter at medium e.g multi link promo
+ */
+%layout--bleed-right-wide-gutter-medium,
+.layout--bleed-right-wide-gutter-medium {
+    @extend %layout--full-bleed;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-m) {
+            margin-left: 0;
+
+            .layout--bleed-right-wide__inner {
+                padding-left: 1 / 12 * 100%;
+                padding-right: 1 / 12 * 100%;
+                margin-left: double(-$gel-spacing-unit);
+            }
+        }
+
+        @include mq($from: gel-bp-l) {
+            padding-left: 0;
+            padding-right: 0;
+
+            .layout--bleed-right-wide__inner {
+                padding-left: 12.5%;
+                padding-right: 12.5%;
+            }
+        }
+    }
+
+}
+
+/**
+ * Allows a component to bleed outside the grid container on the right
+ * from medium
+ */
+%layout--bleed-right-medium,
+%layout--bleed-right-medium {
+    @extend %layout--full-bleed;
+
+    @if $enhanced {
+        @include mq($from: gel-bp-m) {
+            margin-left: 0;
+            padding-left: 0;
+        }
+    }
+
+    .no-js & {
+        margin-left: double(-$gel-spacing-unit);
+        padding-left: double($gel-spacing-unit);
+    }
+}
+
+
+/**
+ * Prevent visual flash
+ * this component will be 'teleported' out of the primary container @wide
+ */
+
+@if $enhanced {
+    @include mq($from: gel-bp-l) {
+        .section-1,
+        .layout__primary-col {
+            [data-teleport="default"] {
+                display: none !important;
+            }
+        }
+    }
+}
+
+
+/**
+ * Legacy layout classes for grid structure
+ */
+@if $enhanced {
+    .layout {
+        @include gel-layout;
+    }
+
+    .layout__item {
+        @include gel-layout-item;
+    }
+
+    .layout__block-item {
+        display: block;
+        padding-left: $gel-spacing-unit;
+
+        @if $enhanced {
+            @include mq($from: $gel-gutter-change) {
+                padding-left: double($gel-spacing-unit);
+            }
+        }
+    }
+
+    .layout--center {
+        text-align: center;
+    }
+
+    .layout--medium-center {
+        @include mq($from: gel-bp-m, $until: gel-bp-l) {
+            text-align: center;
+        }
+    }
+
+}
+
+@if $enhanced {
+
+    /**
+     * We sometimes want to use flexbox to give us equal height columns
+     * GEL Layout doesn't currently offer this so we'll add it here for now
+     * when this gets moved to the GEL component we can remove it from here
+     */
+    .gel-layout--flex {
+        @include flex-display;
+        @include flex-wrap(wrap);
+
+        .gel-layout__item {
+            @include flex-display;
+        }
+    }
+
+}

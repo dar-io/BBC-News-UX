@@ -1,0 +1,18 @@
+<script>
+
+var sidebarToggle = document.getElementById('sidebar-nav-toggle');
+
+if(sidebarToggle) {
+    sidebarToggle.addEventListener('click', function() {
+         document.body.classList.toggle('sidebar-open');
+         document.body.classList.toggle('sidebar-hidden');
+    });
+}
+
+
+[].forEach.call(document.querySelectorAll('.lx-sg-accordion'), function (el) {
+  el.querySelector('.lx-sg-accordion__title').addEventListener('click', function() {
+      el.classList.toggle('lx-sg-accordion--open');
+  }, false);
+});
+</script>

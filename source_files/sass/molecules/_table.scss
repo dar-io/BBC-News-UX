@@ -1,0 +1,209 @@
+%table,
+.table {
+    width: 100%;
+    border-collapse: separate;
+    margin-bottom: double($gel-spacing-unit);
+}
+
+%table--fixed,
+.table--fixed {
+    table-layout: fixed;
+}
+
+%table-container,
+.table-container {
+    width: 100%;
+    overflow-y: auto;
+}
+
+%table__head,
+.table__head {
+    background: #f5f5f5;
+
+    .table__cell {
+        border-bottom: 1px solid $sp-c-silver;
+
+        @if $enhanced {
+            padding-top: $gel-spacing-unit;
+            padding-bottom: halve($gel-spacing-unit);
+
+            vertical-align: bottom;
+        }
+    }
+}
+
+%table__row,
+.table__row {
+    &:focus,
+    &:hover {
+        background-color: #f5f5f5;
+        color: #1c2d3d;
+    }
+}
+
+.table__row--disabled {
+    &,
+    .table__link {
+        color: $sp-c-mortar;
+    }
+}
+
+.table__row--highlighted {
+    background-color: $c-solitude-blue;
+
+    &:focus,
+    &:hover {
+        background-color: darken($c-solitude-blue, 5%);
+    }
+
+    .table__cell {
+        border-bottom: 1px solid darken($c-solitude-blue, 4%);
+    }
+}
+
+.table__row--selected {
+    background-color: #1c2d3d;
+    color: $sp-c-white;
+
+    .table__link {
+        color: $sp-c-white;
+    }
+
+    &:focus,
+    &:hover {
+        background-color: #398bb7;
+        color: $sp-c-white;
+    }
+}
+
+.table__row--break {
+    .table__cell {
+        border-bottom: 1px dashed #333;
+    }
+}
+
+/**
+ * 1. Focus first and last cells to have increased padding
+ */
+%table__cell,
+.table__cell {
+    border-bottom: 1px solid #eee;
+    padding-top: $gel-spacing-unit;
+    padding-bottom: $gel-spacing-unit;
+    padding-left: halve($gel-spacing-unit);
+    padding-right: halve($gel-spacing-unit);
+    text-align: center;
+
+    &:first-child {
+        padding-left: $gel-spacing-unit; /* [1] */
+    }
+
+    &:last-child {
+        padding-right: $gel-spacing-unit; /* [1] */
+    }
+}
+
+%table__cell--flush,
+.table__cell--flush {
+    padding: 0;
+}
+
+%table__cell--no-border,
+.table__cell--no-border {
+    border-bottom: 0;
+}
+
+%table__cell--border-right,
+.table__cell--border-right {
+    border-right: 1px solid #eee;
+}
+
+%table__cell--border-left,
+.table__cell--border-left {
+    border-left: 1px solid #eee;
+}
+
+
+%table__cell--left,
+.table__cell--left {
+    text-align: left;
+}
+
+%table__cell--center,
+.table__cell--center {
+    text-align: center;
+}
+
+%table__cell--right,
+.table__cell--right {
+    text-align: right;
+}
+
+%table__cell--bold,
+.table__cell--bold {
+    font-weight: bold;
+}
+
+%table__cell--break,
+.table__cell--break {
+    border-top: 1px dashed #333;
+}
+
+%table__link,
+.table__link {
+    color: $sp-c-black;
+    font-weight: bold;
+
+    &:focus,
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/**
+ * Styling tweaks for when tables are being displayed at the widest breakpoint
+ * but need to adopt compact styling
+ */
+
+
+/**
+ * CPS table styling
+ */
+.story-table {
+    @extend %table;
+    margin-bottom: double($gel-spacing-unit);
+
+    thead {
+        @extend %gel-brevier;
+
+        th {
+            @extend %table__cell;
+            @extend %table__cell--bold;
+            @extend %table__cell--left;
+        }
+    }
+
+    tfoot {
+        @extend %gel-brevier;
+
+        td {
+            @extend %table__cell;
+            @extend %table__cell--bold;
+            @extend %table__cell--left;
+        }
+    }
+
+    tbody {
+        @extend %gel-long-primer;
+
+        tr {
+            @extend %table__row;
+        }
+
+        td {
+            @extend %table__cell;
+            @extend %table__cell--left;
+        }
+    }
+}

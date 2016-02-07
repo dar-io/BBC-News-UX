@@ -1,0 +1,40 @@
+{
+  "name": "gel-grid",
+  "homepage": "http://www.bbc.co.uk/gel",
+  "authors": [
+    "Shaun Bent <shaun.bent@bbc.co.uk>"
+  ],
+  "description": "A flexible code implementation of the GEL Grid",
+  "main": "_gel-grid.scss",
+  "keywords": [
+    "Sass",
+    "Grid",
+    "Layout",
+    "Responsive",
+    "BBC",
+    "GEL",
+    "Global",
+    "Experience",
+    "Language"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gel-sass-tools": "git+ssh://git@github.com/bbc/gel-sass-tools.git#^1.0.0"
+  },
+  "_release": "4531ae1b54",
+  "_resolution": {
+    "type": "branch",
+    "branch": "v1",
+    "commit": "4531ae1b5439c6573d8444c798ec5a261b1d91f9"
+  },
+  "_source": "git@github.com:bbc/gel-grid.git",
+  "_target": "v1",
+  "_originalSource": "git@github.com:bbc/gel-grid.git"
+}

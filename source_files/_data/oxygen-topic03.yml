@@ -1,0 +1,75 @@
+#BACKGROUND IMAGE
+
+- header-title:
+    - header-title:  "Oscars 2016"
+
+- background-image:
+    - background-image:  "/assets/img/organisms/topics/oscars-cropped.jpg"
+      background-colour:  "rgba(0, 0, 0, 0.6)"
+
+#TOPIC TAGS
+- topic-tags:
+    - topic-tag:  "Film"
+    - topic-tag:  "Entertainment"
+    - topic-tag:  "Golden Globe 2016"
+
+
+#SLOT ONE
+- slot01:
+    - animOrder:  "1"
+      image:      ""
+      headline:   ""
+      synopsis:   "The 88th Academy Awards ceremony, presented by the Academy of Motion Picture Arts and Sciences, will honor the best films of 2015 and is scheduled to take place on February 28, 2016"
+      time:       ""
+      section:    ""
+
+      contributorAvatar:  ""
+      contributorName:    ""
+      contributorTitle:   ""
+
+
+#SLOT TWO
+- slot02:
+    - animOrder:  "1"
+      image:      "http://c.files.bbci.co.uk/B128/production/_87825354_leesmith1_976afpgetty.jpg"
+      headline:   "Calls to boycott Oscars over 'unforgivable' nominations"
+      synopsis:
+      time:       "2m"
+      section:    "Entertainment & Arts"
+      media-type: "video" #video/audio/image --empty wont show the icon--
+      media-duration: "2:30"
+
+      contributorAvatar:  ""
+      contributorName:    ""
+      contributorTitle:   ""
+
+
+#SLOT THREE
+- slot03:
+    - animOrder:  "1"
+      image:      "http://c.files.bbci.co.uk/02B6/production/_86249600_chris-rock-oscar_getty.jpg"
+      headline:   "Hollywood's reputation on the line over diversity"
+      synopsis:
+      time:       "2m"
+      section:    "Oscars 2016"
+      media-type: "video" #video/audio/image --empty wont show the icon--
+      media-duration: "1:52"
+
+      contributorAvatar:  ""
+      contributorName:    ""
+      contributorTitle:   ""
+
+#SLOT THREE
+- slot04:
+    - animOrder:  "1"
+      image:      "http://c.files.bbci.co.uk/DE94/production/_87908965_revenantleo.jpg"
+      headline:   "The Revenant storms to top of US box Office"
+      synopsis:
+      time:       "2h"
+      section:    "Film"
+      media-type:   #video/audio/image --empty wont show the icon--
+      media-duration: "20:00"
+
+      contributorAvatar:  ""
+      contributorName:    ""
+      contributorTitle:   ""

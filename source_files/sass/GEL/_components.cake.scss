@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    # (DELICIOUS) CAKE
+\*------------------------------------*/
+
+.cake-header {
+    padding: double($gel-spacing-unit) 0;
+
+    background-color: $sp-c-mist;
+    color: $sp-c-black;
+}
+
+.cake-header__logo {
+    display: inline-block;
+
+    vertical-align: top;
+}
+
+.cake-header__logo-text {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Gill Sans MT', 'Gill Sans', Calibri, sans-serif;
+    vertical-align: top;
+}
+
+.cake-body {
+    padding: double($gel-spacing-unit) 0;
+}

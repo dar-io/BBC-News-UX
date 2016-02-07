@@ -1,0 +1,25 @@
+{
+  "name": "news-sport-cake",
+  "description": "News Sport Exploration into Slicing",
+  "main": "index.js",
+  "authors": [
+    "Will Bamford <w.bamford@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/bbc/news-sport-cake",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "private": true,
+  "dependencies": {
+    "bbc-grandstand": "git@github.com:bbc/bbc-grandstand.git#^1.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

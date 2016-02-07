@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    # ITEM STATUS MODIFICATIONS DARIO
+\*------------------------------------*/
+
+.live-status-block-news{
+  background-color: $nw-c-red;
+  padding: 0px 0px 3px 4px;
+  color: #fff;
+  margin-right: halve($gel-spacing-unit);
+  vertical-align: text-top;
+}
+
+/*------------------------------------*\
+    # ITEM STATUS
+\*------------------------------------*/
+
+.gs-c-item-status {
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.gs-c-item-status--live {
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @include theme('sport') {
+        color: $white;
+    }
+
+    @include theme('news') {
+        color: $white;
+    }
+
+    &.gs-c-item-status--on-dark {
+        @include theme('sport') {
+            color: $sp-c-live-blue-on-dark;
+        }
+    }
+}
+
+.gs-c-item-status__icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+
+    vertical-align: middle;
+}
+
+.gs-c-item-status__text {
+    display: inline-block;
+    margin-left: halve($gel-spacing-unit);
+    padding-top:2.3px;
+    vertical-align: middle;
+}
+
+@-webkit-keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: .3; }
+    100% { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: .3; }
+    100% { opacity: 1; }
+}
+
+/* postcss-bem-linter: ignore */
+.gs-c-item-status__icon #pulse {
+  -webkit-animation: pulse 1.7s cubic-bezier(.25, .1, .25, 1) infinite;
+          animation: pulse 1.7s cubic-bezier(.25, .1, .25, 1) infinite;
+}

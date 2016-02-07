@@ -1,0 +1,7 @@
+.babel__item {
+  padding-bottom: $gel-spacing-unit;
+
+  @include mq($from:gel-bp-xxl) {
+    padding-bottom: double($gel-alt-spacing-unit);
+  }
+}

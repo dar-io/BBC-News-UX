@@ -1,0 +1,164 @@
+///*--------------------------------------------*\
+//    # IODINE USED MOSTLY FOR MUST SEE, SPORT
+//\*--------------------------------------------*/
+
+
+.iodine__lead-promo{
+  .media__island{
+    position: relative;
+    @include mq($from:gel-bp-l, $until:gel-bp-xxl) {
+     &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image:linear-gradient(to bottom,rgba(0,17,22,0) 0,rgba(0,17,22,.6) 100%);
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
+    height: 56%;
+   }
+
+    }
+  }
+
+@include mq($from:gel-bp-l, $until:gel-bp-xxl) {
+  .iodine__title{
+      a{color:$white;}
+    }
+    .timestamp, .section-tag{
+      color:$white;
+    }
+  }
+  .iodine__media {
+     @include mq($from:700px, $until:gel-bp-l) {
+      width: gel-columns(2/3);
+      float: right;
+      padding-left: $gel-spacing-unit;
+      margin-left: $gel-spacing-unit;
+    }
+  }
+  .iodine__body {
+    z-index: 99;
+     @include mq($from:gel-bp-l, $until:gel-bp-xxl) {
+    position: absolute;
+    bottom: $gel-spacing-unit;
+    padding-left: $gel-spacing-unit;
+    padding-right: $gel-spacing-unit;
+  }
+  }
+  float: left;
+  }
+
+
+.iodine__body{
+  @include flex(1);
+  @include flex-display;
+  @include flex-direction(column);
+  @include flex-justify(space-between);
+}
+
+.iodine--slot{
+  @include flex-display;
+  @include flex(1, 1, 100%);
+  flex-direction: column;
+}
+
+
+
+.iodine__lead-promo--left{
+  .iodine__lead-promo{
+  float: left;
+  }
+
+.iodine__item--2,.iodine__item--3,.iodine__item--4, .iodine__item--5, .iodine__item--6, .iodine__item--7{
+  @include mq($from:gel-bp-l, $until:gel-bp-xxl) {
+  min-height: 288px;
+}
+}
+
+.iodine__item--2,.iodine__item--3,.iodine__item--4, .iodine__item--5, .iodine__item--6, .iodine__item--7 {
+  @include mq($from:gel-bp-m, $until:gel-bp-l) {
+  min-height: 300px;
+}
+}
+
+.iodine__item--4,.iodine__item--2,.iodine__item--3{
+  @include mq($from:gel-bp-xxl) {
+  min-height: 300px;
+}
+}
+
+  .iodine--pair-1{
+  float: left;
+  }
+
+  .iodine--pair-2{
+    float: right;
+
+  }
+  .iodine--pair-3{
+  float: right;
+  }
+
+}
+
+.iodine__item{
+  @include mq($from:gel-bp-xs) {
+    padding-bottom: double($gel-spacing-unit);
+  }
+   @include mq($from:gel-bp-xxl) {
+    padding-bottom: double($gel-alt-spacing-unit);
+  }
+}
+.iodine__lead-promo--right{
+
+
+  .iodine__lead-promo{
+
+  float: right;
+    .iodine__media {
+      @include mq($from:700px, $until:gel-bp-l) {
+        width: gel-columns(2/3);
+        float: left;
+        padding-right: $gel-spacing-unit;
+        margin-right: $gel-spacing-unit;
+        padding-left:0;
+        margin-left: 0;
+      }
+    }
+
+  }
+
+.iodine__item--2,.iodine__item--3{
+  @include mq($from:gel-bp-l, $until:gel-bp-xxl) {
+  min-height: 286px;
+}
+}
+
+.iodine__item--2,.iodine__item--3,.iodine__item--4, .iodine__item--5, .iodine__item--6, .iodine__item--7 {
+  @include mq($from:gel-bp-m, $until:gel-bp-l) {
+  min-height: 256px;
+}
+}
+
+.iodine__item--4,.iodine__item--2,.iodine__item--3{
+  @include mq($from:gel-bp-xxl) {
+  min-height: 256px;
+}
+}
+
+
+  .iodine--pair-1{
+  float: right;
+  }
+
+  .iodine--pair-2{
+    float: left;
+
+  }
+  .iodine--pair-3{
+  float: left;
+  }
+
+
+}

@@ -1,405 +1,83 @@
-@import 'normalize';
-@import 'mq';
 
-@import 'mixins';
-
-// ATOMS
-//
-
-@import 'atoms';
-@import 'molecules';
-
-// COLLIDER
-//
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  @include ff-arial;
-  background-color: #FAFAFA;
-  color: $body-copy;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-h1 { @extend %trafalgar; }
-h2 { @extend %double-pica; }
-h3 { @extend %great-primer; }
-h4 { @extend %pica; }
-
-h1,
-.alpha {
-
-  // Only apply these styles to Collider heading's
-  &.cldr__h {
-    letter-spacing: -1px;
-  }
-}
-
-h1,
-.alpha,
-h2,
-h3,
-h4 {
-
-  // Only apply these styles to Collider heading's
-  &.cldr__h {
-    color: $news;
-    font-weight: normal;
-  }
-}
-
-a {
-  color: $link;
-  text-decoration: none;
-
-  &:hover {
-    color: $link-hover;
-  }
-}
-
-// Sidebar
-//
-
-.cldr__sidebar {
-  background-color: #FFF;
-  height: 100%;
-  padding-top: 24px;
-  padding-right: 12px;
-  padding-left: 12px;
-  position: fixed;
-    top: 0; left: 0;
-  transform: translateX(-240px);
-  transition: transform 150ms ease-in;
-  width: 240px;
-  z-index: 10;
-
-  @include mq(g3) {
-    transform: translateX(0);
-    transition: transform 250ms ease-out;
-  }
-}
-  .cldr__title {
-    @extend .alpha;
-    display: block;
-    font-size: 2em;
-    margin-bottom: 16px;
-  }
-  .cldr__primary-nav {
-    @include cldr-nav;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    li {
-      font-size: 18px;
-
-      &:last-child a {
-        border-bottom: none;
-      }
-    }
-    a {
-      border-bottom: 1px solid #EEE;
-      padding-top: 12px;
-      padding-bottom: 12px;
-    }
-    strong {
-      display: block;
-      font-weight: normal;
-    }
-  }
-    .cldr__primary-nav__subtitle {
-      font-size: 14px;
-    }
+// GEL Components
+@import 'GEL/settings.global';
+@import 'GEL/generic.box-sizing';
+@import 'GEL/generic.normalize';
+@import 'GEL/generic.reset';
 
 
-// Content
-//
-
-.cldr__content {
-  margin-left: 0;
-  padding: 24px;
-
-  @include mq(g3) {
-    margin-left: 240px;
-  }
-
-  > h1 {
-    margin-top: 0;
-  }
-}
-
-.cldr__atom {}
-  .cldr__atom__view {}
-
-.cldr__molecule {}
-
-.cldr__atom,
-.cldr__molecule {
-  margin-bottom: 48px;
-
-  > p {
-    color: $news;
-  }
-}
-
-  .cldr__molecule__view {}
-    .cldr__molecule__view__body {}
+@import 'bower_components/bbc-grandstand/grandstand';
 
 // Objects
-//
+@import 'bower_components/bbc-grandstand/objects/live-status';
+@import 'bower_components/bbc-grandstand/objects/list-ui';
 
-.cldr__tabs {
-  @include cldr-nav;
-  @include cldr-nav--inline;
+$enhanced: true;
 
-  li {
-    background-color: #EEE;
-  }
-  .cldr__tab--active {
-    background-color: #FFF;
-  }
-  a {
-    padding: 8px 12px;
+@import 'bower_components/gel-sass-tools/sass-tools';
 
-    &:hover {
-      background-color: #FFF;
-    }
-  }
-}
-
-  .cldr__tab-panels {}
-    .cldr__tab-panel {
-      display: none;
-    }
-    .cldr__tab-panel--active {
-      display: block;
-    }
-
+// TOOLS
+@import 'tools/theme';
 
 // ATOMS
-// - Grid
+@import 'atoms/news-colours';
+@import 'atoms/timestamp';
+@import 'atoms/section-tag';
+@import 'atoms/faux-block-link';
+@import 'atoms/icons';
+@import 'atoms/typography';
+@import 'atoms/layout';
+@import 'atoms/list-inline';
+@import 'atoms/item-status';
+@import 'atoms/more-btn';
+@import 'atoms/media-island';
+@import 'atoms/media-icon';
+@import 'atoms/arrow';
 
-.cldr__grid {}
-  .cldr__grid__item {
-    margin-bottom: 8px;
+// molecules
+@import 'molecules/key-points';
+@import 'molecules/contributer';
+@import 'molecules/table';
+@import 'molecules/form-guide';
+@import 'molecules/movement';
+@import 'molecules/slice-header';
+@import 'molecules/av-live';
+@import 'molecules/topic-tag';
+@import 'molecules/add-button';
 
-    @include mq(g3) {
-      margin-bottom: 16px;
-    }
+// UTILITIES
+@import 'utilities/visability';
+@import 'utilities/columns';
+@import 'utilities/text-over-image';
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-    .cldr__grid__item__text {
-      @extend %minion;
-      color: rgba(255,255,255,0);
-      display: block;
-      background-color: #AADBF5;
-      padding-top: 2px;
-      padding-bottom: 2px;
-      text-align: center;
-    }
+// TRUMPS
+@import 'trumps/orb-hacks';
 
-
-// - Colour
-
-.cldr__colour {
-  @include cldr-nav;
-  @include cldr-nav--inline;
-
-  li {
-    margin-right: 16px;
-  }
-}
-  .cldr__colour__block {
-    border: 1px solid #EEE;
-    height: 72px;
-    position: relative;
-    width: 128px;
-
-    span {
-      position: absolute;
-        left: 0; top: 50%;
-      text-align: center;
-      transform: translateY(-50%);
-      width: 100%;
-    }
-  }
-  .cldr__colour__name {
-    margin-top: 8px;
-  }
-  .cldr__colour__var {
-    color: #999;
-    margin-top: 4px;
-  }
-
-  // atoms/ - Colour Palette blocks
-  // - Set the BG colour of the block using our ATOM VARIABLE from _atoms.scss, and type color accordingly.
-  .cldr__colour__block--news       { background-color: $news;       color: #FFF; }
-  .cldr__colour__block--newsbeat   { background-color: $newsbeat;   color: #FFF; }
-  .cldr__colour__block--body-copy  { background-color: $body-copy;  color: #FFF; }
-  .cldr__colour__block--link       { background-color: $link;       color: #FFF; }
-  .cldr__colour__block--link-hover { background-color: $link-hover; color: #FFF; }
+// COMPONENTS
+@import 'components/tab-selector/tab-selector';
 
 
-// - Typography
-// -- Fonts
+// ORGANISMS
 
-.cldr__fonts {
-  @include cldr-nav;
-}
-  .cldr__fonts__font {
+@import 'organisms/babka';
+@import 'organisms/curium';
+@import 'organisms/caesium';
+@import 'organisms/indium';
+@import 'organisms/iodine';
+@import 'organisms/astatine';
+@import 'organisms/gallium';
+@import 'organisms/erbium';
+@import 'organisms/most-popular';
+@import 'organisms/babel';
+@import 'organisms/oxygen';
 
-    > span {
-      font-size: 1.17em;
-    }
-    > ul {
-      @include cldr-nav;
-      @include cldr-nav--inline;
-      margin-top: 1em;
-    }
-  }
-    .cldr__fonts__font__variation {
-      margin-right: 16px;
-
-      p {
-        background-color: #111;
-        color: #FFF;
-        margin-top: 0;
-        padding-top: 4px;
-        padding-bottom: 4px;
-        text-align: center;
-      }
-    }
-      .cldr__fonts__font__specimen {
-        background-color: #FFF;
-        font-size: 36px;
-        height: 128px - 18;
-        position: relative;
-        width: 72px;
-
-        span {
-          position: absolute;
-            left: 0; top: 16px;
-          text-align: center;
-          width: 100%;
-        }
-
-        .cldr__fonts__font--arial   & { @include ff-arial; }
-        .cldr__fonts__font--georgia & { @include ff-georgia; }
-
-        .cldr__fonts__font__variation--bold   & { @include bold; }
-        .cldr__fonts__font__variation--italic & { @include italic; }
-      }
-
-// -- Scale
-
-.cldr__typographic-scale {
-  width: 100%;
-
-  tr {
-    border-top: 1px solid #EEE;
-  }
-  td {
-    padding-top: 8px;
-    padding-bottom: 16px;
-  }
-}
-  .cldr__typographic-scale__name     {
-    font-size: 13px;
-    text-transform: uppercase;
-    width: 15%;
-  }
-  .cldr__typographic-scale__fs       {}
-  .cldr__typographic-scale__lh       {}
-  .cldr__typographic-scale__lts      {}
-  .cldr__typographic-scale__specimen {
-    padding-left: 5%;
-  }
-
-  .cldr__typographic-scale__name,
-  .cldr__typographic-scale__fs,
-  .cldr__typographic-scale__lh,
-  .cldr__typographic-scale__lts {
-    vertical-align: top;
-  }
-
-  .cldr__typographic-scale__fs,
-  .cldr__typographic-scale__lh,
-  .cldr__typographic-scale__lts {
-    @include cldr-ff-monaco;
-    text-align: right;
-    width: 5%;
-  }
-
-  .cldr__typographic-scale__specimen--double-trafalgar       { @extend %double-trafalgar; }
-  .cldr__typographic-scale__specimen--double-trafalgar--bold { @extend %double-trafalgar--bold; }
-
-  .cldr__typographic-scale__specimen--trafalgar              { @extend %trafalgar; }
-  .cldr__typographic-scale__specimen--trafalgar--bold        { @extend %trafalgar--bold; }
-
-  .cldr__typographic-scale__specimen--double-pica            { @extend %double-pica; }
-  .cldr__typographic-scale__specimen--double-pica--bold      { @extend %double-pica--bold; }
-
-  .cldr__typographic-scale__specimen--great-primer           { @extend %great-primer; }
-  .cldr__typographic-scale__specimen--great-primer--bold     { @extend %great-primer--bold; }
-
-  .cldr__typographic-scale__specimen--pica                   { @extend %pica; }
-  .cldr__typographic-scale__specimen--pica--bold             { @extend %pica--bold; }
-
-  .cldr__typographic-scale__specimen--long-primer            { @extend %long-primer; }
-  .cldr__typographic-scale__specimen--long-primer--bold      { @extend %long-primer--bold; }
-
-  .cldr__typographic-scale__specimen--brevier                { @extend %brevier; }
-  .cldr__typographic-scale__specimen--brevier--bold          { @extend %brevier--bold; }
-
-  .cldr__typographic-scale__specimen--minion                 { @extend %minion; }
-  .cldr__typographic-scale__specimen--minion--bold           { @extend %minion--bold; }
-
-// - Lists
-// -- Nav
-.cldr__nav {
-  @include nav;
-}
-  .cldr__nav--stacked {
-    @include nav;
-    @include nav--stacked;
+@include mq($from:gel-bp-xxl){
+  .gel-layout__item {
+      padding-left: 24px;
   }
 
 
-// - Iconography
-// -- Icons
-
-.cldr__icons {}
-  .cldr__icon {}
-
-// -- Branch
-
-.cldr__branch {
-  @include branch;
-}
-
-
-// MOLECULES
-// - Units
-
-// -- Promo
-
-.cldr__molecule__view__body--promo {
-  @extend .one-whole;
-  @extend .g3--one-half;
-  @extend .g4--one-third;
-  @extend .g5--one-quarter;
+  .gel-layout {
+    margin-left: -24px;
+  }
 }

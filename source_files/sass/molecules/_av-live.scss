@@ -1,0 +1,48 @@
+.actinium__item {
+    display: inline-block;
+    position: relative;
+}
+
+
+.service_icon {
+    display: block;
+    position: absolute;
+    top: 0px;
+}
+
+
+
+.actinium__item__body {
+    padding-left: 52px;
+}
+
+
+.a-item-status--live--media{
+  padding: 0 halve($gel-alt-spacing-unit);
+}
+
+.a-item-status--news{
+  background: $nw-c-red;
+  color: $white;
+}
+.a-item-status--radio4{
+  background: #003C72;
+  color: $white;
+}
+
+.a-media-logo--medium{
+height: 40px;
+width:  40px;
+}
+
+.a-media-logo--radio4{
+  color: #1C305D;
+}
+.a-media-logo--news{
+  color: $nw-c-red;
+}
+
+
+.float-right{
+  float: right;
+}

@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    # Contributer
+\*------------------------------------*/
+
+.contributor {
+  display: table;
+  width: 100%;
+
+  .contributor__avatar {
+    padding-right: $gel-alt-spacing-unit;
+
+    > img {
+      display: block;
+      max-width: none;
+    }
+  }
+  .contributor__body {
+    width: 100%;
+  }
+
+  .contributor__avatar,
+  .contributor__body {
+    display: table-cell;
+    vertical-align: middle;
+  }
+    .contributor__name {
+      font-family: georgia;
+      font-style: italic;
+
+
+    }
+    .contributor__title {
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .contributor__name,
+    .contributor__title {
+      display: block;
+      font-weight: 400;
+
+}
+    }
+
+// - Avatar1§
+
+.avatar{
+    background-color: #EEE;
+    height: auto;
+    border-radius: 50%;
+}
+.avatar--small {
+  border-radius: 50%;
+  width: 44px;
+}
+
+.avatar--medium {
+  width: 56px;
+}

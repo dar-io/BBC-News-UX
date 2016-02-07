@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    SECTION TAG
+\*------------------------------------*/
+
+$section-tag-color: #000 !default;
+$section-tag-color--news: #900 !default;
+
+/**
+ * The section tag is currently a plain text link with a specific
+ * color assoicated. UX have proposed changes to the styling of
+ * section tags, so we're making this abstraction in preperation
+ * for this new style.
+ */
+.section-tag {
+    color: $section-tag-color;
+
+    a {
+        color: inherit;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+/**
+ * Section tags are often nested within faux-block-links so
+ * we need to increase its z-index so it sits above the faux
+ * link
+ */
+.section-tag--nested-link {
+    position: relative;
+    z-index: 1;
+}
+
+/**
+ * Color variants
+ */
+.section-tag--news {
+    color: $section-tag-color--news;
+}

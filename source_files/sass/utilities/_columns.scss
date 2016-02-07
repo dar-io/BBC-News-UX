@@ -1,0 +1,44 @@
+
+/*------------------------------------*\
+    # COLUMNS
+\*------------------------------------*/
+
+@include mq($from:gel-bp-m) {
+  .list-cols-2\@xxl{
+   column-count: 2;
+   overflow: hidden;
+   column-gap: 24px;
+   column-fill: balance;
+   border-top: 0;
+  }
+}
+
+@include mq($from:gel-bp-l) {
+  .list-cols-2\@xxl{
+   column-count: 2;
+   overflow: hidden;
+   column-gap: 24px;
+   column-fill: balance;
+   border-top: 0;
+  }
+}
+
+@include mq($from:gel-bp-xxl) {
+  .list-cols-2\@xxl{
+   column-count: 2;
+   overflow: hidden;
+   column-gap: 24px;
+   column-fill: balance;
+   border-top: 0;
+  }
+}
+
+[class*="list-cols-"]{
+  .gs-o-list-ui__item{
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+  }
+}
+
+

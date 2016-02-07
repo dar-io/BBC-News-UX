@@ -1,0 +1,107 @@
+/*------------------------------------*\
+    # MEDIA ICON
+\*------------------------------------*/
+
+/**
+ * The `media-icon` pattern is used to display a media attribution in
+ * in a standard way.
+ *
+    <span class="gs-o-media-icon">
+        <span class="gs-o-media-icon__icon gel-icon">
+            <svg>
+                <use xlink:href="#gel-icon-play"></use>
+            </svg>
+        </span>
+    </span>
+ *
+ * 1. We don't display the media if you don't cut the mustard so no need for
+ *    the icon
+ */
+.gs-o-media-icon {
+    display: none; /* [1] */
+
+    @if $enhanced {
+        display: block;
+
+        color: $sp-c-black;
+        background-color: $sp-c-white;
+
+        cursor: pointer;
+    }
+}
+
+.gs-o-media-icon__icon {
+    vertical-align: top;
+}
+
+@if $enhanced {
+
+    /**
+     * Sizing
+     */
+    .gs-o-media-icon--mini {
+        padding: 4px 4px 4px 6px;
+
+        .gs-o-media-icon__icon {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    .gs-o-media-icon--small {
+        padding: $gel-spacing-unit;
+
+        .gs-o-media-icon__icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .gs-o-media-icon--medium {
+        padding: double($gel-spacing-unit);
+
+        .gs-o-media-icon__icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .gs-o-media-icon--large {
+        padding: quadruple($gel-spacing-unit);
+    }
+
+
+    /**
+     * Allows a media icon to be used inline when supporting media
+     * is not available
+     */
+    .gs-o-media-icon--inline {
+        display: inline-block;
+        width: 1.15em;
+        height: 1.15em;
+        margin-right: halve($gel-alt-spacing-unit);
+    }
+
+
+    /**
+     * Reserves the default colours applied to media-icons
+     */
+    .gs-o-media-icon--inverse {
+        color: $sp-c-white;
+        background-color: $sp-c-black;
+    }
+
+
+    /**
+     * Allows for different styling for live session as apose to catch up or
+     * on demand content
+     */
+    .gs-o-media-icon--live {
+        @include theme('sport') {
+
+        }
+        @include theme('news') {
+
+        }
+    }
+}

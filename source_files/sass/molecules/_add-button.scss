@@ -1,0 +1,21 @@
+.nw-c-toggle-button__indicator--add {
+    background-color: #3179b5;
+}
+
+.nw-c-toggle-button__indicator {
+    display: table-cell;
+    min-width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nw-c-toggle-button__indicator + .slice-header--title,  .nw-c-toggle-button__indicator + .topic-tag__name{
+    margin-left: halve($gel-spacing-unit);
+  }
+.nw-c-toggle-button__indicator + .slice-header--title{
+    margin-left: $gel-spacing-unit;
+    a{line-height:32px;}
+  }

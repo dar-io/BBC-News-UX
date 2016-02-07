@@ -1,0 +1,31 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html class="no-js {% unless page.disable-1280 %}b-pw-1280{% endunless %} ctm">
+<head>
+    <meta charset="utf-8" />
+    {% include core/orb/head.html %}
+    {% include core/head.html %}
+    {% unless page.enable-news-nav %}
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/main.css" />
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/icon-font.css" />
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/sport-nav.css" />
+    {% else %}
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/news/compact.css" />
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/news/tablet.css" />
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/news/wide.css" />
+    {% endunless %}
+</head>
+<body>
+  {% include core/orb/bodyfirst.html %}
+
+    {{ content }}
+
+    {% include core/bodylast.html %}
+
+    {% include core/orb/bodylast.html %}
+    <script src="{{ baseurl }}/assets/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="{{ baseurl }}/assets/js/main.js"></script>
+</body>
+</html>

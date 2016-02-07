@@ -1,0 +1,137 @@
+/*------------------------------------*\
+    # KEY POINTS MODIFICATIONS \\DARIO//
+\*------------------------------------*/
+
+.keypoints--height--fixed-medium {
+
+  .lx-keypoints-component-wrap{
+    max-height: 322px;
+    overflow: hidden;
+}
+}
+
+.keypoints--height--small {
+
+  .lx-keypoints-component-wrap{
+    max-height: 236px;
+    overflow: hidden;
+  }
+}
+
+.keypoints--fixed-height .lx-keypoints-component-wrap{
+    max-height: 322px;
+    overflow: hidden;
+}
+.lx-keypoints-component-wrap {
+    position:relative;
+    border-top: 5px solid #cb0101;
+    // border-left: 1px solid #ededed;
+    padding-top: 4px;
+     // padding: 4px 6px 0px 6px;
+    // border-right: 1px solid #ededed;
+
+
+    @include mq($from:gel-bp-m) {
+      // margin-left: -$gel-spacing-unit;
+      // margin-right: -$gel-spacing-unit;
+    }
+
+    @include mq($from:gel-bp-xxl) {
+      // margin-left: -$gel-alt-spacing-unit;
+      // margin-right: -$gel-alt-spacing-unit;
+    }
+    .lx-c-key-points{
+      position:relative;
+      &:before{
+        content: none;
+        display: block;
+        position: relative;
+        top: -$gel-alt-spacing-unit;
+        border-top: 1px solid $c-silver;
+        left: -8px;
+        width: calc(100% + #{double($gel-spacing-unit)})
+      }
+    }
+
+}
+
+
+
+/*------------------------------------*\
+    # KEY POINTS
+\*------------------------------------*/
+
+.lx-c-key-points {
+    list-style: none;
+}
+
+.lx-c-key-points__item {
+    position: relative;
+
+    margin-bottom: $gel-alt-spacing-unit;
+
+    &:before {
+        position: absolute;
+        top: 18px;
+        left: 8px;
+        bottom: -10px;
+
+        width: 1px;
+
+        background-color: $sp-c-silver;
+
+        content: '';
+    }
+
+
+    &:last-child {
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.lx-c-key-points__link {
+    color: $sp-c-black;
+    text-decoration: none;
+}
+
+.lx-c-key-points__icon {
+    width: double($gel-spacing-unit);
+    height: double($gel-spacing-unit);
+
+    @include theme('sport') {
+        color: $sp-c-live-blue;
+    }
+    @include theme('news') {
+        color: $nw-c-red;
+    }
+}
+
+.lx-c-key-points__timestamp {
+    display: block;
+    margin-bottom: halve($gel-spacing-unit);
+
+    color: $sp-c-mortar;
+}
+
+.lx-c-key-points__text {
+
+    .lx-c-key-points__link:focus &,
+    .lx-c-key-points__link:hover & {
+      color: $nw-c-dark-blue;
+        @include theme('sport') {
+            color: $sp-c-dark-blue;
+        }
+        @include theme('news') {
+            color: $nw-c-dark-blue;
+        }
+    }
+}
+
+
+.lx-c-key-points__icon{
+  svg{
+    fill: $news-brand-red;
+  }
+}

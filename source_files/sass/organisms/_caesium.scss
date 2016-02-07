@@ -1,0 +1,460 @@
+///*------------------------------------*\
+//    # THEMES
+//\*------------------------------------*/
+
+
+
+
+.theme--light-gray{
+  .caesium--slot, .gs-o-media-icon{
+    background-color:#ededed;
+  }
+  .caesium__body{
+    padding: 0 $gel-spacing-unit $gel-spacing-unit;
+  }
+  .caesium__river .caesium__body{
+    padding-top: $gel-spacing-unit;
+  }
+  .lead-promo__body{
+    @include mq($from:gel-bp-l) {
+
+        padding-left:$gel-spacing-unit;
+      padding-top: $gel-spacing-unit;
+    }
+  }
+  .gs-o-media-icon, a{color:inherit;}
+  .caesium__summary, .lead-promo__summary{color: inherit;}
+  .timestamp{color:inherit;}
+}
+
+.theme--dark{
+  -webkit-font-smoothing:antialiased;
+  .caesium--slot, .gs-o-media-icon{
+    background-color:#0D1840;
+  }
+
+   .caesium__river .caesium__body{
+    padding-top: $gel-spacing-unit;
+  }
+
+  .caesium__body{
+    padding:0 $gel-spacing-unit $gel-spacing-unit;
+  }
+  .lead-promo__body{
+    @include mq($from:gel-bp-l) {
+
+        padding-left:$gel-spacing-unit;
+      padding-top: $gel-spacing-unit;
+    }
+  }
+  .contributor__name, .gs-o-media-icon, a{color:$white; }
+  .timestamp, .contributor__title, .caesium__summary, .lead-promo__summary{color:#ededed;}
+
+}
+
+
+///*------------------------------------*\
+//    # caesium USED FOR TOP STORIES
+//\*------------------------------------*/
+
+
+
+/**
+* The reverse variant of 'caesium' By default a
+* stacked layout with the image above the content,
+* from medium (600px) it is all inline.
+*/
+  .caesium--reverse {
+    @include flex-direction(column);
+    @include mq($from:gel-bp-m) {
+      @include flex-direction(row);
+    }
+    .caesium__media {
+      width: 100%;
+      margin-bottom: $gel-spacing-unit;
+
+      @include mq($from:gel-bp-m) {
+        margin-bottom: 0;
+      }
+    }
+    .caesium__body {
+      width: 100%;
+      min-height: initial;
+    }
+  }
+
+
+
+///*------------------------------------*\
+//    # RIVER DISPLAYS HEADLINES ONLY
+//\*------------------------------------*/
+
+.caesium__river {
+
+  .caesium__meta {
+      margin-top: $gel-spacing-unit;
+
+      @include mq($from:gel-bp-m) {
+        margin-top: $gel-spacing-unit;
+      }
+    }
+
+  .caesium__item--river{
+    padding-top: $gel-spacing-unit;
+    padding-bottom: $gel-spacing-unit;
+  }
+
+  @include mq($from:gel-bp-m, $until:gel-bp-l) {
+    .caesium__item--river {
+      margin-bottom: 0;
+
+      .caesium__media {
+        display: none;
+      }
+    }
+
+    .river__item--1,
+    .river__item--4,
+    .river__item--7,
+     {
+      &:before {
+        display: none;
+      }
+       &:after {
+        left: double($gel-spacing-unit) !important;
+      }
+    }
+
+    .river__item--1,
+    .river__item--2,
+    .river__item--3,
+    .river__item--4,
+    .river__item--5,
+    .river__item--6,
+    .river__item--7,
+    .river__item--8 {
+      &:before {
+        top: $gel-alt-spacing-unit;
+        bottom: $gel-alt-spacing-unit;
+      }
+      &:after {
+        left: 0px;
+      }
+    }
+  }
+
+    @include mq($from:gel-bp-m, $until:gel-bp-xxl) {
+    .river__item--1,
+    .river__item--2,
+    .river__item--3,
+    .river__item--4,
+    .river__item--5,
+    .river__item--6,
+    .river__item--7
+     {
+      &:before {
+        display: none;
+      }
+       &:after {
+        left: double($gel-spacing-unit) !important;
+      }
+    }
+
+
+    }
+
+  @include mq($from:gel-bp-xxl) {
+    & > .gel-layout {
+      min-height: 614px;
+    }
+    .caesium__item--river {
+      padding-bottom:$gel-alt-spacing-unit;
+      padding-top: $gel-alt-spacing-unit;
+      }
+    .river__item--1{
+      padding-top: 0px;
+    }
+    .river__item--1,
+    .river__item--2,
+    .river__item--3,
+    .river__item--4,
+    .river__item--5,
+    .river__item--6,
+    .river__item--7,
+    .river__item--8 {
+      &:before {
+        top: 0;
+        bottom: 0;
+        display: none;
+      }
+      &:after {
+
+        left: double($gel-alt-spacing-unit) !important;
+      }
+    }
+
+  }
+
+
+}
+
+///*------------------------------------*\
+//    # caesium ITEM STYLES
+//\*------------------------------------*/
+
+.caesium--wrap {
+  .caesium--slot{
+    @include flex-display;
+  }
+}
+.caesium--slot{
+  @include flex-display;
+  @include flex(1, 1, 100%);
+  flex-direction: column;
+}
+
+.caesium__body{
+
+  @include flex(1);
+  @include flex-display;
+  @include flex-direction(column);
+  @include flex-justify(space-between);
+}
+.caesium__summary{
+  color: $summary-copy;
+}
+
+.caesium__meta {
+  margin-top: $gel-spacing-unit;
+
+  @include mq($from:gel-bp-m) {
+    margin-top: $gel-spacing-unit;
+  }
+}
+
+.caesium__media{
+  display: block;
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.caesium__item--5{
+  min-height: 328px;
+}
+
+.caesium__item {
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-top: 0;
+    vertical-align: top;
+
+    &:before {
+      position: absolute;
+      right: 0;
+      top: 0;
+      left: $gel-spacing-unit;
+      display: block;
+      border: 0 solid $c-silver;
+      border-top-width: 1px;
+      content: '';
+    }
+
+    .avatar{ background-color: $white;}
+    &.anfield__item--1 {
+      &:before {
+        display: none;
+      }
+    }
+
+    .caesium__item--headline {
+      min-height: 74px;
+    }
+
+  @include mq($from:gel-bp-xs) {
+    @include flex-direction(row);
+      padding-bottom: double($gel-spacing-unit);
+
+    &:before {
+      top: $gel-spacing-unit;
+      right: auto;
+      bottom: $gel-spacing-unit;
+      left: $gel-spacing-unit;
+      border-top-width: 0;
+      border-left-width: 1px;
+      content: '';
+    }
+    &:after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      left: 0;
+      display: block;
+      border: 0 solid $c-silver;
+      border-top-width: 1px;
+      content: '';
+    }
+    &.caesium__item--1 {
+      padding-top: 0;
+
+      &:after {
+        display: none;
+      }
+      &:before {
+        display: none;
+      }
+    }
+    &.caesium__item--2,
+    &.caesium__item--3,
+    &.caesium__item--4,
+    &.caesium__item--5,
+    &.caesium__item--7, {
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+
+    &.caesium__item--river {
+      .caesium__media {
+        display: none;
+      }
+    }
+  }
+
+    @include mq($from:gel-bp-l) {
+
+      &.caesium__item--2 {
+      padding-top: 0;
+      &:after {
+        display: none;
+      }
+      &:before {
+        display: none;
+        top: 0;
+      }
+    }
+
+}
+
+  @include mq($from:gel-bp-m, $until:gel-bp-xxl) {
+
+
+    &.caesium__item--3 {
+      &:before {
+        display: none;
+      }
+      &:after {
+        left: 16px !important;
+      }
+    }
+  }
+
+
+  @include mq($from:gel-bp-xxl) {
+    padding-bottom: double($gel-alt-spacing-unit);
+
+    &:before {
+      top: $gel-alt-spacing-unit;
+      bottom: $gel-alt-spacing-unit;
+      left: $gel-alt-spacing-unit;
+    }
+    &.river__item--1 {
+      &:after {
+        display: none;
+      }
+    }
+
+    &.river__item--3 {
+      &:before {
+        display: none;
+      }
+      &:after {
+        left: double($gel-alt-spacing-unit) !important;
+      }
+    }
+
+  }
+}
+
+///*------------------------------------*\
+//    # LEAD PROMO
+//\*------------------------------------*/
+.caesium__item{
+.lead-promo {
+
+@include mq($from:gel-bp-m) {
+  .lead-promo__media {
+    width: gel-columns(12/1);
+    padding-left: 0;
+    position: relative;
+  }
+  .lead-promo__body {
+    width: gel-columns(12/1);
+  }
+}
+  @include mq($from:gel-bp-l) {
+
+     .lead-promo__body{
+      position:relative;
+      width: gel-columns(1/3);
+
+    }
+    .media-island {
+      width: gel-columns(2/3);
+      float: right;
+
+    }
+  }
+
+@include mq($from:gel-bp-m, $until:gel-bp-l) {
+  .gs-o-media-icon{
+    z-index: 99;
+  }
+  .timestamp, a{color:$white;}
+  .has-media-icon--medium{
+    .lead-promo__content{
+      padding-left:68px;
+    }
+  }
+  .media-island {
+    position:relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-image: linear-gradient(to bottom, rgba(0, 17, 22, 0) 0, rgba(0, 17, 22, .6) 100%);
+      width: 100%;
+      z-index: 1;
+      bottom: 0;
+      height: 56%;
+    }
+  }
+  .lead-promo__body {
+    z-index: 99;
+    position: absolute;
+    bottom: $gel-spacing-unit;
+
+  }
+}
+}
+}
+
+
+
+
+
+
+
+
+
+.group-1,.group-2,.group-3{
+    @include mq($from:gel-bp-xxl) {
+  float: left;
+}
+}
+

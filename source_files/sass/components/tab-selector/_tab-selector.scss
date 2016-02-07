@@ -1,0 +1,102 @@
+$tab-selector__color-default: $sp-c-white;
+$tab-selector__color-default-text: #1c2d3d;
+$tab-selector__color-selected: #4f4d4c;
+$tab-selector__color-selected-text: $sp-c-white;
+$tab-selector__color-border: $sp-c-silver;
+$tab-selector__color--hover: #d5d5d5;
+
+@if $enhanced {
+    .tab-selector {
+        margin-bottom: double($gel-spacing-unit);
+
+        @include mq($from: gel-bp-m) {
+            margin-bottom: double($gel-alt-spacing-unit);
+        }
+
+        border-top: 1px solid $tab-selector__color-border;
+        border-bottom: 1px solid $tab-selector__color-border;
+    }
+
+    .tab-selector--small-centered {
+        .tab-selector__tab-list {
+            margin: 0 auto;
+            max-width: 480px;
+
+            padding-left: $gel-spacing-unit;
+            padding-right: $gel-spacing-unit;
+
+            @include mq($from: gel-bp-s) {
+                padding-left: double($gel-spacing-unit);
+                padding-right: double($gel-spacing-unit);
+            }
+
+            @include mq($from: gel-bp-m) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    .tab-selector__tab-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        text-align: center;
+    }
+
+    .tab-selector__tab-item {
+        display: table-cell;
+        background-color: $tab-selector__color-default;
+        color: $tab-selector__color-default-text;
+        border-left: 1px solid $tab-selector__color-border;
+
+        &:last-of-type {
+            border-right: 1px solid $tab-selector__color-border;
+        }
+
+        &:hover {
+            background-color: $tab-selector__color--hover;
+            cursor: pointer;
+        }
+    }
+
+    .tab-selector__tab-item-selected {
+        position: relative;
+        background-color: $tab-selector__color-selected;
+
+        &:hover {
+            background-color: $tab-selector__color-selected;
+        }
+
+        &:after {
+            content: ' ';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            height: 0;
+            width: 0;
+            pointer-events: none;
+            border: solid transparent;
+            border-top-color: $tab-selector__color-selected;
+            border-width: 6px;
+            margin-left: -6px;
+        }
+
+        .tab-selector__link {
+            color: $tab-selector__color-selected-text;
+        }
+    }
+
+    .tab-selector__link {
+        display: block;
+        padding-top: $gel-spacing-unit;
+        padding-bottom: $gel-spacing-unit;
+        padding-left: $gel-spacing-unit;
+        padding-right: $gel-spacing-unit;
+        color: $tab-selector__color-default-text;
+        text-decoration: none;
+    }
+}

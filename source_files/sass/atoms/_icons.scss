@@ -1,0 +1,622 @@
+$cache-buster: epoch();
+
+/**
+ * The GEL icon variables allows you to include the current
+ * character code for any of the GEL icons.
+ *
+ * A good example of where this might be used is when changing
+ * between up and down arrows to show open and closed states
+ */
+$gelicon--up: '\e003';
+$gelicon--next: '\e005';
+$gelicon--down: '\e004';
+$gelicon--previous: '\e002';
+
+/**
+ * In some cases the media icon object needs to be increased in
+ * in size. However, this is generally only required in specific places
+ *
+ * !! This might not be the best location for this mixin but
+ *    the current structure doesn't allow for it to live in
+ *    the best place.
+ */
+@mixin media-icon-medium() {
+    width: 40px;
+    height: 40px;
+
+    font-size: 20px;
+    line-height: 40px;
+}
+
+
+/**
+ * We don't use the gelicon's at base so we need to hide them
+ */
+.no-font-face .gelicon {
+    display: none;
+}
+
+.ico {
+    // background-image: url('../../images/onesport-sprite.png');
+    background-repeat: no-repeat;
+}
+
+%ico-sport,
+.ico-sport {
+    background-position: 0 -75px;
+    width: 104px;
+    height: 26px;
+    display: inline-block;
+}
+
+%ico-sport-white,
+.ico-sport-white {
+    background-position: 0 -101px;
+}
+
+%ico-chevron-down,
+.ico-chevron-down {
+    background-position: -52px -24px;
+    width: 13px;
+    height: 11px;
+    display: inline-block;
+}
+
+%ico-chevron-down-black,
+.ico-chevron-down-black {
+    background-position: -39px -24px;
+}
+
+%ico-chevron-up-white,
+.ico-chevron-up-white {
+    background-position: 0 -24px;
+}
+
+%ico-chevron-right-thin,
+.ico-chevron-right-thin {
+    background-position: -65px -24px;
+    width: 9px;
+    height: 12px;
+    display: inline-block;
+}
+
+%ico-burger,
+.ico-burger {
+    background-position: 0 0;
+    width: 16px;
+    height: 13px;
+    display: inline-block;
+}
+
+%ico-burger-white,
+.ico-burger-white {
+    background-position: -74px -24px;
+}
+
+%ico-to-top,
+.ico-to-top {
+    background-position: -26px -24px;
+    display: inline-block;
+    width: 13px;
+    height: 11px;
+}
+
+%ico-medal,
+.ico-medal {
+    width: 15px;
+    height: 16px;
+    display: inline-block;
+}
+
+%ico-medal--gold,
+.ico-medal--gold {
+    background-position: -31px 0;
+    color: #ffbc00;
+}
+
+%ico-medal--silver,
+.ico-medal--silver {
+    background-position: -46px 0;
+    color: #bebebe;
+}
+
+%ico-medal--bronze,
+.ico-medal--bronze {
+    background-position: -16px 0;
+    color: #c19555;
+}
+
+%ico-olympic-rings
+.ico-olympic-rings {
+    background-position: -24px -37px;
+}
+
+%ico-video,
+.ico-video,
+%ico-audio,
+.ico-audio {
+    background-position: 0 -37px;
+    width: 2.4em;
+    height: 2.4em;
+    display: inline-block;
+}
+
+%ico-audio,
+.ico-audio {
+    background-position: -61px 0;
+}
+
+@if $enhanced {
+
+    @font-face {
+        font-family: 'bbc-sport';
+        src: url('../../fonts/fonts/bbc-sport.eot?v=' + $cache-buster);
+        src: url('../../fonts/fonts/bbc-sport.eot?v=' + $cache-buster + '#iefix') format('embedded-opentype'),
+             url('../../fonts/fonts/bbc-sport.woff?v=' + $cache-buster) format('woff'),
+             url('../../fonts/fonts/bbc-sport.ttf?v=' + $cache-buster) format('truetype'),
+             url('../../fonts/fonts/bbc-sport.svg?v=' + $cache-buster + '#bbc-sport') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .font-face {
+        /* Use the following CSS code if you want to have a class per icon */
+        /*
+        Instead of a list of all class selectors,
+        you can use the generic selector below, but it's slower:
+        [class*='ico-'] {
+        */
+        .ico {
+            font-family: 'bbc-sport';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            background: none;
+        }
+
+        // =====
+        .ico-speed-skating:before,
+        .ico-speed-skating-sochi:before {
+            content: '\e604';
+        }
+
+        .ico-snowboarding:before,
+        .ico-snowboard-slopestyle-sochi:before {
+            content: '\e605';
+        }
+
+        .ico-snowboard:before,
+        .ico-snowboard-parallel-events-sochi:before {
+            content: '\e606';
+        }
+
+        .ico-snowboarding-sochi:before,
+        .ico-snowboard-halfpipe-sochi:before {
+            content: '\e607';
+        }
+
+        .ico-snowboard-cross-sochi:before {
+            content: '\e608';
+        }
+
+        .ico-ski-jumping-sochi:before {
+            content: '\e609';
+        }
+
+        .ico-short-track-skating:before,
+        .ico-short-track-skating-sochi:before {
+            content: '\e60a';
+        }
+
+        .ico-ice-hockey-sochi:before {
+            content: '\e60b';
+        }
+
+        .ico-freestyle-skiing-slopestyle-sochi:before {
+            content: '\e60c';
+        }
+
+        .ico-freestyle-skiing-ski-cross-sochi:before {
+            content: '\e60d';
+        }
+
+        .ico-freestyle-skiing-moguls-sochi:before {
+            content: '\e60e';
+        }
+
+        .ico-freestyle-skiing-halfpipe-sochi:before {
+            content: '\e60f';
+        }
+
+        .ico-luge:before,
+        .ico-luge-sochi:before {
+            content: '\e610';
+        }
+
+        .ico-nordic-combined:before,
+        .ico-nordic-combined-sochi:before {
+            content: '\e611';
+        }
+
+        .ico-figure-skating:before,
+        .ico-figure-skating-sochi:before {
+            content: '\e612';
+        }
+
+        .ico-curling:before,
+        .ico-curling-sochi:before {
+            content: '\e613';
+        }
+
+        .ico-cross-country-skiing-sochi:before {
+            content: '\e614';
+        }
+
+        .ico-bobsleigh:before,
+        .ico-bobsleigh-sochi:before {
+            content: '\e615';
+        }
+
+        .ico-biathlon:before,
+        .ico-biathlon-sochi:before {
+            content: '\e616';
+        }
+
+        .ico-freestyle-skiing-sochi:before {
+            content: '\e617';
+        }
+
+        .ico-skiing:before,
+        .ico-alpine-skiing:before,
+        .ico-alpine-skiing-sochi:before {
+            content: '\e618';
+        }
+
+        .ico-skeleton:before,
+        .ico-skeleton-sochi:before {
+            content: '\e619';
+        }
+
+        .ico-burger:before {
+            content: '\e006';
+            font-size: 16px;
+        }
+
+        .ico-medal:before {
+            content: '\e603';
+            font-size: 16px;
+        }
+
+        .ico-arrow-down-filled-white:before {
+            content: '\e600';
+            font-size: 16px;
+        }
+
+        .ico-comments {
+            width: auto;
+            height: auto;
+            color: #4e4e4e;
+        }
+
+        .ico-comments:before {
+            content: '\e00c';
+        }
+
+        .label {
+            font-size: 12px;
+        }
+
+        .ico-chevron-left:before {
+            content: '\e00a';
+            font-size: 16px;
+        }
+
+        .ico-chevron-right:before {
+            content: '\e009';
+            font-size: 16px;
+        }
+
+        .ico-chevron-right-thin:before {
+            content: '\e602';
+            font-size: 16px;
+        }
+
+        .ico-chevron-up:before {
+            content: '\e00b';
+            font-size: 16px;
+        }
+
+        .ico-chevron-down:before {
+            content: '\e008';
+            font-size: 16px;
+        }
+
+        .ico-olympic-rings:before {
+            content: '\e620';
+        }
+
+        .ico-wrestling:before {
+            content: '\e61a';
+        }
+
+        .ico-winter-sports:before {
+            content: '\e61b';
+        }
+
+        .ico-weightlifting:before {
+            content: '\e61c';
+        }
+
+        .ico-volleyball:before {
+            content: '\e61d';
+        }
+
+        .ico-transfers:before {
+            content: '\e61e';
+        }
+
+        .ico-triathlon:before {
+            content: '\e61f';
+        }
+
+        .ico-tennis:before {
+            content: '\e621';
+        }
+
+        .ico-taekwondo,
+        .ico-martial-arts {
+            &:before {
+                content: '\e622';
+            }
+        }
+
+        .ico-table-tennis:before {
+            content: '\e623';
+        }
+
+        .ico-swimming:before {
+            content: '\e624';
+        }
+
+        .ico-standing-tables:before {
+            content: '\e625';
+        }
+
+        .ico-squash:before {
+            content: '\e626';
+        }
+
+        .ico-sport-personality:before {
+            content: '\e627';
+        }
+
+        .ico-snooker:before {
+            content: '\e628';
+        }
+
+        .ico-shooting:before {
+            content: '\e629';
+        }
+
+        .ico-sailing:before {
+            content: '\e62a';
+        }
+
+        .ico-rugby-union:before {
+            content: '\e62b';
+        }
+
+        .ico-rugby-sevens:before {
+            content: '\e62c';
+        }
+
+        .ico-rugby-league:before {
+            content: '\e62d';
+        }
+
+        .ico-rowing:before {
+            content: '\e62e';
+        }
+
+        .ico-results2:before {
+            content: '\e62f';
+        }
+
+        .ico-netball:before {
+            content: '\e630';
+        }
+
+        .ico-moto-gp:before {
+            content: '\e631';
+        }
+
+        .ico-modern-pentathlon:before {
+            content: '\e632';
+        }
+
+        .ico-leagues-competitions:before {
+            content: '\e633';
+        }
+
+        .ico-judo:before {
+            content: '\e634';
+        }
+
+        .ico-ice-hockey:before {
+            content: '\e635';
+        }
+
+        .ico-horse-racing:before {
+            content: '\e636';
+        }
+
+        .ico-hockey:before {
+            content: '\e637';
+        }
+
+        .ico-handball:before {
+            content: '\e638';
+        }
+
+        .ico-gymnastics:before {
+            content: '\e639';
+        }
+
+        .ico-gossip:before {
+            content: '\e63a';
+        }
+
+        .ico-golf:before {
+            content: '\e63b';
+        }
+
+        .ico-generic-event:before {
+            content: '\e63c';
+        }
+
+        .ico-gaelic-games:before {
+            content: '\e63d';
+        }
+
+        .ico-formula1,
+        .ico-formula-1,
+        .ico-motorsport {
+            &:before {
+                content: '\e63e';
+            }
+        }
+
+        .ico-football:before {
+            content: '\e63f';
+        }
+
+        .ico-fencing:before {
+            content: '\e640';
+        }
+
+        .ico-equestrian:before {
+            content: '\e641';
+        }
+
+        .ico-drives:before {
+            content: '\e642';
+        }
+
+        .ico-diving:before {
+            content: '\e643';
+        }
+
+        .ico-disability-sports:before {
+            content: '\e644';
+        }
+
+        .ico-darts:before {
+            content: '\e645';
+        }
+
+        .ico-cycling:before {
+            content: '\e646';
+        }
+
+        .ico-cricket:before {
+            content: '\e647';
+        }
+
+        .ico-canoeing:before {
+            content: '\e648';
+        }
+
+        .ico-boxing:before {
+            content: '\e649';
+        }
+
+        .ico-boxing-glove:before {
+            content: '\e64a';
+        }
+
+        .ico-bowls:before {
+            content: '\e64b';
+        }
+
+        .ico-basketball:before {
+            content: '\e64c';
+        }
+
+        .ico-baseball,
+        .ico-rounders {
+            &:before {
+                content: '\e64d';
+            }
+        }
+
+        .ico-badminton:before {
+            content: '\e64e';
+        }
+
+        .ico-athletics,
+        .ico-running {
+            &:before {
+                content: '\e64f';
+            }
+        }
+
+        .ico-archery:before {
+            content: '\e650';
+        }
+
+        .ico-american-football:before {
+            content: '\e651';
+        }
+
+        .ico-all-teams:before {
+            content: '\e652';
+        }
+
+        .ico-uk:before {
+            content: '\e654';
+        }
+
+        .ico-results:before {
+            content: '\e653';
+        }
+
+        .ico-walking:before {
+            content: '\e655';
+        }
+
+        .ico-synchronised-swimming:before {
+            content: '\e901';
+        }
+
+        .ico-water-polo:before {
+            content: '\e900';
+        }
+
+
+        @include mq($from: $gel-grid-gutter-change) {
+            .ico-comments:before {
+                font-size: 16px;
+            }
+
+            .ico-chevron-left:before {
+                font-size: 24px;
+            }
+
+            .ico-chevron-right:before {
+                font-size: 24px;
+            }
+        }
+    }
+
+    @include mq($from: 900px) {
+        .no-touch.font-face {
+            .ico-comments:before {
+                font-size: 12px;
+            }
+        }
+    }
+}

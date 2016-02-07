@@ -1,0 +1,51 @@
+
+/*------------------------------------*\
+    #  TEXT OVER THE IMAGE
+\*------------------------------------*/
+
+@mixin image-gradient {
+content: "";
+background-image: linear-gradient(to bottom, rgba(0, 17, 22, 0) 0, rgba(0, 17, 22, .6) 100%);
+display: block;
+position: absolute;
+width: 100%;
+z-index: 1;
+bottom: 0;
+height: 56%;
+}
+
+@include mq($from:gel-bp-l, $until:gel-bp-xxl) {
+  .u-txt-over-image\@l {
+    .media-island {
+      position: relative;
+
+      &:before {
+         @include image-gradient;
+
+      }
+      [class*='__body'] {
+        position: absolute;
+        bottom: double($gel-spacing-unit);
+        z-index: 99;
+        [class*='__title'] {
+          a {
+            color: $white;
+          }
+        }
+        [class*='__summary']{
+          color: $white;
+         }
+
+        .timestamp, .section-tag {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+
+.u-text-on-dark-bg{
+  color: $white;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
