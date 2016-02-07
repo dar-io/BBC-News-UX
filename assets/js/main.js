@@ -81,3 +81,26 @@ $('.faux-block-link').hover(
   })
 
 
+
+$(document).ready(function () {
+    // Load the first 3 list items from another HTML file
+    //$('#moreList').load('externalList.html li:lt(3)');
+    $('#moreList .astatine__item:lt(4)').show();
+    $('#showLess').hide();
+    var items =  25;
+    var shown =  3;
+    $('#loadMore').click(function () {
+        $('#showLess').show();
+         $('#loadMore').hide();
+        shown = $('#moreList .astatine__item:visible').size()+5;
+        if(shown< items) {$('#moreList .astatine__item:lt('+shown+')').show();}
+        else {$('#moreList .astatine__item:lt('+items+')').show();
+             $('#loadMore').hide();
+             }
+    });
+    $('#showLess').click(function () {
+     $('#loadMore').show();
+      $('#showLess').hide();
+        $('#moreList .astatine__item').not(':lt(3)').hide();
+    });
+});
