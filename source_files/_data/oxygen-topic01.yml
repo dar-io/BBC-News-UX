@@ -1,40 +1,42 @@
 #BACKGROUND IMAGE
 
 - header-title:
-    - header-title:  "US Election"
+    - header-title:       "US Election"
+      url:                "#topic one"
 
 - background-image:
-    - background-image:  "/assets/img/organisms/topics/oscars-cropped.jpg"
-      background-colour:  "rgba(0, 0, 0, 0.6)"
+    - background-image:   "/assets/img/organisms/topics/us-flag.jpg"
+      background-colour:  "rgba(0, 0, 0, 0.5)"
 
 
 #TOPIC TAGS
 - topic-tags:
-    - topic-tag:  "United States"
-    - topic-tag:  "US Politics"
-    - topic-tag:  "Republican Party"
+    - topic-tag:          "United States"
+    - topic-tag:          "US Politics"
+    - topic-tag:          "Republican Party"
 
 
 #SLOT ONE
 - slot01:
-    - animOrder:  "1"
-      synopsis:   "The United States presidential election of 2016, scheduled for Tuesday, November 8, 2016, will be the 58th quadrennial U.S. presidential election"
+    - animOrder:          "1"
+      synopsis:           "The United States presidential election of 2016, scheduled for Tuesday, November 8, 2016, will be the 58th quadrennial U.S. presidential election"
 
 - slot01:
-    - animOrder:  "1"
-      synopsis:   "As President Borack Obama cannot run again, both parties are holding competitive primaries this year."
+    - animOrder:          "1"
+      synopsis:           "As President Borack Obama cannot run again, both parties are holding competitive primaries this year."
 
 
 #SLOT TWO
 - slot02:
-    - animOrder:  "1"
-      image:      "http://c.files.bbci.co.uk/61EC/production/_87986052_trumpafp.jpg"
-      headline:   "Winners and losers after Iowa vote"
+    - animOrder:          "1"
+      image:              "http://c.files.bbci.co.uk/61EC/production/_87986052_trumpafp.jpg"
+      headline:           "Winners and losers after Iowa vote"
       synopsis:
-      time:       "22m"
-      section:    "US Election 2016"
-      media-type:   #video/audio/image --empty wont show the icon--
-      media-duration: "2:30"
+      time:               "22m"
+      section:            "US Election 2016"
+      media-type:         #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.co.uk/news/election-us-2016-35462570"
 
       contributorAvatar:  ""
       contributorName:    ""
@@ -43,14 +45,15 @@
 
 #SLOT THREE
 - slot03:
-    - animOrder:  "1"
-      image:      "http://ichef.bbci.co.uk/news/660/cpsprodpb/1073D/production/_87998376_007040958-1.jpg"
-      headline:   "American exceptionalism in a time of malaise"
+    - animOrder:          "1"
+      image:              "http://ichef.bbci.co.uk/news/660/cpsprodpb/1073D/production/_87998376_007040958-1.jpg"
+      headline:           "American exceptionalism in a time of malaise"
       synopsis:
-      time:       "2m"
-      section:    "Magazine"
-      media-type:   #video/audio/image --empty wont show the icon--
-      media-duration: "1:52"
+      time:               "2m"
+      section:            "Magazine"
+      media-type:         #video/audio/image --empty wont show the icon--
+      media-duration:     "1:52"
+      url:                "http://www.bbc.com/news/world-us-canada-35438548"
 
       contributorAvatar:  ""
       contributorName:    ""
@@ -58,14 +61,15 @@
 
 #SLOT THREE
 - slot04:
-    - animOrder:  "1"
-      image:      "http://ichef-1.bbci.co.uk/news/624/cpsprodpb/CC34/production/_88067225_hi031247559.jpg"
-      headline:   "Hillary Clinton's many roles in US politics"
+    - animOrder:          "1"
+      image:              "http://ichef-1.bbci.co.uk/news/624/cpsprodpb/CC34/production/_88067225_hi031247559.jpg"
+      headline:           "Hillary Clinton's many roles in US politics"
       synopsis:
-      time:       "44m"
-      section:    "US & Canada"
-      media-type:   "video" #video/audio/image --empty wont show the icon--
-      media-duration: "2:48"
+      time:               "44m"
+      section:            "US & Canada"
+      media-type:         "video" #video/audio/image --empty wont show the icon--
+      media-duration:     "2:48"
+      url:                "http://www.bbc.co.uk/news/world-us-canada-20874451"
 
       contributorAvatar:  ""
       contributorName:    ""

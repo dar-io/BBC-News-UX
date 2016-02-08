@@ -1,0 +1,33 @@
+.slice-cutter{
+padding-bottom: double($gel-alt-spacing-unit);
+    margin-top: double($gel-spacing-unit);
+
+    > .gel-layout {
+      height: 0;
+    }
+}
+
+.slice-cutter--keyline{
+  position: relative;
+&:after{
+  position: absolute;
+    right: 0px;
+    border-top: 1px solid #dbdbdb;
+    content: ' ';
+    @include mq($from:gel-bp-xs) {
+    left: double($gel-spacing-unit);
+    top: 0;
+    }
+    @include mq($from:gel-bp-xxl) {
+    left: double($gel-alt-spacing-unit);
+    }
+  }
+}
+
+
+.oxygen--wrap + .slice-cutter, .topic-collection + .slice-cutter{
+  margin-top:0;
+  .slice-cutter--keyline:after{
+    display: none;
+  }
+}

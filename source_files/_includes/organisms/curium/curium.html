@@ -9,166 +9,253 @@
       <div class="gel-layout gel-layout--flex">
         <!-- Item 01 -->
         <div class="gel-layout__item curium__item curium__item--1 gel-1/1@xs gel-1/1@m gel-3/4@l gel-3/4@xxl">
+         {% for atom_group in site.data.curium %}
+            {% for atom in atom_group.slot01 %}
+
           <article class="curium--reverse lead-promo gs-u-clearfix faux-block-link gel-long-primer curium--has-media">
           <div class="lead-promo__headline gel-1/3@m">
-            <h3 class="lead-promo__title faux-block-link__target gel-double-pica-bold "> <a href="#story1"> <span class="lead-promo__title-text">Security Council condemns N Korea launch</span> </a> </h3>
+            <h3 class="lead-promo__title faux-block-link__target gel-agate "> <a href="{{ atom.url }}"> <span class="lead-promo__title-text">{{ atom.headline }}</span> </a> </h3>
 </div>
 
-
+             {% if atom.image  == null %}
+              {% else %}
             <div class="lead-promo__media">
               <div class="media-island">
                 <div class="gs-o-responsive-image gs-o-responsive-image--16by9 ">
-                  <img src="http://c.files.bbci.co.uk/167FA/production/_88145129_88145127.jpg" class="sp-image-replace" width="240">
+                  <img src="{{ atom.image }}" class="sp-image-replace" width="240">
                 </div>
 
-<!-- <div class="lead-promo__content-mask">
-<div class="lead-promo__content-wrapper">
-<h3 class="curium__title faux-block-link__target gel-double-pica-bold "> <a href="#"> <span class="curium__title-text">Asylum seeker wristbands scrapped</span> </a> </h3>
 
-</div>
-</div> -->
+                {% if atom.media-type  == null %}
+                  {% else %}
+                    <span class="gs-o-media-icon--medium  gs-o-media-icon media-island__icon--bl media-island__icon">
+                      <span class="gs-o-media-icon__icon gel-icon">
+                        <svg>
+                          <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                        </svg>
+                      </span>
+                      <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                    </span>
+                  {% endif %}
+
               </div>
 
 
 
 
             </div>
+               {% endif %}
 
             <div class="lead-promo__body">
             <div class="lead-promo__content">
-                <p class="lead-promo__summary gel-long-primer gs-u-mt">The UN Security Council strongly condemns North Korea's launch of a long-range rocket, saying it will soon adopt a sanctions resolution.</p>
+                <p class="lead-promo__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
 
             <div class="lead-promo__meta gs-u-mt">
               <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
                 <li> <span class="timestamp">
-                <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">1h</time> </span>  </li>
+                <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
                 <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                  <a href="#">Asia</a> </span>
+                  <a href="#{{ atom.section }}">{{ atom.section }}</a> </span>
                 </li>
               </ul>
             </div>
 
             </div>
 
+  {% if atom.index-AlsoOne == null %}
+              {% else %}
           <div class="index-alsos">
           <div class="gel-layout gel-layout--flex">
           <div class="gel-layout__item index-alsos__item gel-1/1@m">
-            <article class="gs-u-clearfix faux-block-link gel-long-primer">
-               <p class="index-alsos__title faux-block-link__target gel-brevier "> <a href="#"> <span class="index-alsos__title-text">  Reasons behind rocket launch</span> </a> </p>
+            <article class="gs-u-clearfix gel-long-primer">
+               <p class="index-alsos__title faux-block-link__target gel-brevier "> <a href="/related-link"> <span class="index-alsos__title-text">{{ atom.index-AlsoOne}}</span> </a> </p>
             </article>
           </div>
           <div class="gel-layout__item index-alsos__item gel-1/1@m">
-            <article class="gs-u-clearfix faux-block-link gel-long-primer">
-               <p class="index-alsos__title faux-block-link__target gel-brevier "> <a href="#"> <span class="index-alsos__title-text">Wales' refugee response 'too narrow'</span> </a> </p>
+            <article class="gs-u-clearfixgel-long-primer">
+               <p class="index-alsos__title faux-block-link__target gel-brevier "> <a href="/related-link"> <span class="index-alsos__title-text">{{ atom.index-AlsoTwo}}</span> </a> </p>
             </article>
           </div>
 
 
           </div>
           </div>
-
+  {% endif %}
 
             </div>
 
 
             </article>
+
+          {% endfor %}
+          {% endfor %}
+
           </div>
 
 
-        <!-- Item 02 -->
+
+       <!-- ITEM 2 -->
         <div class="gel-layout__item curium__item curium__item--2  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
-          <article class="curium--slot gs-u-clearfix faux-block-link">
-            <div class="curium__media">
-              <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-                <img src="http://ichef.bbci.co.uk/curationkit-ichef/384x216/cpsprodpb/157F5/production/_87935088_031136148-1.jpg" class="sp-image-replace" width="240">
-              </div>
-            </div>
-            <div class="curium__body">
-              <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt"> <a href="#"> <span class="curium__title-text">Russia demands 'Putin corruption' proof</span> </a> </h3>
-                <p class="curium__summary gel-long-primer gs-u-mt">The Kremlin calls on the US Treasury to come up with proof after it told the BBC it considered...</p>
-              </div>
-
-              <div class="curium__meta">
-                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                  <li> <span class="timestamp">
-                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">Europe</a> </span>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-            </article>
-          </div>
-
-
-        <!-- Item 03 -->
-        <div class="gel-layout__item curium__item curium__item--3 gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
-          <article class="curium--slot gs-u-clearfix faux-block-link ">
-            <div class="curium__media">
-              <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-                <img src="http://ichef.bbci.co.uk/curationkit-ichef/384x216/cpsprodpb/13678/production/_87908497_hi030701139.jpg" class="sp-image-replace" width="240">
-              </div>
-            </div>
-            <div class="curium__body">
-              <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt"> <a href="#"> <span class="curium__title-text">Zika virus 'to spread across Americas'</span> </a> </h3>
-                <p class="curium__summary gel-long-primer gs-u-mt">The Zika virus is likely to spread across nearly all of the Americas, the World Health Organization has warned.</p>
-              </div>
-
-              <div class="curium__meta">
-                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                  <li> <span class="timestamp"><i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">Health</a> </span>
-                  </li>
-                </ul>
-              </div>
+          {% for atom_group in site.data.curium %}
+            {% for atom in atom_group.slot02 %}
+              <article class="curium--slot gs-u-clearfix faux-block-link">
+              {% if atom.image  == null %}
+              {% else %}
+                <div class="media-island">
+                  <div class="curium__media ">
+                    <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                      <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                    </div>
+                  </div>
+                  {% if atom.media-type  == null %}
+                  {% else %}
+                    <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                      <span class="gs-o-media-icon__icon gel-icon">
+                        <svg>
+                          <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                        </svg>
+                      </span>
+                      <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                    </span>
+                  {% endif %}
+                </div>
+              {% endif %}
+                <div class="curium__body">
+                  <div class="curium__content">
+                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="curium__title-text">{{ atom.headline }}</span> </a> </h3>
+                    {% if atom.synopsis  == null %}
+                    {% else %}
+                      <p class="curium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="curium__meta">
+                    <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                      <li> <span class="timestamp ">
+                      <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                      <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                        <a href="#">{{ atom.section }}</a> </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+          {% endfor %}
+        </div>
 
 
-            </div>
-            </article>
 
-          </div>
 
-        <!-- Item 04 -->
+
+       <!-- ITEM 3 -->
+        <div class="gel-layout__item curium__item curium__item--3  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
+          {% for atom_group in site.data.curium %}
+            {% for atom in atom_group.slot03 %}
+              <article class="curium--slot gs-u-clearfix faux-block-link">
+              {% if atom.image  == null %}
+              {% else %}
+                <div class="media-island">
+                  <div class="curium__media ">
+                    <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                      <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                    </div>
+                  </div>
+                  {% if atom.media-type  == null %}
+                  {% else %}
+                    <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                      <span class="gs-o-media-icon__icon gel-icon">
+                        <svg>
+                          <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                        </svg>
+                      </span>
+                      <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                    </span>
+                  {% endif %}
+                </div>
+              {% endif %}
+                <div class="curium__body">
+                  <div class="curium__content">
+                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="curium__title-text">{{ atom.headline }}</span> </a> </h3>
+                    {% if atom.synopsis  == null %}
+                    {% else %}
+                      <p class="curium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="curium__meta">
+                    <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                      <li> <span class="timestamp">
+                      <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                      <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                        <a href="#">{{ atom.section }}</a> </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+          {% endfor %}
+        </div>
+
+
+   <!-- Item 04 -->
         <div class="gel-layout__item curium__item curium__item--4 gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
-
-       <article class="curium--slot gs-u-clearfix faux-block-link ">
-            <div class="curium__media">
-              <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-                <img src="http://ichef.bbci.co.uk/curationkit-ichef/384x216/cpsprodpb/8202/production/_87928233_hi025732386.jpg" class="sp-image-replace" width="240">
-              </div>
-            </div>
-            <div class="curium__body">
-              <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt"> <a href="#"> <span class="curium__title-text">Tesco knowingly delayed payments</span> </a> </h3>
-                <p class="curium__summary gel-long-primer gs-u-mt"> Tesco "knowingly delayed paying money to suppliers in order to improve its own financial position", the supermarket ombudsman has found. </p>
-              </div>
-
-              <div class="curium__meta">
-                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                  <li> <span class="timestamp">
-                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">Business</a> </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </article>
-
-
-          </div>
-
-        <!-- Item 05 -->
-        <div class="gel-layout__item curium__item curium__item--5 gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
             <article class="curium--slot gs-u-clearfix faux-block-link keypoints--height--medium">
-             {% include molecules/key-points.html %}
+             {% include molecules/key-points-topstories.html %}
             </article>
           </div>
+
+       <!-- ITEM 5 -->
+        <div class="gel-layout__item curium__item curium__item--5  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
+          {% for atom_group in site.data.curium %}
+            {% for atom in atom_group.slot04 %}
+              <article class="curium--slot gs-u-clearfix faux-block-link">
+              {% if atom.image  == null %}
+              {% else %}
+                <div class="media-island">
+                  <div class="curium__media ">
+                    <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                      <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                    </div>
+                  </div>
+                  {% if atom.media-type  == null %}
+                  {% else %}
+                    <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                      <span class="gs-o-media-icon__icon gel-icon">
+                        <svg>
+                          <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                        </svg>
+                      </span>
+                      <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                    </span>
+                  {% endif %}
+                </div>
+              {% endif %}
+                <div class="curium__body">
+                  <div class="curium__content">
+                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="curium__title-text">{{ atom.headline }}</span> </a> </h3>
+                    {% if atom.synopsis  == null %}
+                    {% else %}
+                      <p class="curium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="curium__meta">
+                    <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                      <li> <span class="timestamp">
+                      <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                      <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                        <a href="#">{{ atom.section }}</a> </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+          {% endfor %}
+        </div>
+
+
+
+
 
         <!-- Item 06 -->
         <div class="gel-layout__item curium__item curium__item--5 gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
@@ -180,29 +267,51 @@
 
    <!-- Item 07 VISIBLE UNTIL GROUP C-->
         <div class="gel-layout__item curium__item curium__item--7 gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl v-u-hidden@l v-u-hidden@xxl">
-          <article class="curium--slot gs-u-clearfix faux-block-link">
-            <div class="curium__media">
-              <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-                <img src="http://ichef.bbci.co.uk/images/ic/1120xn/p03gn9xc.jpg" class="sp-image-replace" width="240">
-              </div>
-            </div>
-            <div class="curium__body">
-              <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt"> <a href="#"> <span class="curium__title-text">UK storm brings downpours and gales</span> </a> </h3>
-                <p class="curium__summary gel-long-primer gs-u-mt"> The storm that brought near-record snowfall to the eastern US brings heavy rain and high winds to much of UK.</p>
-              </div>
-
-              <div class="curium__meta">
-                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                  <li> <span class="timestamp">
-                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">UK</a> </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </article>
+   {% for atom_group in site.data.curium %}
+            {% for atom in atom_group.slot05 %}
+              <article class="curium--slot gs-u-clearfix faux-block-link">
+              {% if atom.image  == null %}
+              {% else %}
+                <div class="media-island">
+                  <div class="curium__media ">
+                    <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                      <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                    </div>
+                  </div>
+                  {% if atom.media-type  == null %}
+                  {% else %}
+                    <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                      <span class="gs-o-media-icon__icon gel-icon">
+                        <svg>
+                          <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                        </svg>
+                      </span>
+                      <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                    </span>
+                  {% endif %}
+                </div>
+              {% endif %}
+                <div class="curium__body">
+                  <div class="curium__content">
+                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="curium__title-text">{{ atom.headline }}</span> </a> </h3>
+                    {% if atom.synopsis  == null %}
+                    {% else %}
+                      <p class="curium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="curium__meta">
+                    <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                      <li> <span class="timestamp">
+                      <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                      <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                        <a href="#">{{ atom.section }}</a> </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+          {% endfor %}
           </div>
 
           </div>
@@ -219,151 +328,29 @@
 <div class="curium__river gs-u-mb@m gs-u-mt+@m gs-u-mt-@xxl gs-u-mb-@xxl">
 <div class="gel-layout gel-layout--flex">
         <!-- Headline 01 -->
-        <div class="gel-layout__item curium__item curium__item--river river__item--1 gel-1/3@m gel-1/4@l gel-1/1@xxl v-u-hidden@xs v-u-hidden@s v-u-hidden@m">
+          {% for atom_group in site.data.curium %}
+            {% for atom in atom_group.river %}
+        <div class="gel-layout__item curium__item curium__item--river river__item--{{ atom.id }} gel-1/3@m gel-1/4@l gel-1/1@xxl {{ atom.visibility-classes }}">
           <article class="gs-u-clearfix faux-block-link">
             <div class="curium__body">
               <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-english"> <a href="#"> <span class="curium__title-text">UK storm brings downpours and gales</span> </a> </h3>
+                <h3 class="curium__title faux-block-link__target gel-english"> <a href="{{ atom.url }}"> <span class="curium__title-text">{{ atom.headline }}</span> </a> </h3>
               </div>
 
               <div class="curium__meta">
                 <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
                   <li> <span class="timestamp">
-                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
+                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
                   <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">UK</a> </span>
+                    <a href="{{ atom.section }}">{{ atom.section }}</a> </span>
                   </li>
                 </ul>
               </div>
             </div>
             </article>
         </div>
-
-        <!-- Headline 02 -->
-        <div class="gel-layout__item curium__item curium__item--river river__item--2 gel-1/3@m gel-1/4@l gel-1/1@xxl">
-          <article class="gs-u-clearfix faux-block-link">
-            <div class="curium__body">
-              <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-english"> <a href="#"> <span class="curium__title-text">Replace ANC leaders - Mandela friend</span> </a> </h3>
-              </div>
-
-              <div class="curium__meta">
-                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                  <li> <span class="timestamp">
-                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">Africa</a> </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </article>
-        </div>
-
-        <!-- Headline 03 -->
-        <div class="gel-layout__item curium__item curium__item--river river__item--3 gel-1/3@m gel-1/4@l gel-1/1@xxl">
-          <article class="gs-u-clearfix faux-block-link">
-            <div class="curium__body">
-              <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-english"> <a href="#"> <span class="curium__title-text">Israel's Peres taken to hospital</span> </a> </h3>
-              </div>
-
-              <div class="curium__meta">
-                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                  <li> <span class="timestamp">
-                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">Middle East</a> </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </article>
-        </div>
-        <!-- Headline 04 -->
-        <div class="gel-layout__item curium__item curium__item--river river__item--4 gel-1/3@m gel-1/4@l gel-1/1@xxl">
-          <article class="gs-u-clearfix faux-block-link">
-            <div class="curium__body">
-              <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-english"> <a href="#"> <span class="curium__title-text">UK 'considering' refugee children call
-</span> </a> </h3>
-              </div>
-
-              <div class="curium__meta">
-                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                  <li> <span class="timestamp">
-                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">UK Politics</a> </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </article>
-        </div>
-
-        <!-- Headline 05 -->
-        <div class="gel-layout__item curium__item curium__item--river river__item--5 gel-1/3@m gel-1/4@l gel-1/1@xxl">
-          <article class="gs-u-clearfix faux-block-link">
-            <div class="curium__body">
-              <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-english"> <a href="#"> <span class="curium__title-text">Nearly 60 Iraq killings claims dropped</span> </a> </h3>
-              </div>
-
-              <div class="curium__meta">
-                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                  <li> <span class="timestamp">
-                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">UK</a> </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </article>
-        </div>
-
-        <!-- Headline 06 -->
-        <div class="gel-layout__item curium__item curium__item--river river__item--6 gel-1/3@m gel-1/4@l gel-1/1@xxl">
-          <article class="gs-u-clearfix faux-block-link">
-            <div class="curium__body">
-              <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-english"> <a href="#"> <span class="curium__title-text">IS 'posts Paris attackers video online'</span> </a> </h3>
-              </div>
-
-              <div class="curium__meta">
-                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                  <li> <span class="timestamp">
-                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">Middle East</a> </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </article>
-        </div>
-
-        <!-- Headline 07 -->
-        <div class="gel-layout__item curium__item curium__item--river river__item--7 gel-1/3@m gel-2/4@l gel-1/1@xxl">
-          <article class="gs-u-clearfix faux-block-link">
-            <div class="curium__body">
-              <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-english"> <a href="#"> <span class="curium__title-text">Charities given 'last chance' on fundraising</span> </a> </h3>
-              </div>
-
-              <div class="curium__meta">
-                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                  <li> <span class="timestamp">
-                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                    <a href="#">UK</a> </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </article>
-        </div>
+    {% endfor %}
+          {% endfor %}
 
   </div>
 

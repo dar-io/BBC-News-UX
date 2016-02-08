@@ -1,0 +1,159 @@
+#BACKGROUND IMAGE
+
+#SLOT ONE
+- slot01:
+    - animOrder:          "1"
+      image:              "http://ichef.bbci.co.uk/curationkit-ichef/624x216/cpsprodpb/3575/production/_88158631_torture_getty_624.jpg"
+      headline:           "Syria 'exterminating detainees' - report"
+      synopsis:           "The Syrian government has carried out a state policy of extermination against thousands of detainees, UN human rights investigators say."
+      time:               "30m"
+      section:            "Middle East"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.co.uk/news/world-middle-east-35521801"
+
+      index-AlsoOne:      "Syria's disappeared"
+      index-AlsoTwo:      "Artist's images of detention"
+
+      contributorAvatar:  ""
+      contributorName:    ""
+      contributorTitle:   ""
+
+#SLOT TWO
+- slot02:
+    - animOrder:          "1"
+      image:              "http://ichef.bbci.co.uk/news/400/cpsprodpb/AD4C/production/_88146344_88146343.jpg"
+      headline:           "Why did North Korea launch a rocket?"
+      synopsis:           "Bruce Bennett looks at the reasons why North Korean may have decided to launch a long-range rocket"
+      time:               "30m"
+      section:            "Asia"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.co.uk/news/world-asia-35516199"
+
+
+#SLOT THREE
+- slot03:
+    - animOrder:          "1"
+      image:              "http://ichef-1.bbci.co.uk/news/624/cpsprodpb/D3B3/production/_88159145_carnewquay_getty.jpg"
+      headline:           "Storm Imogen lashing parts of the UK"
+      synopsis:           "About 13,000 homes are without power and travel is disrupted as Storm Imogen brings heavy rain and winds of up to 96mph to parts of Britain."
+      time:               "55m"
+      section:            "UK"
+      media-type:         "video" #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.co.uk/news/world-middle-east-35521801"
+
+
+#SLOT FOUR
+- slot04:
+    - animOrder:          "1"
+      image:              "http://c.files.bbci.co.uk/1320A/production/_88064387_88064382.jpg"
+      headline:           "PM denies scaremongering over 'Jungle'"
+      synopsis:           "David Cameron rejects claims he is 'scaremongering' by saying that the 'Jungle' migrant camp in Calais could move to England if the UK leaves the EU."
+      time:               "21m"
+      section:            "EU Referendum"
+      media-type:           #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.co.uk/news/uk-politics-eu-referendum-35519210"
+
+
+
+#KEYPOINTS LIVE
+- keypointsHeadline:
+    - headline:          "BBC Local Live: Storm hits South West"
+
+- keypoints-live:
+    - headline:           "Storm Imogen causes disruption across the South West"
+      time:               "16:27" #duration format 00:00
+      media-type:         "text" #media/text
+      url:                "/post01"
+
+    - headline:           "RSPCA Inspector goes missing while working in west Cornwall"
+      time:               "16:18" #duration format 00:00
+      media-type:         "text" #media/text
+      url:                "/post01"
+
+    - headline:           "All trains in and out of Cornwall cancelled as tree hits main line: Passengers evacuated"
+      time:               "16:08" #duration format 00:00
+      media-type:         "text" #media/text
+      url:                "/post01"
+
+
+
+#SLOT FIVE **HIDDEN STORY**
+- slot05:
+    - animOrder:          "1"
+      image:              "http://ichef-1.bbci.co.uk/news/624/cpsprodpb/10B5C/production/_88144486_88144485.jpg"
+      headline:           "Zika virus fails to spoil carnival"
+      synopsis:           "Millions of people celebrate the first day of the annual carnival festivities across Brazil despite concerns about the recent Zika virus outbreak."
+      time:               "47m"
+      section:            "Latin America & Caribbean"
+      media-type:           #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.co.uk/news/world-latin-america-35514811"
+
+#SLOT FEATURED
+- featured:
+    - animOrder:          "1"
+      image:              "/assets/img/molecules/stars.jpg"
+      headline:           "Reach for the stars"
+      synopsis:           "What are your chances of becoming an astronaut?"
+      time:               "21m"
+      section:            "UK"
+      media-type:           #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "#featured"
+
+
+
+#RIVER HEADLINES
+- river:
+    - headline:           "Zika virus fails to spoil carnival"
+      time:               "47m"
+      section:            "Latin America & Caribbean"
+      url:                "http://www.bbc.co.uk/news/world-latin-america-35514811"
+      id:                 "1"
+      visibility-classes: "v-u-hidden@xs v-u-hidden@s v-u-hidden@m"
+
+    - headline:           "Deepcut death 'may not be suicide'"
+      time:               "1h"
+      section:            "Surrey"
+      url:                "http://www.bbc.co.uk/news/uk-england-surrey-35523305"
+      id:                 "2"
+      visibility-classes:
+
+    - headline:           "Pilot in prisons seeks to cut violence"
+      time:               "1h"
+      section:            "UK"
+      url:                "http://www.bbc.co.uk/news/uk-35518477"
+      id:                 "3"
+      visibility-classes:
+
+    - headline:           "Twelve men jailed for abusing girl, 14"
+      time:               "2h"
+      section:            "Leeds & West Yorkshire"
+      url:                "http://www.bbc.co.uk/news/uk-england-leeds-35524340"
+      id:                 "4"
+      visibility-classes:
+
+    - headline:           "Georgy Girl author Forster dies"
+      time:               "2h"
+      section:            "Entertainment & Arts"
+      url:                "http://www.bbc.co.uk/news/entertainment-arts-35520860"
+      id:                 "5"
+      visibility-classes:
+
+    - headline:           "Chicago officer sues shot teen's family"
+      time:               "7h"
+      section:            "US & Canada"
+      url:                "http://www.bbc.co.uk/news/world-us-canada-35519757"
+      id:                 "6"
+      visibility-classes:
+
+    - headline:           "Leopard mauls six in Indian school"
+      time:               "7h"
+      section:            "India"
+      url:                "http://www.bbc.co.uk/news/world-asia-india-35519414"
+      id:                 "7"
+      visibility-classes:

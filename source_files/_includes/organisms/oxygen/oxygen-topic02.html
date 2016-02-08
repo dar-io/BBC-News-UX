@@ -1,25 +1,37 @@
 <section class="oxygen--wrap gs-u-clearfix">
-  {% for atom_group in site.data.oxygen-topic02 %}
-    {% for atom in atom_group.background-image %}
-      <style type="text/css">
-      .oxygen--wrap:before { background-image:url({{ baseurl }}{{ atom.background-image }}); }
-      .oxygen--wrap:after { background-color:{{ atom.background-colour }}; }
-      </style>
-    {% endfor %}
-  {% endfor %}
-  <div class="gel-wrap">
+
+
+    <div class="gel-wrap">
     <div class="gel-layout">
 
 
       {% for atom_group in site.data.oxygen-topic02 %}
         {% for atom in atom_group.header-title %}
-          <div class="gel-layout__item slice-header slice-header--keyline">
-            <span class="topic-tag__plus-add-button">{% include molecules/add-button.html %}
-              <div class="slice-header--title  faux-block-link"><h2 class="faux-block-link__target gel-double-pica"><a href="">{{ atom.header-title }}</a></h2></div>
+          <div class="gel-layout__item slice-header">
+            <span class="topic-tag__plus-add-button">
+              <div class="slice-header--title  faux-block-link"><h2 class="faux-block-link__target gel-double-pica"><a href="{{ atom.url }}">{{ atom.header-title }}</a></h2></div>
+              {% include molecules/add-button-with-text.html %}
             </span>
           </div>
         {% endfor %}
       {% endfor %}
+
+</div>
+</div>
+
+  {% for atom_group in site.data.oxygen-topic02 %}
+    {% for atom in atom_group.background-image %}
+<div style="background-image:url({{ baseurl }}{{ atom.background-image }});" class="oxigen--item oxigen--item02">
+<style>
+.oxigen--item02:before{background-color:{{ atom.background-colour}};}
+</style>
+
+    {% endfor %}
+  {% endfor %}
+
+  <div class="gel-wrap">
+    <div class="gel-layout">
+
 
 
     </div>
@@ -33,10 +45,10 @@
               <article class="oxygen--slot gs-u-clearfix faux-block-link u-text-on-dark-bg">
                 <div class="oxygen__body">
                   <div class="oxygen__content">
-                            {% for atom_group in site.data.oxygen-topic02 %}
+                  {% for atom_group in site.data.oxygen-topic02 %}
             {% for atom in atom_group.slot01 %}
                     <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
-                             {% endfor %}
+                        {% endfor %}
           {% endfor %}
                   </div>
                 </div>
@@ -50,8 +62,8 @@
           {% for atom_group in site.data.oxygen-topic02 %}
             {% for atom in atom_group.slot02 %}
               <article class="oxygen--slot gs-u-clearfix faux-block-link">
-                {% if atom.media  == null %}
-                 {% else %}
+              {% if atom.image  == null %}
+              {% else %}
                 <div class="media-island">
                   <div class="oxygen__media ">
                     <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
@@ -70,10 +82,10 @@
                     </span>
                   {% endif %}
                 </div>
-                {% endif %}
+              {% endif %}
                 <div class="oxygen__body gs-u-pl gs-u-pr">
                   <div class="oxygen__content">
-                    <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt gs-u-mb"> <a href="#"> <span class="oxygen__title-text">{{ atom.headline }}</span> </a> </h3>
+                    <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt gs-u-mb"> <a href="{{ atom.url }}"> <span class="oxygen__title-text">{{ atom.headline }}</span> </a> </h3>
                     {% if atom.synopsis  == null %}
                     {% else %}
                       <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
@@ -100,6 +112,8 @@
           {% for atom_group in site.data.oxygen-topic02 %}
             {% for atom in atom_group.slot03 %}
               <article class="oxygen--slot gs-u-clearfix faux-block-link">
+                {% if atom.image  == null %}
+              {% else %}
                 <div class="media-island">
                   <div class="oxygen__media ">
                     <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
@@ -118,9 +132,10 @@
                     </span>
                   {% endif %}
                 </div>
+              {% endif %}
                 <div class="oxygen__body gs-u-pl gs-u-pr">
                   <div class="oxygen__content">
-                    <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt gs-u-pb++ gs-u-mb"> <a href="#"> <span class="oxygen__title-text">{{ atom.headline }}</span> </a> </h3>
+                    <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="oxygen__title-text">{{ atom.headline }}</span> </a> </h3>
                     {% if atom.synopsis  == null %}
                     {% else %}
                       <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
@@ -147,6 +162,8 @@
           {% for atom_group in site.data.oxygen-topic02 %}
             {% for atom in atom_group.slot04 %}
               <article class="oxygen--slot gs-u-clearfix faux-block-link">
+              {% if atom.image  == null %}
+              {% else %}
                 <div class="media-island">
                   <div class="oxygen__media ">
                     <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
@@ -165,9 +182,10 @@
                     </span>
                   {% endif %}
                 </div>
+              {% endif %}
                 <div class="oxygen__body gs-u-pl gs-u-pr">
                   <div class="oxygen__content">
-                    <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt gs-u-pb++ gs-u-mb"> <a href="#"> <span class="oxygen__title-text">{{ atom.headline }}</span> </a> </h3>
+                    <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="oxygen__title-text">{{ atom.headline }}</span> </a> </h3>
                     {% if atom.synopsis  == null %}
                     {% else %}
                       <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
@@ -190,12 +208,12 @@
 
 
         <!-- ITEM 5 -->
-        <div class="gel-layout__item oxygen__item oxygen__item--5 gel-1/2@xs gel-1/1@m gel-1/1@l gel-2/5@xxl">
-          <article class="oxygen--slot gs-u-clearfix faux-block-link u-text-on-dark-bg">
+        <div class="gel-layout__item oxygen__item oxygen__item--5 gel-1/2@xs gel-1/1@m gel-3/4@l gel-4/5@xxl">
+          <article class="oxygen--slot gs-u-clearfix u-text-on-dark-bg">
             <div class="oxygen__body">
               <div class="oxygen__content">
-                <div class="topic-tag__subheader">
-                  <h2 class="topic-tag__subheader--title gel-long-primer">Related Topics:</h2>
+                <div class="topic-tag__subheader branch gs-u-mt">
+                  <h2 class="topic-tag__subheader--title gel-long-primer gs-u-mb">Related Topics:</h2>
                 </div>
                 <ul class="list-inline topic-tag__container">
                   {% for atom_group in site.data.oxygen-topic02 %}
@@ -209,8 +227,15 @@
           </article>
         </div>
 
+        <!-- ITEM 5 -->
+        <div class="gel-layout__item oxygen__item oxygen__item--6 gel-1/2@xs gel-1/1@m gel-1/4@l gel-1/5@xxl">
+          <article class="oxygen--slot gs-u-clearfix faux-block-link u-text-on-dark-bg">
+            <span class="slice-header--bottom-left faux-block-link__target--on-dark"><span class="gel-great-primer">See all 18 stories </span><i class="next__icon gelicon gelicon--next gel-long-primer"></i></span>
+          </article>
+        </div>
 
       </div>
     </div>
   </div>
+ </div>
 </section>

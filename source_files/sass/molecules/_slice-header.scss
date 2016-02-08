@@ -5,7 +5,7 @@
 .slice-header{
   position: relative;
   padding-bottom: double($gel-spacing-unit);
-  margin-top: quadruple($gel-spacing-unit);
+  margin-top: 0;
   padding-top: 0;
 
 }
@@ -16,20 +16,6 @@
   position: absolute;
   right: 0;
   top: halve($gel-spacing-unit);
-}
-
-.slice-header--keyline:after{
-  position: absolute;
-    right: 0px;
-    border-top: 1px solid #dbdbdb;
-    content: ' ';
-    @include mq($from:gel-bp-xs) {
-    left: double($gel-spacing-unit);
-    top: double(-$gel-alt-spacing-unit);
-    }
-    @include mq($from:gel-bp-xxl) {
-    left: double($gel-alt-spacing-unit);
-    }
 }
 
 .topic-collection {

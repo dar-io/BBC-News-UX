@@ -1,19 +1,20 @@
 
+   {% for atom_group in site.data.curium %}
+            {% for atom in atom_group.featured %}
 
-
- <article class="featured gs-u-clearfix faux-block-link " style="background-image: url(http://ichef.bbci.co.uk/curationkit-ichef/684x216/cpsprodpb/BECD/production/_87954884_030764246-1.jpg);">
+ <article class="featured gs-u-clearfix faux-block-link " style="background-image: url({{ atom.image }});">
 
 
         <div class="featured__content">
         <div class="featured__body">
-        <span class="featured--label promo__label UK headline gel-minion"> Magazine </span>
+        <span class="featured--label promo__label UK headline gel-minion"> {{ atom.section }} </span>
             <h3 class="featured__title faux-block-link__targetgs-u-mt">
 
-            <a href="#"> <span class="curium__title-text gel-paragon ">A gang goes global</span> </a> </h3>
+            <a href="{{ atom.url }}"> <span class="curium__title-text gel-paragon faux-block-link__target--on-dark">{{ atom.headline }}</span> </a> </h3>
 
 
 
-            <p class="featured__summary gel-long-primer gs-u-mt"> The vicious world of Nigeria's sex-trafficking 'Air Lords'</p>
+            <p class="featured__summary gel-long-primer gs-u-mt"> {{ atom.synopsis }}</p>
 
           </div>
 
@@ -24,3 +25,6 @@
 
 
         </article>
+
+            {% endfor %}
+          {% endfor %}

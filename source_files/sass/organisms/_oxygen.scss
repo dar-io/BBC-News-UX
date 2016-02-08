@@ -5,36 +5,32 @@
 .oxygen--wrap{
   position: relative;
   overflow: hidden;
-  padding-bottom: double($gel-alt-spacing-unit);
-  @include mq($from:gel-bp-xs, $until:gel-bp-xxl) {
-    padding-bottom: double($gel-spacing-unit);
-  }
-  &:before{
-    background-color:#edfefe;
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 76px;
-    background-size: cover;
-    background-position: center center;
-    @include mq($from:gel-bp-xs, $until:gel-bp-l) {
-      top: 108px;
-    }
-  }
-   &:after{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 76px;
-    z-index: 0;
-     @include mq($from:gel-bp-xs, $until:gel-bp-l) {
-      top: 108px;
-    }
-   }
+  // &:before{
+  //   background-color:#edfefe;
+  //   content: '';
+  //   position: absolute;
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 76px;
+  //   background-size: cover;
+  //   background-position: center center;
+  //   @include mq($from:gel-bp-xs, $until:gel-bp-l) {
+  //     top: 108px;
+  //   }
+  // }
+  //  &:after{
+  //   content: '';
+  //   position: absolute;
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 76px;
+  //   z-index: 0;
+  //    @include mq($from:gel-bp-xs, $until:gel-bp-l) {
+  //     top: 108px;
+  //   }
+  //  }
 
    .topic-tag__list-item{
     .topic-tag__name{
@@ -95,12 +91,7 @@
   position: relative;
   z-index: 2;
    .oxygen__item--5{
-   @include mq($from:gel-bp-xxl){
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   padding-left: 0;
-   }
+
  }
 }
 
@@ -123,3 +114,40 @@
  }
 
 }
+
+
+.oxigen--item{
+  position:relative;
+  padding-bottom: double($gel-alt-spacing-unit);
+  background-size: cover;
+  background-position: center center;
+   @include mq($from:gel-bp-xs, $until:gel-bp-l) {
+    background-position-y: 32px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+  &:before{
+    background-color:rgba(0, 0, 0, 0.6);
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+
+    @include mq($from:gel-bp-xs, $until:gel-bp-l) {
+      top: 32px;
+    }
+  }
+ }
+
+ .slice-header--bottom-left{
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  .next__icon{
+    vertical-align: bottom;
+    color: $turquoise;
+  }
+ }

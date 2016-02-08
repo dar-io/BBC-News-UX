@@ -1,40 +1,42 @@
 #BACKGROUND IMAGE
 
 - header-title:
-    - header-title:  "EU Referendum"
+    - header-title:       "EU Referendum"
+      url:                "#topic two"
 
 - background-image:
-    - background-image:  ""
+    - background-image:   ""
       background-colour:  "#3B4147"
 
 
 #TOPIC TAGS
 - topic-tags:
-    - topic-tag:  "UK Politics"
-    - topic-tag:  "European Union"
-    - topic-tag:  "UK and EU"
+    - topic-tag:          "UK Politics"
+    - topic-tag:          "European Union"
+    - topic-tag:          "UK and EU"
 
 
 #SLOT ONE
 - slot01:
-    - animOrder:  "1"
-      synopsis:   "The United Kingdom European Union membership referendum is scheduled to take place in the UK and Gibraltar before the end of 2017."
+    - animOrder:          "1"
+      synopsis:           "The United Kingdom European Union membership referendum is scheduled to take place in the UK and Gibraltar before the end of 2017."
 
 - slot01:
-    - animOrder:  "1"
-      synopsis:   "Membership of the European Union has been a controversial issue in the UK since the country joined the then European Economic Community in 1973."
+    - animOrder:          "1"
+      synopsis:           "Membership of the European Union has been a controversial issue in the UK since the country joined the then European Economic Community in 1973."
 
 
 #SLOT TWO
 - slot02:
-    - animOrder:  "1"
+    - animOrder:          "1"
       image:
-      headline:   "EU reforms: 'Audacious demand' taken seriously by leaders"
-      synopsis:   "For the first time in EU history, one country has stood up and threatened to leave if the EU doesn't dance to its reformist tune."
-      time:       "2m"
-      section:    "EU Referendum"
-      media-type:   #video/audio/image --empty wont show the icon--
-      media-duration: "2:30"
+      headline:           "EU reforms: 'Audacious demand' taken seriously by leaders"
+      synopsis:           "For the first time in EU history, one country has stood up and threatened to leave if the EU doesn't dance to its reformist tune."
+      time:               "2m"
+      section:            "EU Referendum"
+      media-type:         #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.com/news/uk-politics-eu-referendum-35479551"
 
       contributorAvatar:  ""
       contributorName:    ""
@@ -43,14 +45,15 @@
 
 #SLOT THREE
 - slot03:
-    - animOrder:  "1"
-      image:      "http://ichef-1.bbci.co.uk/news/660/cpsprodpb/14BBC/production/_87942948_cfe30fec-c792-4872-b3d0-d6a21ade7130.jpg"
-      headline:   "EU exit 'will cut migration by 100,000'"
+    - animOrder:          "1"
+      image:              "http://ichef-1.bbci.co.uk/news/660/cpsprodpb/14BBC/production/_87942948_cfe30fec-c792-4872-b3d0-d6a21ade7130.jpg"
+      headline:           "EU exit 'will cut migration by 100,000'"
       synopsis:
-      time:       "2m"
-      section:    "UK Immigration"
-      media-type:   #video/audio/image --empty wont show the icon--
-      media-duration: "1:52"
+      time:               "2m"
+      section:            "UK Immigration"
+      media-type:         #video/audio/image --empty wont show the icon--
+      media-duration:     "1:52"
+      url:                "http://www.bbc.co.uk/news/uk-politics-35414310"
 
       contributorAvatar:  ""
       contributorName:    ""
@@ -58,14 +61,15 @@
 
 #SLOT THREE
 - slot04:
-    - animOrder:  "1"
-      image:      "http://ichef-1.bbci.co.uk/news/660/cpsprodpb/6BF2/production/_88043672_01536c68-e7e5-42da-b0ef-943369d518c7.jpg"
-      headline:   "What do MPs think about EU?"
+    - animOrder:          "1"
+      image:              "http://ichef-1.bbci.co.uk/news/660/cpsprodpb/6BF2/production/_88043672_01536c68-e7e5-42da-b0ef-943369d518c7.jpg"
+      headline:           "What do MPs think about EU?"
       synopsis:
-      time:       "5h"
-      section:    "EU Referendum"
-      media-type:   #video/audio/image --empty wont show the icon--
-      media-duration: "20:00"
+      time:               "5h"
+      section:            "EU Referendum"
+      media-type:         #video/audio/image --empty wont show the icon--
+      media-duration:     "2:05"
+      url:                "http://www.bbc.co.uk/news/uk-politics-eu-referendum-35466853"
 
       contributorAvatar:  ""
       contributorName:    ""

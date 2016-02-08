@@ -1,11 +1,23 @@
 .nw-c-toggle-button__indicator--add {
-    background-color: #3179b5;
+    background-color: #006ef0;
+}
+
+.nw-c-toggle-button__indicator--large{
+    min-width: 32px;
+    height: 32px;
+}
+
+.nw-c-toggle-button__indicator--medium{
+    min-width:28px;
+    height: 28px;
+    padding-left: 8px;
+    padding-right: 8px;
+
 }
 
 .nw-c-toggle-button__indicator {
     display: table-cell;
-    min-width: 32px;
-    height: 32px;
+
     vertical-align: middle;
     text-align: center;
     color: #fff;
@@ -19,3 +31,10 @@
     margin-left: $gel-spacing-unit;
     a{line-height:32px;}
   }
+.add-text{
+  padding-left: 4px;
+}
+
+.slice-header--title{
+  margin-right: double($gel-spacing-unit);
+}

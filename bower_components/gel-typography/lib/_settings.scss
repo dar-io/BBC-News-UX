@@ -23,7 +23,7 @@ $gel-type-namespace: $gel-namespace !default;
 //
 // @type String
 //
-$gel-type-touch-class: 'no-touch' !default;
+$gel-type-touch-class: 'no-touch-' !default;
 
 // Which typography group contains the base or core typography styles
 //
@@ -116,6 +116,20 @@ $gel-type-settings: (
             'font-weight': bold,
             'letter-spacing': -1px
         )
+    ),
+    'agate': (
+       'group-a': (
+         'font-size': 27px,
+         'line-height': 32px
+       ),
+       'group-c': (
+         'font-size': 27px,
+         'line-height': 32px
+       ),
+       'group-d': (
+         'font-size': 27px,
+         'line-height': 32px
+       )
     ),
     'double-pica': (
         'group-a': (

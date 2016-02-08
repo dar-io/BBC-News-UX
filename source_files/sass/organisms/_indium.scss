@@ -8,7 +8,6 @@
 }
 
 .indium--wrap{
-  margin-top: $gel-spacing-unit;
   background-color: #f2f2f2;
  @include mq($from:gel-bp-xs) {
   padding-top: double($gel-spacing-unit);

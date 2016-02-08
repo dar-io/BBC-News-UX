@@ -13,7 +13,7 @@
 .keypoints--height--small {
 
   .lx-keypoints-component-wrap{
-    max-height: 236px;
+    max-height: 246px;
     overflow: hidden;
   }
 }
@@ -24,21 +24,20 @@
 }
 .lx-keypoints-component-wrap {
     position:relative;
-    border-top: 5px solid #cb0101;
-    // border-left: 1px solid #ededed;
-    padding-top: 4px;
-     // padding: 4px 6px 0px 6px;
-    // border-right: 1px solid #ededed;
+    border-top: 2px solid #cb0101;
+     border-left: 1px solid #ededed;
+     padding: 4px 6px 0px 6px;
+     border-right: 1px solid #ededed;
 
 
     @include mq($from:gel-bp-m) {
-      // margin-left: -$gel-spacing-unit;
-      // margin-right: -$gel-spacing-unit;
+       margin-left: halve(-$gel-spacing-unit);
+       margin-right: halve(-$gel-spacing-unit);
     }
 
     @include mq($from:gel-bp-xxl) {
-      // margin-left: -$gel-alt-spacing-unit;
-      // margin-right: -$gel-alt-spacing-unit;
+       margin-left: halve(-$gel-spacing-unit);
+       margin-right: halve(-$gel-spacing-unit);
     }
     .lx-c-key-points{
       position:relative;
@@ -72,8 +71,8 @@
 
     &:before {
         position: absolute;
-        top: 18px;
-        left: 8px;
+        top: 22px;
+        left: 9px;
         bottom: -10px;
 
         width: 1px;
@@ -97,8 +96,8 @@
 }
 
 .lx-c-key-points__icon {
-    width: double($gel-spacing-unit);
-    height: double($gel-spacing-unit);
+    width: 19px;
+    height: 18px;
 
     @include theme('sport') {
         color: $sp-c-live-blue;
@@ -134,4 +133,12 @@
   svg{
     fill: $news-brand-red;
   }
+}
+
+.curium--slot {
+  .lx-keypoints-component-wrap{
+    max-height: 332px;
+    overflow: hidden;
+  }
+
 }

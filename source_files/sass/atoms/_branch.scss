@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    # BRANCH
+\*------------------------------------*/
+
+.branch{
+  position: relative;
+  &:before{
+    content: '';
+    display: block;
+    background-color: $turquoise;
+    height: 2px;
+    width: 72px;
+    position: absolute;
+    top: -$gel-spacing-unit;
+  }
+  &.topic--slice{
+     &:before{
+      background-color: $turquoise;
+     }
+  }
+}
+
