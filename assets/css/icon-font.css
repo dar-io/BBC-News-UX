@@ -29,6 +29,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'gel-icons';
+  src:url('../fonts/GELIconsFull-Book.eot');
+  src:url('../fonts/GELIconsFull-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GELIconsFull-Book.ttf') format('truetype'),
+    url('../fonts/GELIconsFull-Book.woff') format('woff'),
+    url('../fonts/GELIconsFull-Book.svg#gelicons-social') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
 .gelicon {
     font-family: 'gelicons-core';
 }
@@ -425,4 +439,137 @@
 }
 .gelicon--digg:before {
     content: "\e30a";
+}
+
+
+/*WEATHER*/
+
+
+.weather-icon {
+    position: absolute;
+    left: 0;
+}
+
+.icon-cloud,.icon-drizzle,.icon-hail,.icon-snow,.icon-snow-double {
+    color: #CECECE;
+}
+
+.icon-cloud:before {
+    content: '\F402';
+}
+
+.icon-drizzle:before {
+    content: '\F40D';
+}
+
+.icon-hail:before {
+    content: '\F40B';
+}
+
+.icon-snow:before {
+    content: '\F408';
+}
+
+.icon-snow-double:before {
+    content: '\F409';
+}
+
+.icon-cloud-dark,.icon-cloud-dark-open,.icon-fog,.icon-hazy,.icon-mist {
+    color: #000;
+}
+
+.icon-cloud-dark:before {
+    content: '\F402';
+}
+
+.icon-cloud-dark-open:before {
+    content: '\F403';
+}
+
+.icon-fog:before {
+    content: '\F40E';
+}
+
+.icon-hazy:before {
+    content: '\F40F';
+}
+
+.icon-mist:before {
+    content: '\F410';
+}
+
+.icon-moon,.icon-moon-rays {
+    color: #AEAEAE;
+}
+
+.icon-moon:before {
+    content: '\F400';
+}
+
+.icon-moon-rays:before {
+    content: '\F405';
+}
+
+.icon-rain,.icon-rain-double-drop,.icon-rain-drop {
+    color: #5896CC;
+}
+
+.icon-rain:before {
+    content: '\F40A';
+}
+
+.icon-rain-drop:before {
+    content: '\F406';
+}
+
+.icon-rain-double-drop:before {
+    content: '\F407';
+}
+
+.icon-sun,.icon-sun-rays,.icon-thunder {
+    color: #F8D34B;
+}
+
+.icon-sun:before {
+    content: '\F401';
+}
+
+.icon-sun-rays:before {
+    content: '\F404';
+}
+
+.icon-thunder:before {
+    content: '\F40C';
+}
+
+.icon-sand-storm,.icon-tornado {
+    color: #000;
+}
+
+.icon-sand-storm:before {
+    content: '\F411';
+}
+
+.icon-tornado:before {
+    content: '\F412';
+}
+
+.icon-locate,.icon-search {
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-family: gel-icons;
+}
+
+.icon-search:before {
+    line-height: 36px;
+    font-size: 31px;
+    content: '\E613';
+}
+
+.icon-locate:before {
+    line-height: 12px;
+    font-size: 36px;
+    content: '\E600';
 }
