@@ -39,23 +39,23 @@
         color: #ffffff;
     }
   .news .primary-nav__item--full-highlight {
-        background: #121212
+        background: #121212;
     }
   .news .primary-nav__item--full-highlight .primary-nav__link {
-        color: #fff
+        color: #fff;
     }
   .news .primary-nav__item--full-highlight .primary-nav__link-text {
-        border-left: 1px solid transparent
+        border-left: 1px solid transparent;
     }
   .news .primary-nav__item--full-highlight+.primary-nav__item .primary-nav__link-text {
-        border-left: 1px solid transparent
+        border-left: 1px solid transparent;
     }
   .news .primary-nav__item--not-full-highlight .primary-nav__link {
-        border-bottom: 4px solid #121212
+        border-bottom: 4px solid #121212;
     }
   .news .primary-nav__item--pinned {
         display: block;
-        border-left: 1px solid #D03838
+        border-left: 1px solid #D03838;
     }
   .news .primary-nav__link:hover {
         border-bottom: 4px solid #ffffff;
@@ -102,13 +102,13 @@
     .global-header__wrap {
         max-width: 1008px;
         margin: 0 auto;
-        position: relative
+        position: relative;
     }
 }
 
 @media (min-width: 80em) {
     .global-header__wrap {
-        max-width:1280px
+        max-width:1280px;
     }
 }
 
@@ -118,7 +118,7 @@
     margin-bottom: 0.75rem;
     margin-left: 8px;
     margin-right: 8px;
-    position: relative
+    position: relative;
 }
 @media (min-width: 15em) {
     .global-header__logo {
@@ -136,11 +136,11 @@
 .global-header__logo:visited,
 .global-header__logo:active,
 .global-header__logo:hover {
-    color: #000;
+    color: #fff;
     text-decoration: none
 }
 .global-header__font-icon {
-    display: none
+    display: none;
 }
 @media (min-width: 15em) {
     .font-face .global-header__font-icon {
@@ -158,7 +158,7 @@
 @media (min-width: 37.5em) {
     .font-face .global-header__font-icon {
         font-size: 1.8125rem;
-        line-height: 2.875rem
+        line-height: 2.875rem;
     }
 }
 .global-header__beta {
@@ -183,12 +183,12 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border: 1px solid #c6af36;
-    color: #000
+    color: #000;
 }
 @media (min-width: 15em) {
     .touch .global-header__all-sports-button {
         padding-top: 0.4375rem;
-        padding-bottom: 0.4375rem
+        padding-bottom: 0.4375rem;
     }
 }
 @media (min-width: 25em) {
@@ -207,7 +207,7 @@
 }
 .touch .global-header__all-sports-text {
     font-size: 1rem;
-    line-height: 1.375rem
+    line-height: 1.375rem;
 }
 @media (min-width: 15em) {
     .global-header__all-sports-button--active {
@@ -231,7 +231,7 @@
 .global-header__burger {
     position: relative;
     top: 1px;
-    margin-right: 8px
+    margin-right: 8px;
 }
 @media (min-width: 15em) {
     .global-header__burger {
@@ -241,16 +241,16 @@
 @media (min-width: 15em) {
     .font-face .global-header__burger:before {
         position: absolute;
-        top: -2px
+        top: -2px;
     }
 }
 @media (min-width: 15em) {
     .global-header__image-icon {
-        display: none
+        display: none;
     }
 }
 .global-header__sport-text {
-    display: none
+    display: none;
 }
 @media (min-width: 15em) {
     .global-header__sport-text {
@@ -268,7 +268,7 @@
     }
 }
 .global-header__section {
-    display: none
+    display: none;
 }
 @media (min-width: 37.5em) {
     .global-header__section {
@@ -281,14 +281,14 @@
     }
     .font-face .global-header__section {
         position: relative;
-        top: 2px
+        top: 2px;
     }
     .global-header__section:focus,
     .global-header__section:visited,
     .global-header__section:active,
     .global-header__section:hover {
         color: #121212;
-        text-decoration: none
+        text-decoration: none;
     }
     .ie7 .global-header__section {
         position: relative;
@@ -296,7 +296,7 @@
     }
 }
 .global-header__branding {
-    display: none
+    display: none;
 }
 @media (min-width: 37.5em) {
     .global-header__trademark {
@@ -304,7 +304,7 @@
         top: 4px;
         right: -14px;
         font-size: 0.75rem;
-        line-height: 0.75rem
+        line-height: 0.75rem;
     }
 }
 
@@ -323,7 +323,7 @@
 .nav-bottom {
     max-width: 1008px;
     margin: 0 auto;
-    position: relative
+    position: relative;
 }
 @media (min-width: 56.25em) {
     .nav-top,
@@ -335,12 +335,12 @@
 @media (min-width: 56.25em) {
     .nav-top--not-full-width,.nav-bottom--not-full-width {
         max-width:1280px;
-        margin: 0 auto
+        margin: 0 auto;
     }
 }
 
 .nav-top__sponsorship {
-    display: none
+    display: none;
 }
 @media (min-width: 37.5em) {
     .nav-top__sponsorship {
@@ -362,18 +362,18 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 2147483599
+    z-index: 2147483599;
 }
 .nav-top--hidden {
-    display: none
+    display: none;
 }
 .app .nav-top__space-saver {
     position: relative;
     background-color: #121212;
-    height: 32px
+    height: 32px;
 }
 .app.touch .nav-top__space-saver {
-    height: 40px
+    height: 40px;
 }
 
 
