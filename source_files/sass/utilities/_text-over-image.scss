@@ -44,8 +44,128 @@ height: 56%;
   }
 }
 
+@include mq($from:gel-bp-m, $until:gel-bp-l) {
+  .u-txt-over-image--top\@m {
+    .media-island {
+      position: relative;
+
+      &:before {
+         @include image-gradient;
+
+      }
+      [class*='__body'] {
+        position: absolute;
+        top: double($gel-spacing-unit);
+        z-index: 99;
+        [class*='__title'] {
+          a {
+            color: $white;
+          }
+        }
+        [class*='__summary']{
+          color: $white;
+         }
+
+        .timestamp, .section-tag {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@include mq($from:gel-bp-l, $until:gel-bp-xxl) {
+  .u-txt-over-image--top\@l {
+    .media-island {
+      position: relative;
+
+      &:before {
+         @include image-gradient;
+
+      }
+      [class*='__body'] {
+        position: absolute;
+        top: double($gel-spacing-unit);
+        z-index: 99;
+        [class*='__title'] {
+          a {
+            color: $white;
+          }
+        }
+        [class*='__summary']{
+          color: $white;
+         }
+
+        .timestamp, .section-tag {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@include mq($from:gel-bp-xxl) {
+  .u-txt-over-image\@xxl {
+    .media-island {
+      position: relative;
+
+      &:before {
+         @include image-gradient;
+
+      }
+      [class*='__body'] {
+        position: absolute;
+        bottom: double($gel-spacing-unit);
+        z-index: 99;
+        [class*='__title'] {
+          a {
+            color: $white;
+          }
+        }
+        [class*='__summary']{
+          color: $white;
+         }
+
+        .timestamp, .section-tag {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@include mq($from:gel-bp-xxl) {
+  .u-txt-over-image--top\@xxl {
+    .media-island {
+      position: relative;
+
+      &:before {
+         @include image-gradient;
+
+      }
+      [class*='__body'] {
+        position: absolute;
+        top: double($gel-spacing-unit);
+        z-index: 99;
+        [class*='__title'] {
+          a {
+            color: $white;
+          }
+        }
+        [class*='__summary']{
+          color: $white;
+         }
+
+        .timestamp, .section-tag {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
 
 .u-text-on-dark-bg{
   color: $white;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
 }

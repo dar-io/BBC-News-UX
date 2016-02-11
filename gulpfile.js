@@ -59,7 +59,7 @@ gulp.task('sass', function() {
     .pipe( prefix() )
     .pipe( gulp.dest( destination + '/assets/css' ) )
     .pipe( browserSync.reload({ stream: true }) )
-    .pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write(source + '/assets/css'))
     .pipe( gulp.dest( source + '/assets/css' ) );
 
 });
@@ -80,9 +80,10 @@ gulp.task('watch', function() {
     source + '/_data/*.yml',
     source + '/_includes/**/*.html',
     source + '/_layouts/*.html',
-    source + '/img/**/*',
-    source + '/js/main.js',
+    source + '/assets/img/**/*',
+    source + '/assets/js/**/*.js',
     source + '/pages/**/*.html',
+    source + '/prototype/**/*.html',
     source + '/molecules/**/*.html',
     source + '/organisms/**/*.html'
 

@@ -2,7 +2,8 @@
 
 - header-title:
     - header-title:       "EU Referendum"
-      url:                "#topic two"
+      url:                "#topic TWO"
+      class:              "eu-referendum"
 
 - background-image:
     - background-image:   ""
@@ -12,8 +13,13 @@
 #TOPIC TAGS
 - topic-tags:
     - topic-tag:          "UK Politics"
+      URL:                "http://www.bbc.co.uk/news/politics"
+
     - topic-tag:          "European Union"
+      URL:                "http://www.bbc.co.uk/news/politics/eu_referendum"
+
     - topic-tag:          "UK and EU"
+      URL:                "http://www.bbc.co.uk/news/politics/eu_referendum"
 
 
 #SLOT ONE

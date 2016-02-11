@@ -1,7 +1,7 @@
 <div class="lx-keypoints-component-wrap">
 
 
-<h2 class="gs-u-mb+">
+<h2 class="gs-u-mb+ faux-block-link">
 <span class="live-status-block-news">
     <span class="gs-c-item-status gs-c-item-status--live ">
         <span class="gs-c-item-status__icon gel-icon brevier--no-touch">
@@ -14,7 +14,8 @@
 </span>
 {% for atom_group in site.data.curium %}
   {% for atom in atom_group.keypointsHeadline %}
-    <span class="gel-paragon">{{ atom.headline }}</span>
+  <a href="" target="_blank" class="gel-paragon-bold faux-block-link__target">{{ atom.headline }}</a>
+
   {% endfor %}
 {% endfor %}
 </h2>

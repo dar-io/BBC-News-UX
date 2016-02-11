@@ -96,14 +96,15 @@
 #SLOT FEATURED
 - featured:
     - animOrder:          "1"
-      image:              "/assets/img/molecules/stars.jpg"
-      headline:           "Reach for the stars"
-      synopsis:           "What are your chances of becoming an astronaut?"
+      class:
+      image:              "/assets/img/molecules/sevensisters.jpg"
+      headline:           "The difference"
+      synopsis:           "Has not being invaded shaped the UK's views?"
       time:               "21m"
-      section:            "UK"
+      section:            "EU Referendum"
       media-type:           #video/audio/image --empty wont show the icon--
       media-duration:     "2:30"
-      url:                "#featured"
+      url:                "http://www.bbc.co.uk/news/resources/idt-95a417ab-0982-4512-b550-20d68fd53f87"
 
 
 

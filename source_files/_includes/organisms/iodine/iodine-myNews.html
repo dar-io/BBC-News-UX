@@ -1,225 +1,377 @@
-<section class="iodine--wrap iodine__lead-promo--left gs-u-clearfix">
-<div class="gel-wrap">
-    <div class="gel-layout">
-     <div class="gel-layout__item slice-header">
-      <div class="slice-header--title gel-double-pica">myNews</div>
-      <div class="slice-header--controls gel-paragon">See All</div>
-    </div>
-    </div>
+<!-- SLICE CUTTER ///////////////////////////////////////////////////////////////////////////////////-->
+{% include organisms/slice-cutter/slice-cutter.html %}
 
 
-  <div class="gel-layout gs-u-clearfix">
+{% for classes in site.data.iodine02 %}
+  {% for class in classes.classes %}
+    <section class="iodine--wrap {{ class.leadPromoPositionClass }} gs-u-clearfix">
+      <div class="gel-wrap">
+        <div class="gel-layout">
+          {% for atom_group in site.data.iodine02 %}
+            {% for atom in atom_group.header %}
+              <div class="gel-layout__item slice-header gel-1/2@m">
+                <div class="slice-header--title gel-double-pica">{{ atom.section-title }}</div>
+                              <div class="iodine-header--location">
+<div class="slice-header--title gel-paragon">London</div>
+<a class="weather__rendered-link" href="{{ baseurl }}/prototype/02-HP-signed-in.html">
+  <button type="button" class="hp-settings__location-button ls-ui-comp btn-locate icon-locate" title="Use my current location">
 
- <!-- ITEM 1 -->
-      <div class="iodine__lead-promo gel-layout__item iodine__item iodine__item--1  gel-1/1@xs gel-2/4@l gel-2/5@xxl">
-        <article class="iodine--slot gs-u-clearfix faux-block-link">
-        <div class="media__island">
-          <div class="iodine__media ">
-            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-              <img src="http://c.files.bbci.co.uk/7622/production/_87224203_7de21214-2170-414c-b74f-a398ec955d8a.jpg" class="sp-image-replace" width="240">
-            </div>
+  </button>
+    </a>
+</div>
 
+                {% if atom.see-all  == null %}
+                {% else %}
+                  <div class="slice-header--controls gel-paragon">{{ atom.see-all }}</div>
+                {% endif %}
 
-          </div>
+</div>
 
-       <div class="iodine__body">
-            <div class="iodine__content">
- <h3 class="iodine__title faux-block-link__target gel-double-pica-bold gs-u-mt---@m gs-u-mt@xxl"> <a href="#"> <span class="iodine__title-text">The seven Britons to go to space</span> </a> </h3>
-<p class="lead-promo__summary gel-long-primer gs-u-mt v-u-hidden@xs v-u-hidden@s v-u-hidden@l">Tim Peake is the UK's first official astronaut and the first British astronaut to go to the International Space Station.                                                   </p>
+<div class="gel-layout__item weather__item gel-1/2@m">
 
-            </div>
-            <div class="iodine__meta gs-u-mt">
-              <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                <li> <span class="timestamp gs-u-mb">
-                <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">1h</time> </span>  </li>
-                <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                  <a href="#">Space Exploration</a> </span>
-                </li>
-              </ul>
-            </div>
-          </div>
+              <div class="weather">
 
-        </div>
-
-        </article>
-      </div>
-
-<div class="iodine--pair-1 gel-layout__item gel-2/3@m gel-2/4@l gel-2/5@xxl">
-<div class="gel-layout gel-layout--flex">
-       <!-- ITEM 2 -->
-      <div class="gel-layout__item iodine__item iodine__item--2  gel-1/2@xs gel-1/2@m gel-1/2@l gel-1/2@xxl">
-        <article class="iodine--slot gs-u-clearfix faux-block-link">
-        <div class="media-island">
-
-
-          <div class="iodine__media ">
-            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-              <img src="http://c.files.bbci.co.uk/D8FC/production/_87184555_87184554.jpg" class="sp-image-replace" width="240">
-            </div>
-          </div>
-
-    <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
-        <span class="gs-o-media-icon__icon gel-icon">
-            <svg>
-                <use xlink:href="#gel-icon-video"></use>
-            </svg>
+  <a class="weather__rendered-link" href="http://www.bbc.co.uk/weather/2643743" title="Go to the Weather for London">
+    <div class="weather-block weather-block--today">
+      <h3 class="weather-block__day gel-brevier-bold">Today</h3>
+      <div class="weather-block__icon-container" title="Light Rain">
+        <span class="weather-icon icon-cloud-dark-open">
         </span>
-    </span>
+        <span class="weather-icon icon-rain-drop"></span>
+      </div>
+      <div class="forecast">
+        <p class="forecast__day-temp gel-paragon-bold forecast__temperature current-temp">8°C</p>
+      </div>
+    </div>
+    <div class="weather-block weather-block--tomorrow">
+      <h3 class="weather-block__day gel-brevier-bold">Wed</h3>
+      <div class="weather-block__icon-container" title="Sunny Intervals">
+        <span class="weather-icon icon-cloud"> </span><span class="weather-icon icon-sun-rays"> </span>
+      </div>
+      <div class="forecast">
+        <p class="forecast__day-temp gel-long-primer-bold forecast__temperature current-temp">9°C</p>
+
+      </div>
+    </div>
+    <div class="weather-block weather-block--two-days">
+      <h3 class="weather-block__day gel-brevier-bold">Thu</h3>
+      <div class="weather-block__icon-container" title="Sunny">
+        <span class="weather-icon icon-sun"> </span>
+      </div>
+      <div class="forecast">
+        <p class="forecast__day-temp gel-long-primer-bold forecast__temperature current-temp">9°C</p>
+
+      </div>
+    </div>
+  </a>
+  </div>
 
 </div>
 
-          <div class="iodine__body">
-            <div class="iodine__content">
-              <h3 class="iodine__title faux-block-link__target gel-paragon gs-u-mt"> <a href="#"> <span class="iodine__title-text">Cruz leads Trump in Republican opinion poll</span> </a> </h3>
+            {% endfor %}
+          {% endfor %}
+        </div>
+        <div class="gel-layout gs-u-clearfix">
+          <!-- ITEM 1 -->
 
-            </div>
-            <div class="iodine__meta gs-u-mt">
-              <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                <li> <span class="timestamp gs-u-mb">
-                <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">2h</time> </span>  </li>
-                <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                  <a href="#">US Election 2016</a> </span>
-                </li>
-              </ul>
-            </div>
+
+          <div class="iodine__lead-promo gel-layout__item iodine__item iodine__item--1  gel-1/1@xs gel-2/4@l gel-2/5@xxl">
+            {% for atom_group in site.data.iodine02 %}
+              {% for atom in atom_group.slot01 %}
+                <article class="iodine--slot gs-u-clearfix faux-block-link {{ atom.class }}">
+                  <div class="media__island">
+                    <div class="iodine__media ">
+                      <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                        <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                      </div>
+                      {% if atom.media-type  == null %}
+                      {% else %}
+                        <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                          <span class="gs-o-media-icon__icon gel-icon">
+                            <svg>
+                              <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                            </svg>
+                          </span>
+                          <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                        </span>
+                      {% endif %}
+                    </div>
+                    <div class="iodine__body">
+                      <div class="iodine__content">
+                        <h3 class="iodine__title faux-block-link__target gel-double-pica-bold gs-u-mt@s gs-u-mt---@m  gs-u-mt@xxl"> <a class="title-link" target="_blank" href="{{ atom.url }}" > <span class="iodine__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                        {% if atom.synopsis  == null %}
+                        {% else %}
+                          <p class="lead-promo__summary gel-long-primer gs-u-mt v-u-hidden@xs v-u-hidden@s v-u-hidden@l">{{ atom.synopsis }}</p>
+                        {% endif %}
+                      </div>
+                      <div class="iodine__meta gs-u-mt">
+                        <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                          <li> <span class="timestamp gs-u-mb">
+                          <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                          <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
+                            <a href="#">{{ atom.section }}</a> </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              {% endfor %}
+            {% endfor %}
           </div>
-        </article>
-      </div>
+          <div class="iodine--pair-1 gel-layout__item gel-2/3@m gel-2/4@l gel-2/5@xxl">
+            <div class="gel-layout gel-layout--flex">
+              <!-- ITEM 2 -->
 
 
+              <div class="gel-layout__item iodine__item iodine__item--2  gel-1/2@xs gel-1/2@m gel-1/2@l gel-1/2@xxl">
+                {% for atom_group in site.data.iodine02 %}
+                  {% for atom in atom_group.slot02 %}
+                    <article class="iodine--slot gs-u-clearfix faux-block-link {{ atom.class }}">
+                      {% if atom.image  == null %}
+                      {% else %}
+                        <div class="media-island">
+                          <div class="iodine__media ">
+                            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                              <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                            </div>
+                          </div>
+                          {% if atom.media-type  == null %}
+                          {% else %}
+                            <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                              <span class="gs-o-media-icon__icon gel-icon">
+                                <svg>
+                                  <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                                </svg>
+                              </span>
+                              <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                            </span>
+                          {% endif %}
+                        </div>
+                      {% endif %}
+                      <div class="iodine__body">
+                        <div class="iodine__content">
+                          <h3 class="iodine__title faux-block-link__target gel-paragon gs-u-mt gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="iodine__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                          {% if atom.synopsis  == null %}
+                          {% else %}
+                            <p class="iodine__summary gel-long-primer gs-u-mt gs-u-pb++">{{ atom.synopsis }}</p>
+                          {% endif %}
+                        </div>
+                        <div class="iodine__meta gs-u-mb">
+                          <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                            <li> <span class="timestamp gs-u-mb">
+                            <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                            <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                              <a href="#">{{ atom.section }}</a> </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </article>
+                  {% endfor %}
+                {% endfor %}
+              </div>
+              <!-- ITEM 3 -->
 
 
-
-
-       <!-- ITEM 3 -->
-      <div class="gel-layout__item iodine__item iodine__item--3  gel-1/2@xs gel-1/2@m gel-1/2@l gel-1/2@xxl">
-              <article class="iodine--slot gs-u-clearfix faux-block-link">
-          <div class="iodine__media ">
-            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-              <img src="http://c.files.bbci.co.uk/7570/production/_87146003_z9270144-polar_bear-spl.jpg" class="sp-image-replace" width="240">
-            </div>
-          </div>
-          <div class="iodine__body">
-            <div class="iodine__content">
-              <h3 class="iodine__title faux-block-link__target gel-paragon gs-u-mt"> <a href="#"> <span class="iodine__title-text">Polar bears travel further as Arctic sea-ice drifts</span> </a> </h3>
-
-            </div>
-            <div class="iodine__meta gs-u-mt">
-              <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                <li> <span class="timestamp gs-u-mb">
-                <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">45m</time> </span>  </li>
-                <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                  <a href="#">Climate Change</a> </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-      </div>
-</div>
-</div>
-
-
-<div class="iodine--pair-2 gel-layout__item gel-1/3@m gel-2/4@l gel-1/5@xxl">
-<div class="gel-layout gel-layout--flex">
-
-
- <!-- ITEM 4 -->
-      <div class="gel-layout__item iodine__item iodine__item--4  gel-1/2@xs gel-1/1@m gel-1/2@l gel-1/1@xxl">
-       <article class="iodine--slot gs-u-clearfix faux-block-link keypoints--height--small">
-       {% include molecules/key-points.html %}
-        </article>
-      </div>
-
-       <!-- ITEM 5 -->
-      <div class="gel-layout__item iodine__item iodine__item--5  gel-1/2@xs gel-1/1@m gel-1/2@l gel-1/1@xxl">
-        <article class="iodine--slot gs-u-clearfix faux-block-link">
-          <div class="media-island">
-            <div class="iodine__media ">
-              <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-                <img src="http://c.files.bbci.co.uk/7C79/production/_86456813_029894140-1.jpg" class="sp-image-replace" width="240">
+              <div class="gel-layout__item iodine__item iodine__item--3  gel-1/2@xs gel-1/2@m gel-1/2@l gel-1/2@xxl">
+                 <article class="iodine--slot gs-u-clearfix faux-block-link">
+                  {% for atom_group in site.data.iodine02 %}
+                    {% for atom in atom_group.slot03 %}
+                      <article class="iodine--slot gs-u-clearfix faux-block-link {{ atom.class }}">
+                        {% if atom.image  == null %}
+                        {% else %}
+                          <div class="media-island">
+                            <div class="iodine__media ">
+                              <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                                <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                              </div>
+                            </div>
+                            {% if atom.media-type  == null %}
+                            {% else %}
+                              <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                                <span class="gs-o-media-icon__icon gel-icon">
+                                  <svg>
+                                    <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                                  </svg>
+                                </span>
+                                <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                              </span>
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                        <div class="iodine__body">
+                          <div class="iodine__content">
+                            <h3 class="iodine__title faux-block-link__target gel-paragon gs-u-mt gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="iodine__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                            {% if atom.synopsis  == null %}
+                            {% else %}
+                              <p class="iodine__summary gel-long-primer gs-u-mt gs-u-pb++">{{ atom.synopsis }}</p>
+                            {% endif %}
+                          </div>
+                          <div class="iodine__meta gs-u-mb">
+                            <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                              <li> <span class="timestamp gs-u-mb">
+                              <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                              <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                                <a href="#">{{ atom.section }}</a> </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </article>
+                    {% endfor %}
+                  {% endfor %}
+                </article>
               </div>
             </div>
-            <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
-              <span class="gs-o-media-icon__icon gel-icon">
-                <svg>
-                  <use xlink:href="#gel-icon-video"></use>
-                </svg>
-              </span>
-            </span>
           </div>
+          <div class="iodine--pair-2 gel-layout__item gel-1/3@m gel-2/4@l gel-1/5@xxl">
+            <div class="gel-layout gel-layout--flex">
+              <!-- ITEM 4 -->
 
-          <div class="iodine__body">
-            <div class="iodine__content">
-              <h3 class="iodine__title faux-block-link__target gel-paragon gs-u-mt"> <a href="#"> <span class="iodine__title-text"> League of Legends developer sold</span> </a> </h3>
 
-            </div>
-            <div class="iodine__meta gs-u-mt">
-              <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                <li> <span class="timestamp gs-u-mb">
-                <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">3h</time> </span>  </li>
-                <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                  <a href="#">Gaming</a> </span>
-                </li>
-              </ul>
+              <div class="gel-layout__item iodine__item iodine__item--4  gel-1/2@xs gel-1/1@m gel-1/2@l gel-1/1@xxl">
+                {% for atom_group in site.data.iodine02 %}
+                  {% for atom in atom_group.slot03 %}
+                    <article class="iodine--slot gs-u-clearfix keypoints--height--small">
+                      {% include molecules/key-points.html %}
+                </article>
+                  {% endfor %}
+                {% endfor %}
+              </div>
+
+
+              <!-- ITEM 5 -->
+              <div class="gel-layout__item iodine__item iodine__item--5  gel-1/2@xs gel-1/1@m gel-1/2@l gel-1/1@xxl">
+
+
+                {% for atom_group in site.data.iodine02 %}
+                  {% for atom in atom_group.slot06 %}
+
+                 {% include molecules/market-data.html %}
+
+                  {% endfor %}
+                {% endfor %}
+
+
+              </div>
             </div>
           </div>
-        </article>
+          <div class="iodine--pair-3 gel-layout__item gel-2/3@m  gel-2/4@l gel-2/5@xxl">
+            <div class="gel-layout gel-layout--flex">
+              <!-- ITEM 6 -->
+
+
+              <div class="gel-layout__item iodine__item iodine__item--6  gel-1/2@xs gel-1/2@m gel-1/2@l gel-1/2@xxl">
+                {% for atom_group in site.data.iodine02 %}
+                  {% for atom in atom_group.slot05 %}
+                    <article class="iodine--slot gs-u-clearfix faux-block-link {{ atom.class }}">
+                      {% if atom.image  == null %}
+                      {% else %}
+                        <div class="media-island">
+                          <div class="iodine__media ">
+                            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                              <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                            </div>
+                          </div>
+                          {% if atom.media-type  == null %}
+                          {% else %}
+                            <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                              <span class="gs-o-media-icon__icon gel-icon">
+                                <svg>
+                                  <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                                </svg>
+                              </span>
+                              <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                            </span>
+                          {% endif %}
+                        </div>
+                      {% endif %}
+                      <div class="iodine__body">
+                        <div class="iodine__content">
+                          <h3 class="iodine__title faux-block-link__target gel-paragon gs-u-mt gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="iodine__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                          {% if atom.synopsis  == null %}
+                          {% else %}
+                            <p class="iodine__summary gel-long-primer gs-u-mt gs-u-pb++">{{ atom.synopsis }}</p>
+                          {% endif %}
+                        </div>
+                        <div class="iodine__meta gs-u-mb">
+                          <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                            <li> <span class="timestamp gs-u-mb">
+                            <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                            <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                              <a href="#">{{ atom.section }}</a> </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </article>
+                  {% endfor %}
+                {% endfor %}
+              </div>
+
+
+              <!-- ITEM 7 -->
+              <div class="gel-layout__item iodine__item iodine__item--7  gel-1/2@xs gel-1/2@m gel-1/2@l gel-1/2@xxl">
+
+                     {% for atom_group in site.data.iodine02 %}
+                    {% for atom in atom_group.slot04 %}
+                      <article class="iodine--slot gs-u-clearfix faux-block-link {{ atom.class }}">
+                        {% if atom.image  == null %}
+                        {% else %}
+                          <div class="media-island">
+                            <div class="iodine__media ">
+                              <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                                <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                              </div>
+                            </div>
+                            {% if atom.media-type  == null %}
+                            {% else %}
+                              <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                                <span class="gs-o-media-icon__icon gel-icon">
+                                  <svg>
+                                    <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                                  </svg>
+                                </span>
+                                <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                              </span>
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                        <div class="iodine__body">
+                          <div class="iodine__content">
+                            <h3 class="iodine__title faux-block-link__target gel-paragon gs-u-mt gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="iodine__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                            {% if atom.synopsis  == null %}
+                            {% else %}
+                              <p class="iodine__summary gel-long-primer gs-u-mt gs-u-pb++">{{ atom.synopsis }}</p>
+                            {% endif %}
+                          </div>
+                          <div class="iodine__meta gs-u-mb">
+                            <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                              <li> <span class="timestamp gs-u-mb">
+                              <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                              <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                                <a href="#">{{ atom.section }}</a> </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </article>
+                    {% endfor %}
+                  {% endfor %}
+
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-</div>
-</div>
-
-
-<div class="iodine--pair-3 gel-layout__item gel-2/3@m  gel-2/4@l gel-2/5@xxl">
-<div class="gel-layout gel-layout--flex">
-
-       <!-- ITEM 6 -->
-      <div class="gel-layout__item iodine__item iodine__item--6  gel-1/2@xs gel-1/2@m gel-1/2@l gel-1/2@xxl">
-       <article class="iodine--slot gs-u-clearfix faux-block-link">
-       <div class="media-island">
-          <div class="iodine__media ">
-            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-              <img src="http://ichef-1.bbci.co.uk/news/660/cpsprodpb/8099/production/_87212923_87212922.jpg" class="sp-image-replace" width="240">
-            </div>
-          </div>
-          </div>
-
-          <div class="iodine__body">
-            <div class="iodine__content">
-              <h3 class="iodine__title faux-block-link__target gel-paragon gs-u-mt"> <a href="#"> <span class="iodine__title-text">London health devolution deal signed</span> </a> </h3>
-
-            </div>
-            <div class="iodine__meta gs-u-mt">
-              <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                <li> <span class="timestamp gs-u-mb">
-                <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">13m</time> </span>  </li>
-                <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
-                  <a href="#">London</a> </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-      </div>
-
-
-       <!-- ITEM 7 -->
-      <div class="gel-layout__item iodine__item iodine__item--7  gel-1/2@xs gel-1/2@m gel-1/2@l gel-1/2@xxl">
-       <article class="iodine--slot gs-u-clearfix faux-block-link">
-          {% include molecules/market-data.html %}
-        </article>
-      </div>
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-    </div>
-  </div>
+    {% endfor %}
+  {% endfor %}
 </section>
+
+
+
+
+
+

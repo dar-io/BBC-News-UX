@@ -1,3 +1,5 @@
+{% include cldr/baseurl.html %}
+
   <section class="curium--wrap gs-u-clearfix gs-u-mt+">
 <div class="gel-wrap">
 
@@ -12,9 +14,9 @@
          {% for atom_group in site.data.curium %}
             {% for atom in atom_group.slot01 %}
 
-          <article class="curium--reverse lead-promo gs-u-clearfix faux-block-link gel-long-primer curium--has-media">
+          <article class="curium--reverse lead-promo gs-u-clearfix faux-block-link gel-long-primer curium--has-media {{ atom.class }}">
           <div class="lead-promo__headline gel-1/3@m">
-            <h3 class="lead-promo__title faux-block-link__target gel-agate "> <a href="{{ atom.url }}"> <span class="lead-promo__title-text">{{ atom.headline }}</span> </a> </h3>
+            <h3 class="lead-promo__title faux-block-link__target gel-agate "> <a class="title-link" href="{{ atom.url }}"> <span class="lead-promo__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
 </div>
 
              {% if atom.image  == null %}
@@ -68,7 +70,7 @@
           <div class="gel-layout gel-layout--flex">
           <div class="gel-layout__item index-alsos__item gel-1/1@m">
             <article class="gs-u-clearfix gel-long-primer">
-               <p class="index-alsos__title faux-block-link__target gel-brevier "> <a href="/related-link"> <span class="index-alsos__title-text">{{ atom.index-AlsoOne}}</span> </a> </p>
+               <p class="index-alsos__title faux-block-link__target gel-brevier "> <a class="title-link" href="/related-link"> <span class="index-alsos__title-text">{{ atom.index-AlsoOne}}</span> </a> </p>
             </article>
           </div>
           <div class="gel-layout__item index-alsos__item gel-1/1@m">
@@ -98,7 +100,7 @@
         <div class="gel-layout__item curium__item curium__item--2  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
           {% for atom_group in site.data.curium %}
             {% for atom in atom_group.slot02 %}
-              <article class="curium--slot gs-u-clearfix faux-block-link">
+              <article class="curium--slot gs-u-clearfix faux-block-link {{ atom.class }}">
               {% if atom.image  == null %}
               {% else %}
                 <div class="media-island">
@@ -122,7 +124,7 @@
               {% endif %}
                 <div class="curium__body">
                   <div class="curium__content">
-                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="curium__title-text">{{ atom.headline }}</span> </a> </h3>
+                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a class="title-link" href="{{ atom.url }}"> <span class="curium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
                     {% if atom.synopsis  == null %}
                     {% else %}
                       <p class="curium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
@@ -148,7 +150,7 @@
 
 
        <!-- ITEM 3 -->
-        <div class="gel-layout__item curium__item curium__item--3  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
+        <div class="gel-layout__item curium__item curium__item--3  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl {{ atom.class }}">
           {% for atom_group in site.data.curium %}
             {% for atom in atom_group.slot03 %}
               <article class="curium--slot gs-u-clearfix faux-block-link">
@@ -175,7 +177,7 @@
               {% endif %}
                 <div class="curium__body">
                   <div class="curium__content">
-                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="curium__title-text">{{ atom.headline }}</span> </a> </h3>
+                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a class="title-link" href="{{ atom.url }}"> <span class="curium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
                     {% if atom.synopsis  == null %}
                     {% else %}
                       <p class="curium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
@@ -199,16 +201,16 @@
 
    <!-- Item 04 -->
         <div class="gel-layout__item curium__item curium__item--4 gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
-            <article class="curium--slot gs-u-clearfix faux-block-link keypoints--height--medium">
+            <article class="curium--slot gs-u-clearfix  keypoints--height--medium {{ atom.class }}">
              {% include molecules/key-points-topstories.html %}
             </article>
           </div>
 
        <!-- ITEM 5 -->
-        <div class="gel-layout__item curium__item curium__item--5  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
+        <div class="gel-layout__item curium__item curium__item--5  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl ">
           {% for atom_group in site.data.curium %}
             {% for atom in atom_group.slot04 %}
-              <article class="curium--slot gs-u-clearfix faux-block-link">
+              <article class="curium--slot gs-u-clearfix faux-block-link {{ atom.class }}">
               {% if atom.image  == null %}
               {% else %}
                 <div class="media-island">
@@ -232,7 +234,7 @@
               {% endif %}
                 <div class="curium__body">
                   <div class="curium__content">
-                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="curium__title-text">{{ atom.headline }}</span> </a> </h3>
+                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a class="title-link" href="{{ atom.url }}"> <span class="curium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
                     {% if atom.synopsis  == null %}
                     {% else %}
                       <p class="curium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
@@ -260,16 +262,18 @@
         <!-- Item 06 -->
         <div class="gel-layout__item curium__item curium__item--5 gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
 
-
-           {% include molecules/featured.html %}
-
+        {% for atom_group in site.data.curium %}
+              {% for atom in atom_group.featured %}
+             {% include molecules/featured.html class=atom.class image=atom.image section=atom.section url=atom.url headline=atom.headline synopsis=atom.synopsis  %}
+    {% endfor %}
+            {% endfor %}
           </div>
 
    <!-- Item 07 VISIBLE UNTIL GROUP C-->
         <div class="gel-layout__item curium__item curium__item--7 gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl v-u-hidden@l v-u-hidden@xxl">
    {% for atom_group in site.data.curium %}
             {% for atom in atom_group.slot05 %}
-              <article class="curium--slot gs-u-clearfix faux-block-link">
+              <article class="curium--slot gs-u-clearfix faux-block-link {{ atom.class }}">
               {% if atom.image  == null %}
               {% else %}
                 <div class="media-island">
@@ -293,7 +297,7 @@
               {% endif %}
                 <div class="curium__body">
                   <div class="curium__content">
-                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="curium__title-text">{{ atom.headline }}</span> </a> </h3>
+                    <h3 class="curium__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a class="title-link" href="{{ atom.url }}"> <span class="curium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
                     {% if atom.synopsis  == null %}
                     {% else %}
                       <p class="curium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
@@ -331,10 +335,10 @@
           {% for atom_group in site.data.curium %}
             {% for atom in atom_group.river %}
         <div class="gel-layout__item curium__item curium__item--river river__item--{{ atom.id }} gel-1/3@m gel-1/4@l gel-1/1@xxl {{ atom.visibility-classes }}">
-          <article class="gs-u-clearfix faux-block-link">
+          <article class="gs-u-clearfix faux-block-link {{ atom.class }}">
             <div class="curium__body">
               <div class="curium__content">
-                <h3 class="curium__title faux-block-link__target gel-english"> <a href="{{ atom.url }}"> <span class="curium__title-text">{{ atom.headline }}</span> </a> </h3>
+                <h3 class="curium__title faux-block-link__target gel-english"> <a class="title-link" href="{{ atom.url }}"> <span class="curium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
               </div>
 
               <div class="curium__meta">

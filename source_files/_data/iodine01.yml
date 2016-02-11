@@ -1,0 +1,99 @@
+- classes:
+  - animOrder:            "1"
+    leadPromoPositionClass: "iodine__lead-promo--right" #other class - iodine__lead-promo--left
+
+- header:
+  - animOrder:            "1"
+    section-title:        "Must See"
+    see-all:              "See all"
+
+#SLOT One
+- slot01:
+    - animOrder:          "1"
+      image:              "http://c.files.bbci.co.uk/16B0C/production/_87804929_1024schottlander-dp178504.jpg"
+      headline:           "The bright red work of art"
+      synopsis:           "They were designed to bring public spaces back to life after World War Two - it was art for everyone. Now dozens of post-war sculptures are being given listed status."
+      time:               "2h"
+      section:            "Magazine"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.co.uk/news/magazine-35352595"
+
+#SLOT TWO
+- slot02:
+    - animOrder:          "1"
+      image:              "http://c.files.bbci.co.uk/7818/production/_87844703_p03g6vqn.jpg"
+      headline:           "Caine: I would star in Hatton Garden heist film"
+      synopsis:
+      time:               "2h"
+      section:            "Entertainment & Arts"
+      media-type:         "video" #video/audio/image --empty wont show the icon--
+      media-duration:     "1:17"
+      url:                "http://www.bbc.co.uk/news/entertainment-arts-35380502"
+
+#SLOT Three
+- slot03:
+    - animOrder:          "1"
+      class:              "newsbeat"
+      image:              "http://ichef.bbci.co.uk/news/976/cpsprodpb/77FA/production/_87241703_rihanna_g_976.jpg"
+      headline:           "Is a major artist about to drop a new album?"
+      synopsis:
+      time:               "2h"
+      section:            "NEWSBEAT"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.co.uk/newsbeat/article/35111353/sneak-attack-is-a-major-artist-about-to-drop-a-new-album"
+
+#SLOT Four
+- slot04:
+    - animOrder:          "1"
+      class:
+      image:              "http://ichef-1.bbci.co.uk/news/304/media/images/61287000/jpg/_61287545_015119997-1.jpg"
+      headline:           "Oscars, poverty and ducks: will.i.am answers you"
+      synopsis:
+      time:               "2h"
+      section:            "Business"
+      media-type:         "video" #video/audio/image --empty wont show the icon--
+      media-duration:     "2:23"
+      url:                "http://www.bbc.co.uk/news/business-35381523"
+
+#SLOT Three
+- slot05:
+    - animOrder:          "1"
+      class:
+      image:              "http://ichef.bbci.co.uk/news/660/cpsprodpb/63D1/production/_87835552_hi001406598.jpg"
+      headline:           "Has bullfighting puts Facebook in a dilemma?"
+      synopsis:
+      time:               "5h"
+      section:            "Magazine"
+      media-type:         "video" #video/audio/image --empty wont show the icon--
+      media-duration:     "2:23"
+      url:                "http://www.bbc.co.uk/news/blogs-trending-35376072"
+
+#SLOT Six
+- slot06:
+    - animOrder:          "1"
+      class:              "must-see"
+      image:              "http://ichef-1.bbci.co.uk/news/640/cpsprodpb/13C9D/production/_87835018_87835016.jpg"
+      headline:           "The town where people endure -50 C"
+      synopsis:
+      time:               "3h"
+      section:            "Entertainment & Arts"
+      media-type:         "video" #video/audio/image --empty wont show the icon--
+      media-duration:     "3:20"
+      url:                "http://www.bbc.co.uk/news/entertainment-arts-35376062#?utm_source=twitterfeed&utm_medium=twitter"
+
+
+#SLOT FEATURED
+- featured:
+    - animOrder:          "1"
+      class:              "the-papers"
+      image:              "/assets/img/molecules/promo/thepapers.jpg"
+      headline:           "Rape inquiry shift - but no 'sorry'"
+      synopsis:
+      time:               "21m"
+      section:            "The Papers"
+      media-type:           #video/audio/image --empty wont show the icon--
+      media-duration:     "2:10"
+      url:                "http://www.bbc.co.uk/news/blogs/the_papers"
+

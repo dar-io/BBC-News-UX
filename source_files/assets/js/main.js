@@ -66,6 +66,9 @@ $('.faux-block-link').hover(
 )
 
 
+ $('.display-tool-tip').click(function () {
+         $(this).hide();
+       })
 
 //tabs
 

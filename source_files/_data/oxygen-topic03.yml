@@ -2,7 +2,8 @@
 
 - header-title:
     - header-title:       "Oscars 2016"
-      url:                "#topic Three"
+      url:                "#topic TWO"
+      class:              "oscars-2016"
 
 - background-image:
     - background-image:   "/assets/img/organisms/topics/oscars-cropped.jpg"
@@ -11,8 +12,14 @@
 #TOPIC TAGS
 - topic-tags:
     - topic-tag:          "Film"
+      URL:                "http://www.bbc.co.uk/news/topics/2611f753-ece7-47ea-9782-f912bc1e4088/film"
+
     - topic-tag:          "Entertainment"
+      URL:                "http://www.bbc.co.uk/news/entertainment_and_arts"
+
     - topic-tag:          "Golden Globe 2016"
+      URL:                "http://www.bbc.co.uk/news/entertainment_and_arts"
+
 
 
 #SLOT ONE

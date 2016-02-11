@@ -1,0 +1,168 @@
+
+.neon--wrap{
+  background-color: #F4F4F4;
+}
+
+.neon__title-text{
+  color: #fff;
+}
+.neon__item{
+  .topic-tag__list-item{
+    margin-top: 0;
+  }
+      -webkit-font-smoothing: antialiased;
+  h3.gel-canon{
+    @include mq($from:gel-bp-xl){
+    font-weight:300;
+    font-size: 38px;
+    line-height:38px;
+  }
+     @include mq($from:gel-bp-l){
+    font-weight:300;
+    font-size: 32px;
+    line-height:32px;
+  }
+  }
+ .media-island{
+  height: 274px;
+  &:after{
+    content: '';
+    background-image:url(../img/organisms/mynews/upsell.png);
+    height: 274px;
+    width: 918px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-position: right;
+    background-repeat:no-repeat;
+  }
+  &:before{
+    content: "";
+    background-image: linear-gradient(to left, rgba(0,17,22,0) 0%, #181E2A 100%);
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
+    height: 100%;
+    left: -16px;
+    @include mq($from:gel-bp-l, $until:gel-bp-xxl){
+      left: -44%;
+       width: 144%;
+       background-image: linear-gradient(to left, rgba(0,17,22,0.7) 0%, #181E2A 100%);
+    }
+  }
+ }
+
+.neon__body{
+    height: 232px;
+ @include mq($from:gel-bp-m){
+   width: gel-columns(8/12);
+    }
+
+  @include mq($from:gel-bp-xxl){
+   width: gel-columns(6/12);
+    }
+
+
+  &:before{
+    content: "";
+    background: #BB1919;
+    display: block;
+    position: absolute;
+    width: 4px;
+    z-index: 1;
+    left: 0;
+    height: 100%;
+  }
+}
+
+}
+.neon__meta{
+    position: absolute;
+    bottom: 0;
+}
+
+.neon-header--title{
+  padding-top: double($gel-spacing-unit);
+  padding-bottom: double($gel-spacing-unit);
+}
+
+.hp-settings__location-button {
+    display: inline-block;
+    border: 0;
+    background: 0 0;
+    cursor: pointer;
+    width: 44px;
+    height: 12px;
+    line-height: 12px;
+    float: right;
+}
+
+.local-search form {
+    display: block;
+}
+#orb-search-q {
+    width: 140px;
+    padding-left: 8px;
+}
+
+.local-search form div, .local-search form div {
+    background: #e4e4e4;
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #404040;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #404040;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #404040;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #404040;
+  opacity: 1;
+}
+
+}
+
+.local-search #orb-search-q {
+    border: none;
+    background: 0 0;
+    height: 1.846em;
+    min-height: 24px;
+}
+
+.local-search #orb-search-q {
+    width: 198px;
+    float: left;
+    padding: 2 0 0 6px;
+    color: #460606;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+     box-sizing: content-box;
+}
+
+.local-search #orb-search-button {
+    padding: 5px 8px 8px 0px;
+    box-sizing: content-box;
+
+}
+
+
+
+.local-search {
+  button{
+  display: inline-block;
+    border: 0;
+    background: 0 0;
+    cursor: pointer;
+    width: 14px;
+    height: 12px;
+    line-height: 12px;
+
+  }
+}
+

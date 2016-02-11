@@ -9,16 +9,18 @@
  *
  * 1. IX fix to get hand cursor
  */
+
+
+.title-link:visited .title-link__title-text {
+    color: #686868;
+}
+
 .faux-block-link {
     position: relative;
 
     &:hover {
         cursor: pointer; /* [1] */
     }
-
-       a:visited {
-    color: #686868;
-   }
 
 }
 
@@ -63,7 +65,8 @@
      &:hover a,
      &:focus a,
      .faux-block-link--hover & {
-        color: $link-hover-dark-theme;
+        color: #fff;
+        text-decoration: underline;
     }
 
 

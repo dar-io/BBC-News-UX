@@ -1,242 +1,221 @@
-<section class="oxygen--wrap gs-u-clearfix">
+{% include cldr/baseurl.html %}
+
+<!-- SLICE CUTTER ///////////////////////////////////////////////////////////////////////////////////-->
+{% include organisms/slice-cutter/slice-cutter.html %}
 
 
-    <div class="gel-wrap">
-    <div class="gel-layout">
-
-
-      {% for atom_group in site.data.oxygen-topic03 %}
-        {% for atom in atom_group.header-title %}
-          <div class="gel-layout__item slice-header">
-            <span class="topic-tag__plus-add-button">
-              <div class="slice-header--title  faux-block-link"><h2 class="faux-block-link__target gel-double-pica"><a href="{{ atom.url }}">{{ atom.header-title }}</a></h2></div>
-              {% include molecules/add-button-with-text.html %}
-            </span>
-          </div>
-        {% endfor %}
-      {% endfor %}
-
-</div>
-</div>
+<section class="oxygen--wrap gs-u-clearfix new-topic">
 
   {% for atom_group in site.data.oxygen-topic03 %}
     {% for atom in atom_group.background-image %}
-<div style="background-image:url({{ baseurl }}{{ atom.background-image }});" class="oxigen--item oxigen--item03">
-
-<style>
-.oxigen--item03:before{background-color:{{ atom.background-colour}};}
-</style>
-
+      <div style="background-image:url({{ baseurl }}{{ atom.background-image }});" class="oxigen--item oxigen--item01">
+        <style>
+        .oxigen--item01:before{background-color:{{ atom.background-colour}};}
+        </style>
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-
-  <div class="gel-wrap">
-    <div class="gel-layout">
+    <div class="gel-wrap">
 
 
-
-    </div>
-    <div class="oxygen--content">
-      <div class="gel-layout gel-layout--flex">
+      <div class="oxygen--content">
+      <div class="gel-layout">
 
 
-        <!-- ITEM 1 -->
-        <div class="gel-layout__item oxygen__item oxygen__item--1  gel-1/2@xs gel-1/1@m gel-1/4@l gel-2/5@xxl v-u-hidden@xs v-u-hidden@s v-u-hidden@m">
 
-              <article class="oxygen--slot gs-u-clearfix faux-block-link u-text-on-dark-bg">
+      <!-- Contains header and topics -->
+        <div class="gel-layout__item gel-1/4@l gel-2/5@xxl">
+          <div class="gel-layout">
+            {% for atom_group in site.data.oxygen-topic03 %}
+              {% for atom in atom_group.header-title %}
+                <div class="gel-layout__item slice-header gs-u-pt+ gel-1/1@xxl">
+                  <span class="topic-tag__plus-add-button faux-block-link">
+                    <div class="slice-header--title"><h2 class="faux-block-link__target--on-dark u-text-on-dark-bg gel-double-pica-bold"><a class="u-text-on-dark-bg" target="_blank"  href="{{ atom.url }}">{{ atom.header-title }}</a></h2></div>
+
+                  </span>
+                   <p class="faux-block-link oxygen__summary gel-long-primer-bold  gs-u-mt-"><a class="u-text-on-dark-bg faux-block-link__target--on-dark" target="_blank" href="">See all posts from this topic</a></p>
+                   <div class="gs-u-mt+">{% include molecules/add-button-with-text-long-label.html topic=atom.class topicURL=atom.url topicName=atom.header-title %}</div>
+                </div>
+              {% endfor %}
+            {% endfor %}
+
+            <!-- ITEM 5 -->
+            <div class="gel-layout__item oxygen__item oxygen__item--5 gel-1/2@xs gel-1/1@m gel-1/1@l gel-1/1@xxl">
+              <article class="oxygen--slot gs-u-clearfix u-text-on-dark-bg">
                 <div class="oxygen__body">
                   <div class="oxygen__content">
-                  {% for atom_group in site.data.oxygen-topic03 %}
-            {% for atom in atom_group.slot01 %}
-                    <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
+                    <div class="topic-tag__subheader branch gs-u-mt">
+                      <h2 class="topic-tag__subheader--title gel-long-primer">Related Topics:</h2>
+                    </div>
+                    <ul class="list-inline topic-tag__container">
+                         {% for atom_group in site.data.oxygen-topic03 %}
+                        {% for atom in atom_group.topic-tags %}
+                          <li class="topic-tag__list-item"><span class="topic-tag__plus-add-button"><a target="_blank"  href="{{ atom.URL }}" class="topic-tag__name gel-long-primer">{{ atom.topic-tag }}</a></span></li>
                         {% endfor %}
-          {% endfor %}
-                  </div>
-                </div>
-              </article>
-
-        </div>
-
-
-        <!-- ITEM 2 -->
-        <div class="gel-layout__item oxygen__item oxygen__item--2  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/5@xxl">
-          {% for atom_group in site.data.oxygen-topic03 %}
-            {% for atom in atom_group.slot02 %}
-              <article class="oxygen--slot gs-u-clearfix faux-block-link">
-              {% if atom.image  == null %}
-              {% else %}
-                <div class="media-island">
-                  <div class="oxygen__media ">
-                    <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-                      <img src="{{ atom.image }}" class="sp-image-replace" width="240">
-                    </div>
-                  </div>
-                  {% if atom.media-type  == null %}
-                  {% else %}
-                    <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
-                      <span class="gs-o-media-icon__icon gel-icon">
-                        <svg>
-                          <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
-                        </svg>
-                      </span>
-                      <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
-                    </span>
-                  {% endif %}
-                </div>
-              {% endif %}
-                <div class="oxygen__body gs-u-pl gs-u-pr">
-                  <div class="oxygen__content">
-                    <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="oxygen__title-text">{{ atom.headline }}</span> </a> </h3>
-                    {% if atom.synopsis  == null %}
-                    {% else %}
-                      <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
-                    {% endif %}
-                  </div>
-                  <div class="oxygen__meta gs-u-mb">
-                    <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                      <li> <span class="timestamp gs-u-mb">
-                      <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
-                      <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
-                        <a href="#">{{ atom.section }}</a> </span>
-                      </li>
+                      {% endfor %}
                     </ul>
                   </div>
                 </div>
               </article>
-            {% endfor %}
-          {% endfor %}
-        </div>
-
-
-        <!-- ITEM 3 -->
-        <div class="gel-layout__item oxygen__item oxygen__item--2  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/5@xxl">
-          {% for atom_group in site.data.oxygen-topic03 %}
-            {% for atom in atom_group.slot03 %}
-              <article class="oxygen--slot gs-u-clearfix faux-block-link">
-                {% if atom.image  == null %}
-              {% else %}
-                <div class="media-island">
-                  <div class="oxygen__media ">
-                    <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-                      <img src="{{ atom.image }}" class="sp-image-replace" width="240">
-                    </div>
-                  </div>
-                  {% if atom.media-type  == null %}
-                  {% else %}
-                    <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
-                      <span class="gs-o-media-icon__icon gel-icon">
-                        <svg>
-                          <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
-                        </svg>
-                      </span>
-                      <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
-                    </span>
-                  {% endif %}
-                </div>
-              {% endif %}
-                <div class="oxygen__body gs-u-pl gs-u-pr">
-                  <div class="oxygen__content">
-                    <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="oxygen__title-text">{{ atom.headline }}</span> </a> </h3>
-                    {% if atom.synopsis  == null %}
-                    {% else %}
-                      <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
-                    {% endif %}
-                  </div>
-                  <div class="oxygen__meta gs-u-mb">
-                    <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                      <li> <span class="timestamp gs-u-mb">
-                      <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
-                      <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
-                        <a href="#">{{ atom.section }}</a> </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </article>
-            {% endfor %}
-          {% endfor %}
-        </div>
-
-
-        <!-- ITEM 4 -->
-        <div class="gel-layout__item oxygen__item oxygen__item--4  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/5@xxl">
-          {% for atom_group in site.data.oxygen-topic03 %}
-            {% for atom in atom_group.slot04 %}
-              <article class="oxygen--slot gs-u-clearfix faux-block-link">
-              {% if atom.image  == null %}
-              {% else %}
-                <div class="media-island">
-                  <div class="oxygen__media ">
-                    <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
-                      <img src="{{ atom.image }}" class="sp-image-replace" width="240">
-                    </div>
-                  </div>
-                  {% if atom.media-type  == null %}
-                  {% else %}
-                    <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
-                      <span class="gs-o-media-icon__icon gel-icon">
-                        <svg>
-                          <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
-                        </svg>
-                      </span>
-                      <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
-                    </span>
-                  {% endif %}
-                </div>
-              {% endif %}
-                <div class="oxygen__body gs-u-pl gs-u-pr">
-                  <div class="oxygen__content">
-                    <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a href="{{ atom.url }}"> <span class="oxygen__title-text">{{ atom.headline }}</span> </a> </h3>
-                    {% if atom.synopsis  == null %}
-                    {% else %}
-                      <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
-                    {% endif %}
-                  </div>
-                  <div class="oxygen__meta gs-u-mb">
-                    <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                      <li> <span class="timestamp gs-u-mb">
-                      <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
-                      <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
-                        <a href="#">{{ atom.section }}</a> </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </article>
-            {% endfor %}
-          {% endfor %}
-        </div>
-
-
-        <!-- ITEM 5 -->
-        <div class="gel-layout__item oxygen__item oxygen__item--5 gel-1/2@xs gel-1/1@m gel-3/4@l gel-4/5@xxl">
-          <article class="oxygen--slot gs-u-clearfix u-text-on-dark-bg">
-            <div class="oxygen__body">
-              <div class="oxygen__content">
-                <div class="topic-tag__subheader branch gs-u-mt">
-                  <h2 class="topic-tag__subheader--title gel-long-primer gs-u-mb">Related Topics:</h2>
-                </div>
-                <ul class="list-inline topic-tag__container">
-                  {% for atom_group in site.data.oxygen-topic03 %}
-                    {% for atom in atom_group.topic-tags %}
-                      <li class="topic-tag__list-item"><span class="topic-tag__plus-add-button"><a href="" class="topic-tag__name gel-long-primer">{{ atom.topic-tag }}</a></span></li>
-                    {% endfor %}
-                  {% endfor %}
-                </ul>
-              </div>
             </div>
-          </article>
+          </div>
         </div>
 
-        <!-- ITEM 5 -->
-        <div class="gel-layout__item oxygen__item oxygen__item--6 gel-1/2@xs gel-1/1@m gel-1/4@l gel-1/5@xxl">
-          <article class="oxygen--slot gs-u-clearfix faux-block-link u-text-on-dark-bg">
-            <span class="slice-header--bottom-left faux-block-link__target--on-dark"><span class="gel-great-primer">See all 34 stories </span><i class="next__icon gelicon gelicon--next gel-long-primer"></i></span>
-          </article>
+        <div class="gel-layout__item gel-3/4@l gel-3/5@xxl">
+          <div class="gel-layout gel-layout--flex">
+            <!-- ITEM 2 -->
+            <div class="gel-layout__item oxygen__item oxygen__item--2  gel-1/2@xs gel-1/3@m gel-1/3@l gel-1/3@xxl">
+              {% for atom_group in site.data.oxygen-topic03 %}
+                {% for atom in atom_group.slot02 %}
+                  <article class="oxygen--slot gs-u-clearfix faux-block-link">
+                    {% if atom.image  == null %}
+                    {% else %}
+                      <div class="media-island">
+                        <div class="oxygen__media ">
+                          <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                            <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                          </div>
+                        </div>
+                        {% if atom.media-type  == null %}
+                        {% else %}
+                          <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                            <span class="gs-o-media-icon__icon gel-icon">
+                              <svg>
+                                <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                              </svg>
+                            </span>
+                            <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                          </span>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                    <div class="oxygen__body gs-u-pl gs-u-pr">
+                      <div class="oxygen__content">
+                        <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="oxygen__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                        {% if atom.synopsis  == null %}
+                        {% else %}
+                          <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
+                        {% endif %}
+                      </div>
+                      <div class="oxygen__meta gs-u-mb">
+                        <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                          <li> <span class="timestamp gs-u-mb">
+                          <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                          <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                            <a href="#{{ atom.section }}">{{ atom.section }}</a> </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                {% endfor %}
+              {% endfor %}
+            </div>
+            <!-- ITEM 3 -->
+            <div class="gel-layout__item oxygen__item oxygen__item--2  gel-1/2@xs gel-1/3@m gel-1/3@l gel-1/3@xxl">
+              {% for atom_group in site.data.oxygen-topic03 %}
+                {% for atom in atom_group.slot03 %}
+                  <article class="oxygen--slot gs-u-clearfix faux-block-link">
+                    {% if atom.image  == null %}
+                    {% else %}
+                      <div class="media-island">
+                        <div class="oxygen__media ">
+                          <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                            <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                          </div>
+                        </div>
+                        {% if atom.media-type  == null %}
+                        {% else %}
+                          <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                            <span class="gs-o-media-icon__icon gel-icon">
+                              <svg>
+                                <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                              </svg>
+                            </span>
+                            <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                          </span>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                    <div class="oxygen__body gs-u-pl gs-u-pr">
+                      <div class="oxygen__content">
+                        <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="oxygen__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                        {% if atom.synopsis  == null %}
+                        {% else %}
+                          <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
+                        {% endif %}
+                      </div>
+                      <div class="oxygen__meta gs-u-mb">
+                        <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                          <li> <span class="timestamp gs-u-mb">
+                          <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                          <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                            <a href="#">{{ atom.section }}</a> </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                {% endfor %}
+              {% endfor %}
+            </div>
+            <!-- ITEM 4 -->
+            <div class="gel-layout__item oxygen__item oxygen__item--4  gel-1/2@xs gel-1/3@m gel-1/3@l gel-1/3@xxl">
+              {% for atom_group in site.data.oxygen-topic03 %}
+                {% for atom in atom_group.slot04 %}
+                  <article class="oxygen--slot gs-u-clearfix faux-block-link">
+                    {% if atom.image  == null %}
+                    {% else %}
+                      <div class="media-island">
+                        <div class="oxygen__media ">
+                          <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+                            <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+                          </div>
+                        </div>
+                        {% if atom.media-type  == null %}
+                        {% else %}
+                          <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                            <span class="gs-o-media-icon__icon gel-icon">
+                              <svg>
+                                <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                              </svg>
+                            </span>
+                            <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                          </span>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                    <div class="oxygen__body gs-u-pl gs-u-pr">
+                      <div class="oxygen__content">
+                        <h3 class="oxygen__title faux-block-link__target gel-paragon gs-u-mt gs-u-mt  gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="oxygen__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                        {% if atom.synopsis  == null %}
+                        {% else %}
+                          <p class="oxygen__summary gel-long-primer gs-u-mt+">{{ atom.synopsis }}</p>
+                        {% endif %}
+                      </div>
+                      <div class="oxygen__meta gs-u-mb">
+                        <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                          <li> <span class="timestamp gs-u-mb">
+                          <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                          <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                            <a href="#">{{ atom.section }}</a> </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+          </div>
+          <!-- ITEM 5 -->
+          <!--         <div class="gel-layout__item oxygen__item oxygen__item--6 gel-1/2@xs gel-1/1@m gel-1/4@l gel-1/5@xxl">
+            <article class="oxygen--slot gs-u-clearfix faux-block-link u-text-on-dark-bg">
+              <span class="slice-header--bottom-left faux-block-link__target--on-dark"><span class="gel-great-primer">See all 32 stories </span><i class="next__icon gelicon gelicon--next gel-long-primer"></i></span>
+            </article>
+          </div> -->
         </div>
-
       </div>
     </div>
   </div>
- </div>
 </section>

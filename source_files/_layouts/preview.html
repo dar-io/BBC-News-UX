@@ -19,7 +19,7 @@ layout: compress
     <link rel="stylesheet" href="{{ baseurl }}/assets/css/news/wide.css" />
     {% endunless %}
 </head>
-<body>
+<body class="signedIn">
   {% include core/orb/bodyfirst.html %}
 
     {{ content }}
@@ -28,6 +28,8 @@ layout: compress
 
     {% include core/orb/bodylast.html %}
     <script src="{{ baseurl }}/assets/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="{{ baseurl }}/assets/js/vendor/store2.min.js"></script>
     <script src="{{ baseurl }}/assets/js/main.js"></script>
+    <script src="{{ baseurl }}/assets/js/app.js"></script>
 </body>
 </html>

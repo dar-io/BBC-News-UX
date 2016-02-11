@@ -1,8 +1,10 @@
 #BACKGROUND IMAGE
 
+
 - header-title:
     - header-title:       "US Election"
-      url:                "#topic one"
+      url:                "http://www.bbc.co.uk/news/election/us2016"
+      class:              "us-election"
 
 - background-image:
     - background-image:   "/assets/img/organisms/topics/us-flag.jpg"
@@ -12,8 +14,13 @@
 #TOPIC TAGS
 - topic-tags:
     - topic-tag:          "United States"
+      URL:                "http://www.bbc.co.uk/news/world/us_and_canada"
+
     - topic-tag:          "US Politics"
-    - topic-tag:          "Republican Party"
+      URL:                "http://www.bbc.co.uk/news/election/us2016"
+
+    - topic-tag:          "US Economy"
+      URL:                "http://www.bbc.co.uk/news/topics/6f694397-5780-47da-aaa9-fe9515e29eaf/us-economy"
 
 
 #SLOT ONE

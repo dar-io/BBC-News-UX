@@ -2,27 +2,32 @@
 layout: compress
 ---
 {% include cldr/baseurl.html %}
-<!DOCTYPE HTML>
-<html class="no-js" lang="en-GB">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>BBC &mdash; Collider</title>
-    <meta name="description" content="The world's largest and most powerful pattern collider." />
-
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-
+<!DOCTYPE html>
+<html class="no-js {% unless page.disable-1280 %}b-pw-1280{% endunless %} ctm">
+<head>
+    <meta charset="utf-8" />
+    {% include core/orb/head.html %}
+    {% include core/head.html %}
+    {% unless page.enable-news-nav %}
     <link rel="stylesheet" href="{{ baseurl }}/assets/css/main.css" />
-  </head>
-  <body>
-    {% include cldr/sidebar.html %}
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/icon-font.css" />
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/sport-nav.css" />
+    {% else %}
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/news/compact.css" />
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/news/tablet.css" />
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/news/wide.css" />
+    {% endunless %}
+</head>
+<body>
+  {% include core/orb/bodyfirst.html %}
 
-    <div class="cldr__content">
-      {{ content }}
-    </div>
+    {{ content }}
+
+    {% include core/bodylast.html %}
+
 
     <script src="{{ baseurl }}/assets/js/vendor/jquery-2.1.4.min.js"></script>
     <script src="{{ baseurl }}/assets/js/main.js"></script>
-  </body>
+</body>
 </html>

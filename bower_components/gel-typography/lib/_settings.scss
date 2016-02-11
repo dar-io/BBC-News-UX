@@ -137,8 +137,8 @@ $gel-type-settings: (
           'line-height': 24px
         ),
         'group-c': (
-          'font-size': 26px,
-          'line-height': 30px
+          'font-size': 24px,
+          'line-height': 28px
         ),
         'group-d': (
           'font-size': 24px,
@@ -199,6 +199,11 @@ $gel-type-settings: (
         'group-a': (
           'font-size': 18px,
           'line-height': 22px
+          )
+        ),
+    'paragon-bold': (
+        'group-a': (
+          'font-weight': bold
           )
         ),
     'english': (

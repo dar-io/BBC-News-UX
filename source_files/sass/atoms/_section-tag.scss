@@ -13,7 +13,10 @@ $section-tag-color--news: #900 !default;
  */
 .section-tag {
     color: $section-tag-color;
-
+    .newsbeat & {
+    color: #4B237A;
+    font-weight: bold;
+    }
     a {
         color: inherit;
     }

@@ -30,6 +30,7 @@
     }
   }
   .iodine__media {
+    position: relative;
      @include mq($from:700px, $until:gel-bp-l) {
       width: gel-columns(2/3);
       float: right;
@@ -161,4 +162,31 @@
   min-height: 263px;
 }
 }
+}
+
+
+.iodine-header--location{
+  .slice-header--title{
+    margin-right:0px;
+    color: #767676;
+  }
+  .icon-locate{
+      color: #767676;
+     &:before {
+    line-height: 11px;
+    font-size: 32px;
+  }
+    }
+.hp-settings__location-button{
+  float: none;
+  width: 30px;
+}
+}
+
+.weather__item{
+  display: inline-block;
+  padding-bottom: halve($gel-spacing-unit);
+  .weather{
+    float: right;
+  }
 }

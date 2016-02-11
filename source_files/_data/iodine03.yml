@@ -1,0 +1,112 @@
+- classes:
+  - animOrder:            "1"
+    leadPromoPositionClass: "iodine__lead-promo--left" #other class - iodine__lead-promo--left
+
+- header:
+  - animOrder:            "1"
+    section-title:        "Sport"
+    see-all:              "See all"
+
+#SLOT One
+- slot01:
+    - animOrder:          "1"
+      image:              "http://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/16C94/production/_88223339_jamie_vardy.jpg"
+      headline:           "Sportsday - latest football news"
+      synopsis:           "Premier League news conferences, Manchester United's financial results, Liverpool scrap ticket price rise, plus breaking news."
+      time:               "2h"
+      section:            "Football"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://m.bbc.co.uk/sport/live/35106394"
+
+#SLOT TWO
+- slot02:
+    - animOrder:          "1"
+      image:              "http://ichef.bbci.co.uk/onesport/cps/400/cpsprodpb/985A/production/_88220093_stumps2_bbc.jpg"
+      headline:           "Howzat? Team bowled out for zero"
+      synopsis:
+      time:               "2h"
+      section:            "Cricket"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "1:17"
+      url:                "http://m.bbc.co.uk/sport/cricket/35550946"
+
+#SLOT Three
+- slot03:
+    - animOrder:          "1"
+      class:
+      image:              "http://ichef.bbci.co.uk/onesport/cps/400/cpsprodpb/17392/production/_88222159_mm_fac_promo_v2.jpg"
+      headline:           "FA Cup on the BBC 'You lucky people!'"
+      synopsis:
+      time:               "2h"
+      section:            "Football"
+      media-type:         "video" #video/audio/image --empty wont show the icon--
+      media-duration:     "1:34"
+      url:                "http://m.bbc.co.uk/sport/football/35553170"
+
+#SLOT Four
+- slot04:
+    - animOrder:          "1"
+      class:
+      image:              "http://ichef.bbci.co.uk/onesport/cps/400/cpsprodpb/8BC5/production/_88218753_taylor.jpg"
+      headline:           "England's Taylor 'nervous' for 100th ODI"
+      synopsis:
+      time:               "6h"
+      section:            "Cricket"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:23"
+      url:                "http://m.bbc.co.uk/sport/cricket/35546485"
+
+#SLOT Three
+- slot05:
+    - animOrder:          "1"
+      class:
+      image:              "http://ichef.bbci.co.uk/onesport/cps/400/cpsprodpb/28DD/production/_88216401_taylor_pass_getty.jpg"
+      headline:           "Taylor replaces Scott in Scotland line-up"
+      synopsis:
+      time:               "3h"
+      section:            "Rugby Union"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:23"
+      url:                "http://m.bbc.co.uk/sport/rugby-union/35547625"
+
+#SLOT Six
+- slot06:
+    - animOrder:          "1"
+      class:
+      image:              "http://ichef.bbci.co.uk/onesport/cps/400/cpsprodpb/CAC7/production/_88211915_rexfeatures_4417861a.jpg"
+      headline:           "Nestle ends IAAF sponsorship deal"
+      synopsis:
+      time:               "2d"
+      section:            "Athletics"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "3:20"
+      url:                "http://m.bbc.co.uk/news/business-35546032"
+
+#SLOT Six
+- slot07:
+    - animOrder:          "1"
+      class:
+      image:              "http://ichef.bbci.co.uk/news/400/cpsprodpb/7154/production/_88221092_bojan_empics.jpg"
+      headline:           "Bojan signs Stoke contract to 2020"
+      synopsis:
+      time:               "2d"
+      section:            "Athletics"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "3:20"
+      url:                "http://www.bbc.co.uk/sport/football/35552774"
+
+
+#SLOT FEATURED
+- featured:
+    - animOrder:          "1"
+      class:              "the-papers"
+      image:              "/assets/img/molecules/promo/thepapers.jpg"
+      headline:           "Rape inquiry shift - but no 'sorry'"
+      synopsis:
+      time:               "21m"
+      section:            "The Papers"
+      media-type:           #video/audio/image --empty wont show the icon--
+      media-duration:     "2:10"
+      url:                "featured"
+

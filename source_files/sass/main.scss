@@ -46,6 +46,7 @@ $enhanced: true;
 @import 'molecules/topic-tag';
 @import 'molecules/add-button';
 @import 'molecules/slice-cutter';
+@import 'molecules/weather';
 
 // UTILITIES
 @import 'utilities/visability';
@@ -72,6 +73,7 @@ $enhanced: true;
 @import 'organisms/most-popular';
 @import 'organisms/babel';
 @import 'organisms/oxygen';
+@import 'organisms/neon';
 
 @include mq($from:gel-bp-xxl){
   .gel-layout__item {
