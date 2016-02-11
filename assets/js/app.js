@@ -81,9 +81,9 @@
     $.each( addedTopics, function(topic, isAdded) {
 
       if( isAdded ) {
-        $('body').addClass( 't-' + topic );
+        $('body.signedIn').addClass( 't-' + topic );
       } else {
-        $('body').removeClass( 't-' + topic );
+        $('body.signedIn').removeClass( 't-' + topic );
       }
     });
   }
