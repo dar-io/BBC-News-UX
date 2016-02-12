@@ -11,9 +11,8 @@
   $(document).on('keyup', function(e) {
     if(e.keyCode === 27) {
       store.clear();
-      location.reload();
     }
-
+    location.reload();
   });
 
   // ON EVERY PAGE LOAD
@@ -29,7 +28,6 @@
   } else {
 
     // Otherwise set default topic added states.
-    addedTopics['signedin']      = false;
     addedTopics['us-election']   = false;
     addedTopics['eu-referendum'] = false;
     addedTopics['oscars-2016']   = false;
@@ -47,13 +45,7 @@
   //
 
   // Attach a click handler to all buttons that have a data-toggle-add-topic attribute, and when clicked
-
-//   if ( $( "body" ).is( ".t-signedIn" ) ) {
-
-
-// }
-
-     $('a[data-toggle-add-topic]').on('click', function(e) {
+  $('a[data-toggle-add-topic]').on('click', function(e) {
 
     // Get the topic name from the data attribute
     var topic        = $(this).data('toggle-add-topic');
@@ -63,42 +55,11 @@
 
     if( isTopicAdded ) {
       setTopicRemoved( topic );
-
-
-
     } else {
       setTopicAdded( topic );
-
-      // Display notification after a topic is added
-      $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideDown('fast');
-        window.setTimeout(close3,5000);
-
-      function close3() {
-        $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideToggle('fast');
-        }
     }
 
-
   });
-
-
-
-
-  // $('a[data-sign-in]').on('click', function(e) {
-
-  //   // Get the topic name from the data attribute
-  //   var topic        = $(this).data('sign-in');
-
-  //   // Check to see if it has already been added, so we know whether to add or remove
-  //   var isTopicAdded = addedTopics[ topic ];
-
-  //   if( isTopicAdded ) {
-  //     setTopicRemoved( topic );
-  //   } else {
-  //     setTopicAdded( topic );
-  //   }
-  //  location.reload();
-  // });
 
   // Give this function a topic name and it will ADD the topic to localStorage and the local tracking variable, and then update body topics classes.
   function setTopicAdded( topic ) {
@@ -120,12 +81,9 @@
     $.each( addedTopics, function(topic, isAdded) {
 
       if( isAdded ) {
-
         $('body').addClass( 't-' + topic );
-
       } else {
         $('body').removeClass( 't-' + topic );
-
       }
     });
   }
