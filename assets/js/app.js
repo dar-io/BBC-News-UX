@@ -33,6 +33,7 @@
     addedTopics['us-election']   = false;
     addedTopics['eu-referendum'] = false;
     addedTopics['oscars-2016']   = false;
+    addedTopics['location-set']  = false;
 
     // And then sync them with localStorage
     store.set('addedTopicsLocal', addedTopics);
@@ -53,8 +54,39 @@
 
 // }
 
-     $('a[data-toggle-add-topic]').on('click', function(e) {
 
+     $('#orb-search-form[data-toggle-add-topic]').on('submit', function(e) {
+      event.preventDefault();
+    // Get the topic name from the data attribute
+    var topic        = $(this).data('toggle-add-topic');
+
+    // Check to see if it has already been added, so we know whether to add or remove
+    var isTopicAdded = addedTopics[ topic ];
+
+    if( isTopicAdded ) {
+      setTopicRemoved( topic );
+
+
+
+    } else {
+      setTopicAdded( topic );
+
+      // Display notification after a topic is added
+      $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideDown('fast');
+        window.setTimeout(close3,5000);
+
+      function close3() {
+        $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideToggle('fast');
+        }
+    }
+
+
+  });
+
+
+
+     $('a[data-toggle-add-topic]').on('click', function(e) {
+      event.preventDefault();
     // Get the topic name from the data attribute
     var topic        = $(this).data('toggle-add-topic');
 
