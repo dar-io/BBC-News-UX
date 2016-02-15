@@ -8,12 +8,11 @@
   $('.disabled').on('click', false);
 
   // Clear localStorage on ESC
-  $(document).on('keyup', function(e) {
-    if(e.keyCode === 27) {
+  $('.babel__title').on('click', function(e) {
+    // if(e.keyCode === 27) {
       store.clear();
       location.reload();
-    }
-
+    // }
   });
 
   // ON EVERY PAGE LOAD
