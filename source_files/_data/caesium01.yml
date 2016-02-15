@@ -1,0 +1,154 @@
+- classes:
+  - animOrder:            "1"
+    leadPromoPositionClass: "iodine__lead-promo--right" #other class - iodine__lead-promo--left
+
+- header:
+  - animOrder:            "1"
+    section-title:        "Must See"
+    see-all:              "See all"
+
+
+#SLOT One
+- slot01:
+    - animOrder:          "1"
+      image:              "http://c.files.bbci.co.uk/56D1/production/_88252222_ma2.jpg"
+      headline:           "How my son became a Columbine killer"
+      synopsis:           "After years of silence Sue Klebold - the mother of one of the Columbine High School killers - has been speaking to BBC Newsnight's Kirsty Wark."
+      time:               "1d"
+      section:            "US & Canada"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "8 Photos"
+      url:                "http://www.bbc.com/news/world-us-canada-35559605"
+
+
+#SLOT TWO
+- slot02:
+    - animOrder:          "1"
+      image:
+      headline:           "Was a doctors' contract deal ever possible?"
+      synopsis:           "On Tuesday, the eve of this week's strike by junior doctors in England, the government's negotiating team made a last ditch attempt to break the deadlock with the British Medical Association."
+      time:               "2h"
+      section:
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "1:36"
+      url:                "http://www.bbc.com/news/health-35563301"
+
+      contributorAvatar:  "nicktriggle.png"
+      contributorName:    "Nick Triggle"
+      contributorTitle:   "Health correspondent"
+
+
+#SLOT Three
+- slot03:
+    - animOrder:          "1"
+      image:              "http://c.files.bbci.co.uk/145E/production/_88241250_sophie4.png"
+      headline:           "A gymnast's hip hop moves ... and other trends of the week"
+      synopsis:           ""
+      time:               "4h"
+      section:            "Magazine"
+      media-type:         "video" #video/audio/image --empty wont show the icon--
+      media-duration:     "1:36"
+      url:                "http://www.bbc.com/news/magazine-35562560"
+
+      contributorAvatar:
+      contributorName:
+      contributorTitle:
+
+
+#SLOT Four
+- slot04:
+    - animOrder:          "1"
+      image:
+      headline:           "How Putin is succeeding in Syria"
+      synopsis:           "President Putin set himself achievable goals in Syria and committed enough force to meet them. Viewed from the West, Russia's President, Vladimir Putin, is in the diplomatic dog-house."
+      time:               "1h"
+      section:
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "1:36"
+      url:                "http://www.bbc.com/news/world-middle-east-35539897"
+
+      contributorAvatar:  "jonathanmarcus.png"
+      contributorName:    "Jonathan Marcus"
+      contributorTitle:   "Diplomatic correspondent"
+
+
+#SLOT Four
+- slot05:
+    - animOrder:          "1"
+      image:              "http://c.files.bbci.co.uk/11B86/production/_88228527_simulation.png"
+      headline:           "Gravitational waves: Numbers don't do them justice"
+      synopsis:
+      time:               "2d"
+      section:            "Science & Environment"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "1:36"
+      url:                "http://www.bbc.com/news/science-environment-35553549"
+
+      contributorAvatar:  "jonathanmarcus.png"
+      contributorName:
+      contributorTitle:   "Diplomatic correspondent"
+
+#SLOT Four
+- slot06:
+    - animOrder:          "1"
+      image:
+      headline:           "Is Google feeling unloved?"
+      synopsis:           "On this week's edition of Tech Tent, we bring you two controversies raging in the technology world, plus an insight into an AI business that's actually making money."
+      time:               "2d"
+      section:
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "1:36"
+      url:                "http://www.bbc.com/news/technology-35559595"
+
+      contributorAvatar:  "rorycellanjones.png"
+      contributorName:    "Rory Cellan-Jones"
+      contributorTitle:   "Technology correspondent"
+
+
+#SLOT FEATURED
+- featured:
+    - animOrder:          "1"
+      class:              "the-papers"
+      image:              "/assets/img/molecules/promo/thepapers.jpg"
+      headline:           "Colombia warns on Zika baby risk"
+      synopsis:
+      time:               "21m"
+      section:            "The Papers"
+      media-type:           #video/audio/image --empty wont show the icon--
+      media-duration:     "2:10"
+      url:                "http://www.bbc.co.uk/news/blogs/the_papers"
+
+
+#RIVER HEADLINES
+- river:
+    - headline:           "Friendly place"
+      synopsis:           "Doctor cycles round the world and gives it a clean bill of health"
+      time:               "47m"
+      section:            "Magazine"
+      url:                "http://www.bbc.com/news/magazine-35561848"
+      id:                 "1"
+      visibility-classes:
+
+    - headline:           "Zika outbreak"
+      synopsis:           "Everything you need to know about the virus, which has been declared a global public health emergency."
+      time:               "1h"
+      section:            "Health"
+      url:                "http://www.bbc.com/news/health-35370848"
+      id:                 "2"
+      visibility-classes:
+
+    - headline:           "Why can't Brussels be simpler?"
+      synopsis:           "Journalists often struggle to bring clarity to complex EU politics, the BBC's Laurence Peter reports."
+      time:               "1h"
+      section:            "EU Referendum"
+      url:                "http://www.bbc.com/news/uk-politics-eu-referendum-35532846"
+      id:                 "3"
+      visibility-classes:
+
+    - headline:           "US election: Hillary Clinton's problem with young women"
+      synopsis:           "Hillary Clinton has a problem with women and especially younger women."
+      time:               "2h"
+      section:            "US Election 2016"
+      url:                "http://www.bbc.com/news/election-us-2016-35526323"
+      id:                 "4"
+      visibility-classes:

@@ -17,7 +17,7 @@
   }
   .lead-promo__body{
     @include mq($from:gel-bp-l) {
-
+padding-right:$gel-spacing-unit;
         padding-left:$gel-spacing-unit;
       padding-top: $gel-spacing-unit;
     }
@@ -42,7 +42,7 @@
   }
   .lead-promo__body{
     @include mq($from:gel-bp-l) {
-
+      padding-right:$gel-spacing-unit;
         padding-left:$gel-spacing-unit;
       padding-top: $gel-spacing-unit;
     }
@@ -165,7 +165,7 @@
 
   @include mq($from:gel-bp-xxl) {
     & > .gel-layout {
-      min-height: 614px;
+      min-height: 561px;
     }
     .caesium__item--river {
       padding-bottom:$gel-alt-spacing-unit;
@@ -237,14 +237,14 @@
   position: relative;
   display: block;
   float: left;
+  width:100%;
 }
 
 .caesium__item--5{
-  min-height: 328px;
+  min-height: 269px;
 }
 
 .caesium__item {
-
     position: relative;
     display: inline-block;
     width: 100%;
@@ -262,7 +262,7 @@
       content: '';
     }
 
-    .avatar{ background-color: $white;}
+    .avatar{ background-color: #E8E7E7;}
     &.anfield__item--1 {
       &:before {
         display: none;
@@ -416,7 +416,8 @@
     z-index: 99;
   }
   .timestamp, a{color:$white;}
-  .has-media-icon--medium{
+   .lead-promo__content{padding-left:12px;}
+  .icon--medium-video,.icon--medium-audio,.icon--medium-image{
     .lead-promo__content{
       padding-left:68px;
     }
@@ -458,3 +459,8 @@
 }
 }
 
+
+
+.theme--keylines{
+
+}

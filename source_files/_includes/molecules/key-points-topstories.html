@@ -14,7 +14,7 @@
 </span>
 {% for atom_group in site.data.curium %}
   {% for atom in atom_group.keypointsHeadline %}
-  <a href="" target="_blank" class="gel-paragon-bold faux-block-link__target">{{ atom.headline }}</a>
+  <a href="{{ atom.url }}" target="_blank" class="gel-paragon-bold faux-block-link__target">{{ atom.headline }}</a>
 
   {% endfor %}
 {% endfor %}

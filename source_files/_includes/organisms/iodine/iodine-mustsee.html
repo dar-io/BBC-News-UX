@@ -6,14 +6,16 @@
   {% for class in classes.classes %}
     <section class="iodine--wrap {{ class.leadPromoPositionClass }} gs-u-clearfix">
       <div class="gel-wrap">
-        <div class="gel-layout">
+         <div class="gel-layout">
           {% for atom_group in site.data.iodine01 %}
             {% for atom in atom_group.header %}
               <div class="gel-layout__item slice-header">
-                <div class="slice-header--title gel-double-pica">{{ atom.section-title }}</div>
+                <div class="slice-header--title gel-double-pica"><a target="_blank" href="{{ atom.url }}">{{ atom.section-title }}</a></div>
                 {% if atom.see-all  == null %}
                 {% else %}
-                  <div class="slice-header--controls gel-paragon">{{ atom.see-all }}</div>
+                  <div class="slice-header--controls gel-paragon"><a target="_blank" href="{{ atom.url }}"> {{ atom.see-all }} </a></div>
+
+
                 {% endif %}
               </div>
             {% endfor %}
@@ -34,19 +36,22 @@
                       </div>
                       {% if atom.media-type  == null %}
                       {% else %}
-                        <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+                        <span class="gs-o-media-icon--medium  gs-o-media-icon media-island__icon--bl media-island__icon">
                           <span class="gs-o-media-icon__icon gel-icon">
                             <svg>
                               <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
                             </svg>
                           </span>
-                          <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                          <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
                         </span>
                       {% endif %}
                     </div>
-                    <div class="iodine__body">
+                    <div class="iodine__body icon--medium-{{ atom.media-type }}">
                       <div class="iodine__content">
-                        <h3 class="iodine__title faux-block-link__target gel-double-pica-bold gs-u-mt@s gs-u-mt---@m  gs-u-mt@xxl"> <a class="title-link" target="_blank" href="{{ atom.url }}" > <span class="iodine__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                        <h3 class="iodine__title faux-block-link__target gel-double-pica-bold gs-u-mt@s gs-u-mt---@m  gs-u-mt@xxl"> <a class="title-link" target="_blank" href="{{ atom.url }}" >
+
+                      <span class="iodine__title-text title-link__title-text">
+                      {{ atom.headline }}</span> </a> </h3>
                         {% if atom.synopsis  == null %}
                         {% else %}
                           <p class="lead-promo__summary gel-long-primer gs-u-mt v-u-hidden@xs v-u-hidden@s v-u-hidden@l">{{ atom.synopsis }}</p>
@@ -54,7 +59,7 @@
                       </div>
                       <div class="iodine__meta gs-u-mt">
                         <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                          <li> <span class="timestamp gs-u-mb">
+                          <li> <span class="timestamp">
                           <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
                           <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
                             <a href="#">{{ atom.section }}</a> </span>
@@ -92,7 +97,7 @@
                                   <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
                                 </svg>
                               </span>
-                              <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                              <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
                             </span>
                           {% endif %}
                         </div>
@@ -107,7 +112,7 @@
                         </div>
                         <div class="iodine__meta gs-u-mb">
                           <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                            <li> <span class="timestamp gs-u-mb">
+                            <li> <span class="timestamp">
                             <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
                             <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
                               <a href="#">{{ atom.section }}</a> </span>
@@ -158,7 +163,7 @@
                                   <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
                                 </svg>
                               </span>
-                              <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                              <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
                             </span>
                           {% endif %}
                         </div>
@@ -173,7 +178,7 @@
                         </div>
                         <div class="iodine__meta gs-u-mb">
                           <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                            <li> <span class="timestamp gs-u-mb">
+                            <li> <span class="timestamp">
                             <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
                             <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
                               <a href="#">{{ atom.section }}</a> </span>
@@ -209,7 +214,7 @@
                                     <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
                                   </svg>
                                 </span>
-                                <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                                <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
                               </span>
                             {% endif %}
                           </div>
@@ -224,7 +229,7 @@
                           </div>
                           <div class="iodine__meta gs-u-mb">
                             <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                              <li> <span class="timestamp gs-u-mb">
+                              <li> <span class="timestamp">
                               <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
                               <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
                                 <a href="#">{{ atom.section }}</a> </span>
@@ -264,7 +269,7 @@
                                   <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
                                 </svg>
                               </span>
-                              <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                              <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
                             </span>
                           {% endif %}
                         </div>
@@ -279,7 +284,7 @@
                         </div>
                         <div class="iodine__meta gs-u-mb">
                           <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                            <li> <span class="timestamp gs-u-mb">
+                            <li> <span class="timestamp">
                             <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
                             <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
                               <a href="#">{{ atom.section }}</a> </span>
@@ -314,7 +319,7 @@
                                   <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
                                 </svg>
                               </span>
-                              <span class="gs-o-media-island__duration gel-brevier">{{ atom.media-duration }}</span>
+                              <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
                             </span>
                           {% endif %}
                         </div>
@@ -329,7 +334,7 @@
                         </div>
                         <div class="iodine__meta gs-u-mb">
                           <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
-                            <li> <span class="timestamp gs-u-mb">
+                            <li> <span class="timestamp">
                             <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
                             <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
                               <a href="#">{{ atom.section }}</a> </span>

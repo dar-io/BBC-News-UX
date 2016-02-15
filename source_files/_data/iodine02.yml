@@ -4,24 +4,40 @@
 
 - header:
   - animOrder:            "1"
-    section-title:        "myNews"
+    section-title:        "My News"
     see-all:
 
 #SLOT One
 - slot01:
     - animOrder:          "1"
+      class:              "local-news-replace-with-us-elections"
       image:              "http://ichef.bbci.co.uk/images/ic/480x270/p03j6kk4.jpg"
       headline:           "Met Police chief's contract extended"
       synopsis:           "Sir Bernard Hogan-Howe will head the Metropolitan Police until September 2017 as his contract is extended."
-      time:               "3h"
+      time:               "29m"
       section:            "London"
       media-type:          #video/audio/image --empty wont show the icon--
       media-duration:     "2:30"
-      url:                "http://www.bbc.co.uk/news/world-asia-35516199"
+      url:                "http://www.bbc.com/news/uk-england-london-35549788"
+
+#SLOT One US ELECTIONS
+- slot01:
+    - animOrder:          "1"
+      class:              "us-elections-added-topic"
+      image:              "http://ichef-1.bbci.co.uk/news/624/cpsprodpb/1738F/production/_88191159_031370779-1.jpg"
+      headline:           "New Hampshire winners and losers"
+      synopsis:           "Ten candidates chugged in to New Hampshire after the Iowa caucuses with hopes of success. But who has a ticket on the presidential train as it rolls down the coast, to South Carolina and beyond?"
+      time:               "14m"
+      section:            "US Election 2016"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.com/news/election-us-2016-35529283"
+
 
 #SLOT TWO
 - slot02:
     - animOrder:          "1"
+      class:              "local-news-replace-with-eu-referendum"
       image:              "http://ichef.bbci.co.uk/news/340/cpsprodpb/B023/production/_88219054_hi031352452.jpg"
       headline:           "Psychiatrist struck off over affair"
       synopsis:
@@ -31,23 +47,52 @@
       media-duration:     "1:17"
       url:                "http://www.bbc.co.uk/news/uk-england-london-35552638"
 
+#SLOT TWO - EU REFERENDUM
+- slot02:
+    - animOrder:          "1"
+      class:              "eu-referendum-topic"
+      image:              "http://ichef.bbci.co.uk/news/410/cpsprodpb/17403/production/_88253259_88253258.jpg"
+      headline:           "US wants 'strong UK in strong EU'"
+      synopsis:
+      time:               "29m"
+      section:            "EU Referendum"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "1:17"
+      url:                "http://www.bbc.co.uk/news/uk-politics-eu-referendum-35569134"
+
+
+
 #SLOT Three
 - slot03:
     - animOrder:          "1"
-      class:
+      class:              "local-news-replace-with-us-elections"
       image:              "http://ichef.bbci.co.uk/news/660/cpsprodpb/D1D8/production/_88202735_88197218.jpg"
       headline:           "Man jailed for travelling to Syria"
       synopsis:
-      time:               "1d"
+      time:               "3h"
       section:            "London"
       media-type:          #video/audio/image --empty wont show the icon--
       media-duration:     "2:30"
       url:                "http://www.bbc.co.uk/news/uk-england-london-35542054"
 
+#SLOT Three US ELECTIONS
+- slot03:
+    - animOrder:          "1"
+      class:              "us-elections-added-topic"
+      image:              "http://ichef.bbci.co.uk/news/340/cpsprodpb/1BC2/production/_88160170_trump-promo.jpg"
+      headline:           "Viewpoint: Are Donald Trump and his rivals a big joke?"
+      synopsis:
+      time:               "2h"
+      section:            "US Election 2016"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.com/news/magazine-35521558"
+
+
 #SLOT Four
 - slot04:
     - animOrder:          "1"
-      class:
+      class:              "local-news-replace-with-us-elections"
       image:              "http://ichef-1.bbci.co.uk/news/340/cpsprodpb/16359/production/_88196909_bellfield.jpg"
       headline:           "Who is Levi Bellfield? "
       synopsis:           "Profile of 'heinous' serial killer"
@@ -57,10 +102,24 @@
       media-duration:     "2:23"
       url:                "http://www.bbc.co.uk/news/uk-england-35541060"
 
+#SLOT Four US ELECTIONS
+- slot04:
+    - animOrder:          "1"
+      class:              "us-elections-added-topic"
+      image:              "http://ichef.bbci.co.uk/news/340/cpsprodpb/7C30/production/_88229713_88229712.jpg"
+      headline:           "What's Hillary Clinton's next move?"
+      synopsis:
+      time:               "33m"
+      section:            "US Election 2016"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:23"
+      url:                "http://www.bbc.com/news/election-us-2016-35546662"
+
+
 #SLOT Three
 - slot05:
     - animOrder:          "1"
-      class:
+      class:              "local-news-replace-with-oscars-2016"
       image:              "http://ichef-1.bbci.co.uk/news/340/cpsprodpb/11383/production/_88213507_traintrackcrowdedplatform.jpg"
       headline:           "Off track"
       synopsis:           "Train crew shortages cause 10% of delays"
@@ -70,18 +129,46 @@
       media-duration:     "2:23"
       url:                "http://www.bbc.co.uk/news/magazine-35293307"
 
+#SLOT Six - OSCARS
+- slot05:
+    - animOrder:          "1"
+      class:              "oscars-2016-topic"
+      image:              "http://c.files.bbci.co.uk/8251/production/_87716333_oscar-noms.jpg"
+      headline:           "Oscars 2016: Seven things we learned"
+      synopsis:
+      time:               "38m"
+      section:            "Oscars 2016"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "3:20"
+      url:                "http://www.bbc.com/news/entertainment-arts-35531304"
+
+
 #SLOT Six
 - slot06:
     - animOrder:          "1"
-      class:              "must-see"
-      image:              "http://ichef-1.bbci.co.uk/news/640/cpsprodpb/13C9D/production/_87835018_87835016.jpg"
-      headline:           "The town where people endure -50 C"
+      class:              "local-news-replace-with-oscars-2016"
+      image:              "http://ichef-1.bbci.co.uk/news/624/cpsprodpb/5C53/production/_88253632_30298841-c1d7-4371-a997-65207ebacf04.jpg"
+      headline:           "Thousands against Bishopsgate skyscrapers"
       synopsis:
       time:               "3h"
-      section:            "Entertainment & Arts"
-      media-type:         "video" #video/audio/image --empty wont show the icon--
+      section:            "London"
+      media-type:          #video/audio/image --empty wont show the icon--
       media-duration:     "3:20"
-      url:                "http://www.bbc.co.uk/news/entertainment-arts-35376062#?utm_source=twitterfeed&utm_medium=twitter"
+      url:                "http://www.bbc.com/news/uk-england-london-35555793"
+
+#SLOT Six - OSCARS
+- slot06:
+    - animOrder:          "1"
+      class:              "oscars-2016-topic"
+      image:              "http://c.files.bbci.co.uk/9EDB/production/_88176604_stallone-epa.jpg"
+      headline:           "Oscars 2016: Sylvester Stallone considered boycott"
+      synopsis:
+      time:               "3h"
+      section:            "Oscars 2016"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "3:20"
+      url:                "http://www.bbc.com/news/entertainment-arts-35531304"
+
 
 
 #SLOT FEATURED
@@ -100,42 +187,38 @@
 
 
 #KEYPOINTS LIVE
-- keypointsHeadline:
-    - headline:          "BBC London Live: Latest"
+- keypointsHeadline:      "BBC London Live: Latest"
+  url:                    "#"
 
-- keypoints-live:
+  keypoints-live:
     - headline:           "Police 'should be neutral' in sex abuse inquiries, says Met head"
       time:               "10:27" #duration format 00:00
       media-type:         "text" #media/text
-      url:                "/post01"
+      url:                "#"
 
     - headline:           "Adam Osborne struck off for affair with vulnerable patient"
       time:               "10:18" #duration format 00:00
       media-type:         "text" #media/text
-      url:                "/post01"
+      url:                "#"
 
     - headline:           "Met boss has contract extended by one year"
       time:               "10:08" #duration format 00:00
       media-type:         "text" #media/text
-      url:                "/post01"
-
+      url:                "#"
     - headline:           "Met boss has contract extended by one year"
       time:               "10:08" #duration format 00:00
       media-type:         "text" #media/text
-      url:                "/post01"
-
+      url:                "#"
     - headline:           "Met boss has contract extended by one year"
       time:               "10:08" #duration format 00:00
       media-type:         "text" #media/text
-      url:                "/post01"
-
+      url:                "#"
     - headline:           "Met boss has contract extended by one year"
       time:               "10:08" #duration format 00:00
       media-type:         "text" #media/text
-      url:                "/post01"
-
+      url:                "#"
     - headline:           "Met boss has contract extended by one year"
       time:               "10:08" #duration format 00:00
       media-type:         "text" #media/text
-      url:                "/post01"
+      url:                "#"
 

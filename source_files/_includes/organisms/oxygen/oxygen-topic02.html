@@ -1,5 +1,7 @@
 <!-- SLICE CUTTER ///////////////////////////////////////////////////////////////////////////////////-->
+
 {% include organisms/slice-cutter/slice-cutter.html %}
+
 
 
 {% include cldr/baseurl.html %}
@@ -7,9 +9,9 @@
 
   {% for atom_group in site.data.oxygen-topic02 %}
     {% for atom in atom_group.background-image %}
-      <div style="background-image:url({{ baseurl }}{{ atom.background-image }});" class="oxigen--item oxigen--item01">
+      <div style="background-image:url({{ baseurl }}{{ atom.background-image }});" class="oxigen--item oxigen--item02">
         <style>
-        .oxigen--item01:before{background-color:{{ atom.background-colour}};}
+        .oxigen--item02:before{background-color:{{ atom.background-colour}};}
         </style>
       {% endfor %}
     {% endfor %}

@@ -6,14 +6,16 @@
   {% for class in classes.classes %}
     <section class="iodine--wrap {{ class.leadPromoPositionClass }} gs-u-clearfix">
       <div class="gel-wrap">
-        <div class="gel-layout">
+         <div class="gel-layout">
           {% for atom_group in site.data.iodine03 %}
             {% for atom in atom_group.header %}
               <div class="gel-layout__item slice-header">
-                <div class="slice-header--title gel-double-pica">{{ atom.section-title }}</div>
+                <div class="slice-header--title gel-double-pica"><a target="_blank" href="{{ atom.url }}">{{ atom.section-title }}</a></div>
                 {% if atom.see-all  == null %}
                 {% else %}
-                  <div class="slice-header--controls gel-paragon">{{ atom.see-all }}</div>
+                  <div class="slice-header--controls gel-paragon"><a target="_blank" href="{{ atom.url }}"> {{ atom.see-all }} </a></div>
+
+
                 {% endif %}
               </div>
             {% endfor %}

@@ -1,37 +1,87 @@
 ---
-layout: default
+layout: preview
+title: Layout - Full Width Title
+var-page-state: Coming up
+page-type: layout
+
 ---
 
+<div class="gs-t-news">
+    {% include core/navs/news-global-header.html %}
 
-{% include cldr/baseurl.html %}
-<div class="gel-wrap">
+      {% include molecules/av-live.html %}
 
-  <div class="gel-layout gs-u-mt++">
-  <ul class="gel-layout__item ">
-    <li class="gs-o-list-ui__item">
-      <a href="{{ baseurl }}/prototype/01-HP-signed-out.html">
-        <strong class="gel-paragon">01 - Top stories morning - Not signed  </strong>
-        <p class="gs-u-mt">myNews slice upsell state: user sets the location to London, he is then redirected into another homepage that has the mynews slice filed with local news content</p>
 
-      </a>
-    </li>
-    <li class="gs-o-list-ui__item">
-      <a href="{{ baseurl }}/prototype/02-HP-signed-in.html">
-        <strong class="gel-paragon">02 Top stories morning - Signed In </strong>
+<!-- TOP STORIES -->
+{% include organisms/curium/curium.html %}
 
-        <p class="gs-u-mt">The myNews slice contains local news. Here users can add topics from collection into their my news area.</p>
 
-      </a>
-    </li>
-    <li class="gs-o-list-ui__item">
-      <a href="{{ baseurl }}/prototype/03-HP-mynews-with-topics.html">
-        <strong class="gel-paragon">03 Top stories with evening content and my news with a mix of local news and added topics </strong>
 
-      </a>
-    </li>
+<!-- USED MOSTLY ON COLLECTIONS-->
+{% include organisms/oxygen/oxygen-topic01.html %}
 
-  </ul>
+
+
+<!-- USED MOSTLY ON MUST SEE-->
+{% include organisms/iodine/iodine-mustsee.html %}
+
+
+
+<!-- USED MOSTLY ON COLLECTIONS-->
+{% include organisms/oxygen/oxygen-topic02.html %}
+
+
+
+<!-- FEATURED -->
+{% include organisms/caesium/caesium01.html %}
+
+
+
+<span class="myNewsUpsell gs-u-clearfix">
+<!-- MY NEWS UPSELL -->
+{% include organisms/neon/neon.html %}
+</span>
+
+<span class="myNewsLocal">
+<!-- MY NEWS LOCAL CONTENT-->
+{% include organisms/iodine/iodine-myNews.html %}
+</span>
+
+
+<!-- USED MOSTLY ON COLLECTIONS-->
+{% include organisms/oxygen/oxygen-topic03.html %}
+
+
+<!-- MOST POPULAR-->
+{% include organisms/most-popular/most-popular.html %}
+
+
+<!-- USED MOSTLY ON MUST SEE-->
+{% include organisms/iodine/iodine-sport.html %}
+
+
+
+<!-- USED MOSTLY ON COLLECTIONS-->
+{% include organisms/indium/indium01.html %}
+
+
+<!-- USED MOSTLY FOR MORE FROM UK-->
+<!--  include organisms/astatine/astatine.html  -->
+
+
+<!-- USED MOSTLY FOR MORE FROM UK-->
+{% include organisms/babka/babka01.html %}
+
+
+<!-- USED MOSTLY FOR MORE FROM BBC NEWS-->
+{% include organisms/gallium/gallium.html %}
+
+
+
+<!-- USED MOSTLY FOR Elsewhere on the BBC
+-->
+
+<!-- Other Slice-->
+{% include organisms/babel/babel.html %}
 
 </div>
-</div>
-

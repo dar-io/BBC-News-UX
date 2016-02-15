@@ -59,7 +59,7 @@ gulp.task('sass', function() {
     .pipe( prefix() )
     .pipe( gulp.dest( destination + '/assets/css' ) )
     .pipe( browserSync.reload({ stream: true }) )
-    .pipe(sourcemaps.write(source + '/assets/css'))
+    .pipe(sourcemaps.write( '.'))
     .pipe( gulp.dest( source + '/assets/css' ) );
 
 });

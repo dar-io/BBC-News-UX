@@ -4,7 +4,7 @@ layout: compress
 {% include cldr/baseurl.html %}
 
 <!DOCTYPE html>
-<html class="no-js {% unless page.disable-1280 %}b-pw-1280{% endunless %} ctm">
+<html class="font-face no-js {% unless page.disable-1280 %}b-pw-1280{% endunless %} ctm">
 <head>
     <meta charset="utf-8" />
     {% include core/orb/head.html %}
@@ -20,6 +20,7 @@ layout: compress
     {% endunless %}
 </head>
 <body class="signedIn">
+
   {% include core/orb/bodyfirst.html %}
 
     {{ content }}

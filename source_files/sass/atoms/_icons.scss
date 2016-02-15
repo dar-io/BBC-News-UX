@@ -150,16 +150,17 @@ $gelicon--previous: '\e002';
 
     @font-face {
         font-family: 'bbc-sport';
-        src: url('../../fonts/fonts/bbc-sport.eot?v=' + $cache-buster);
-        src: url('../../fonts/fonts/bbc-sport.eot?v=' + $cache-buster + '#iefix') format('embedded-opentype'),
-             url('../../fonts/fonts/bbc-sport.woff?v=' + $cache-buster) format('woff'),
-             url('../../fonts/fonts/bbc-sport.ttf?v=' + $cache-buster) format('truetype'),
-             url('../../fonts/fonts/bbc-sport.svg?v=' + $cache-buster + '#bbc-sport') format('svg');
+        src: url('../fonts/bbc-sport.eot?v=' + $cache-buster);
+        src: url('../fonts/bbc-sport.eot?v=' + $cache-buster + '#iefix') format('embedded-opentype'),
+             url('../fonts/bbc-sport.woff?v=' + $cache-buster) format('woff'),
+             url('../fonts/bbc-sport.ttf?v=' + $cache-buster) format('truetype'),
+             url('../fonts/bbc-sport.svg?v=' + $cache-buster + '#bbc-sport') format('svg');
         font-weight: normal;
         font-style: normal;
     }
 
     .font-face {
+
         /* Use the following CSS code if you want to have a class per icon */
         /*
         Instead of a list of all class selectors,

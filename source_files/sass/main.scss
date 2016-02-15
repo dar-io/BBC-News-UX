@@ -20,11 +20,11 @@ $enhanced: true;
 @import 'tools/theme';
 
 // ATOMS
+@import 'atoms/icons';
 @import 'atoms/news-colours';
 @import 'atoms/timestamp';
 @import 'atoms/section-tag';
 @import 'atoms/faux-block-link';
-@import 'atoms/icons';
 @import 'atoms/typography';
 @import 'atoms/layout';
 @import 'atoms/list-inline';
@@ -74,6 +74,66 @@ $enhanced: true;
 @import 'organisms/babel';
 @import 'organisms/oxygen';
 @import 'organisms/neon';
+
+
+ .myNewsLocal{
+    display: none;
+  }
+
+.t-location-set{
+  .myNewsUpsell{
+    display: none !important;
+  }
+  .myNewsLocal{
+    display: inherit;
+  }
+}
+
+
+.oscars-2016-topic, .eu-referendum-topic, .us-elections-added-topic{
+  display: none;
+}
+
+
+.t-us-election{
+  .local-news-replace-with-us-elections{
+  display: none;
+}
+  .us-elections-added-topic{
+  display: inherit;
+ }
+}
+
+.t-eu-referendum{
+  .local-news-replace-with-eu-referendum{
+  display: none;
+}
+  .eu-referendum-topic{
+  display: inherit;
+ }
+}
+
+.t-oscars-2016{
+  .local-news-replace-with-oscars-2016{
+  display: none;
+}
+  .oscars-2016-topic{
+  display: inherit;
+ }
+}
+
+.location-london{
+  display: none !important;
+}
+
+.t-location-set{
+  .location-london{
+    display: inherit !important;
+  }
+  .set-location{
+    display: none !important;
+  }
+}
 
 @include mq($from:gel-bp-xxl){
   .gel-layout__item {

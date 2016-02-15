@@ -7,7 +7,7 @@
 
 - background-image:
     - background-image:   ""
-      background-colour:  "#3B4147"
+      background-colour:  "#0F395F"
 
 
 #TOPIC TAGS
@@ -35,9 +35,9 @@
 #SLOT TWO
 - slot02:
     - animOrder:          "1"
-      image:
+      image:              "http://c.files.bbci.co.uk/3531/production/_83671631_thinkstockphotos-186947376.jpg"
       headline:           "EU reforms: 'Audacious demand' taken seriously by leaders"
-      synopsis:           "For the first time in EU history, one country has stood up and threatened to leave if the EU doesn't dance to its reformist tune."
+      synopsis:
       time:               "2m"
       section:            "EU Referendum"
       media-type:         #video/audio/image --empty wont show the icon--

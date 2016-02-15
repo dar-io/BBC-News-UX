@@ -15,8 +15,8 @@
       synopsis:           "They were designed to bring public spaces back to life after World War Two - it was art for everyone. Now dozens of post-war sculptures are being given listed status."
       time:               "2h"
       section:            "Magazine"
-      media-type:          #video/audio/image --empty wont show the icon--
-      media-duration:     "2:30"
+      media-type:         "image" #video/audio/image --empty wont show the icon--
+      media-duration:     "8 Photos"
       url:                "http://www.bbc.co.uk/news/magazine-35352595"
 
 #SLOT TWO
@@ -66,8 +66,8 @@
       synopsis:
       time:               "5h"
       section:            "Magazine"
-      media-type:         "video" #video/audio/image --empty wont show the icon--
-      media-duration:     "2:23"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:
       url:                "http://www.bbc.co.uk/news/blogs-trending-35376072"
 
 #SLOT Six

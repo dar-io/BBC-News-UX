@@ -1,0 +1,112 @@
+- classes:
+  - animOrder:            "1"
+    leadPromoPositionClass: "iodine__lead-promo--right" #other class - iodine__lead-promo--left
+
+- header:
+  - animOrder:            "1"
+    section-title:        "Must See"
+    see-all:              "See all"
+
+
+
+#SLOT One
+- slot01:
+    - animOrder:          "1"
+      image:              "http://ichef-1.bbci.co.uk/news/400/cpsprodpb/CBFE/production/_88222225_compo.jpg"
+      headline:           "Father and sons jailed for fire deaths"
+      synopsis:
+      time:               "34m"
+      section:            "England"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.com/news/uk-england-derbyshire-35557898"
+
+#SLOT TWO
+- slot01:
+    - animOrder:          "1"
+      image:              "http://ichef-1.bbci.co.uk/news/400/cpsprodpb/CFE8/production/_88242235_stormont4.jpg"
+      headline:           "Expenses claim MLAs 'did nothing wrong'"
+      synopsis:
+      time:               "3h"
+      section:            "Northern Ireland"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "1:17"
+      url:                "http://www.bbc.com/news/uk-northern-ireland-35558603"
+
+#SLOT TWO
+- slot01:
+    - animOrder:          "1"
+      image:              "http://ichef-1.bbci.co.uk/news/400/cpsprodpb/815A/production/_88241133_thinkstockphotos-180135142.jpg"
+      headline:           "Anti-rape groups hail legal aid ruling"
+      synopsis:
+      time:               "4h"
+      section:            "Scotland"
+      media-type:         #video/audio/image --empty wont show the icon--
+      media-duration:     "1:17"
+      url:                "http://www.bbc.com/news/uk-scotland-35562009"
+
+
+#SLOT One
+- slot01:
+    - animOrder:          "1"
+      image:              "http://ichef.bbci.co.uk/news/400/cpsprodpb/CEEB/production/_88217925_hospitalward3.jpg"
+      headline:           "NHS Wales 'no better or worse' than UK"
+      synopsis:
+      time:               "34m"
+      section:            "Wales"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.com/news/uk-wales-35549761"
+
+
+#SLOT One
+- slot01:
+    - animOrder:          "1"
+      image:              "http://ichef.bbci.co.uk/news/400/cpsprodpb/80B7/production/_88215923_capture3.jpg"
+      headline:           "Man charged with actress family murders"
+      synopsis:
+      time:               "1h"
+      section:            "England"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.com/news/uk-england-london-35561953"
+
+
+#SLOT TWO
+- slot01:
+    - animOrder:          "1"
+      image:              "http://ichef.bbci.co.uk/news/400/cpsprodpb/17E8C/production/_88223979_powernisign.jpg"
+      headline:           "Power NI cuts electricity bills by 10%"
+      synopsis:
+      time:               "9h"
+      section:            "Northern Ireland"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "1:17"
+      url:                "http://www.bbc.com/news/uk-northern-ireland-35558603"
+
+
+#SLOT TWO
+- slot01:
+    - animOrder:          "1"
+      image:              "http://ichef-1.bbci.co.uk/news/400/cpsprodpb/3AC4/production/_88244051_img_2060.jpg"
+      headline:           "Police operation follows ATM theft"
+      synopsis:
+      time:               "17m"
+      section:            "Scotland"
+      media-type:         #video/audio/image --empty wont show the icon--
+      media-duration:     "1:17"
+      url:                "http://www.bbc.com/news/uk-scotland-tayside-central-35558842"
+
+
+#SLOT One
+- slot01:
+    - animOrder:          "1"
+      image:              "http://ichef.bbci.co.uk/news/400/cpsprodpb/8C9D/production/_88179953_policjacket.jpg"
+      headline:           "Man sorry over 'suspicious' lift offer"
+      synopsis:
+      time:               "9m"
+      section:            "Wales"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.com/news/uk-wales-south-east-wales-35559410"
+

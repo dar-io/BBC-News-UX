@@ -58,11 +58,19 @@
     }
 
     .gs-o-media-icon--medium {
-        padding: double($gel-spacing-unit);
-
+        padding: 12px 18px 24px 18px;
+        z-index: 9;
         .gs-o-media-icon__icon {
             width: 32px;
             height: 32px;
+        }
+        .gs-o-media-island__duration{
+            padding-left:0;
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            bottom: 4px;
+            text-align: center;
         }
     }
 

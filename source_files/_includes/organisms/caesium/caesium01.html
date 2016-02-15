@@ -1,0 +1,464 @@
+{% include cldr/baseurl.html %}
+<!-- SLICE CUTTER ///////////////////////////////////////////////////////////////////////////////////-->
+{% include organisms/slice-cutter/slice-cutter.html %}
+<section class="caesium--wrap theme--keylines">
+  <div class="gel-wrap">
+    <div class="gel-layout">
+      {% for atom_group in site.data.caesium01 %}
+        {% for atom in atom_group.header %}
+          <div class="gel-layout__item slice-header">
+            <div class="slice-header--title gel-double-pica"><a target="_blank" href="{{ atom.url }}">{{ atom.section-title }}</a></div>
+            {% if atom.see-all  == null %}
+            {% else %}
+              <div class="slice-header--controls gel-paragon"><a target="_blank" href="{{ atom.url }}"> {{ atom.see-all }} </a></div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <!-- 5 items group -->
+    <div class="gel-layout gs-u-clearfix ">
+      <!-- Item 01 -->
+      <div class="group-1 gel-layout__item gel-4/5@xxl">
+        <div class="gel-layout gel-layout--flex">
+          <div class="gel-layout__item caesium__item caesium__item--1 gel-1/1@xs gel-2/3@m gel-3/4@l gel-3/4@xxl">
+
+            {% for atom_group in site.data.caesium01 %}
+              {% for atom in atom_group.slot01 %}
+                <article class="caesium--slot caesium--reverse lead-promo gs-u-clearfix faux-block-link gel-long-primer caesium--has-media {{ atom.class }}">
+                  <div class="lead-promo__media ">
+                    {% if atom.image  == null %}
+                    {% else %}
+                      <div class="media-island">
+                        <div class="gs-o-responsive-image gs-o-responsive-image--16by9 ">
+                          <img src="{{ atom.image }}" class="sp-image-replace" width="624">
+                        </div>
+                        {% if atom.media-type  == null %}
+                        {% else %}
+                          <span class="gs-o-media-icon--medium  gs-o-media-icon media-island__icon--bl media-island__icon">
+                            <span class="gs-o-media-icon__icon gel-icon">
+                              <svg>
+                                <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                              </svg>
+                            </span>
+                            <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
+                          </span>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                    <div class="lead-promo__body icon--medium-{{ atom.media-type }}">
+                      <div class="lead-promo__content">
+                        <div class="lead-promo__headline">
+                          <h3 class="lead-promo__title faux-block-link__target gel-agate"> <a href="{{ atom.url }}" class="title-link" target="_blank" > <span class="lead-promo__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                        </div>
+                        {% if atom.synopsis  == null %}
+                        {% else %}
+                          <p class="lead-promo__summary gel-long-primer gs-u-mt v-u-hidden@xs v-u-hidden@s v-u-hidden@m">{{ atom.synopsis }}</p>
+                        {% endif %}
+                        <div class="lead-promo__meta gs-u-mt">
+                          <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                            <li> <span class="timestamp">
+                            <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                            <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
+                              <a href="#{{ atom.section }}">{{ atom.section }}</a> </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              {% endfor %}
+            {% endfor %}
+
+
+          </div>
+          <!-- Item 02 -->
+          <div class="gel-layout__item caesium__item caesium__item--2  gel-1/2@xs gel-1/3@m gel-1/4@l gel-1/4@xxl">
+
+
+{% for atom_group in site.data.caesium01 %}
+  {% for atom in atom_group.slot02 %}
+    <article class="caesium--slot gs-u-clearfix faux-block-link {{ atom.class }}">
+      {% if atom.image  == null %}
+      {% else %}
+        <div class="media-island gs-u-mb">
+          <div class="caesium__media ">
+            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+              <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+            </div>
+          </div>
+          {% if atom.media-type  == null %}
+          {% else %}
+            <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+              <span class="gs-o-media-icon__icon gel-icon">
+                <svg>
+                  <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                </svg>
+              </span>
+              <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
+            </span>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="caesium__body">
+        <div class="caesium__content">
+          <h3 class="caesium__title faux-block-link__target gel-paragon gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="caesium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+          {% if atom.synopsis  == null %}
+          {% else %}
+            <p class="caesium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
+          {% endif %}
+        </div>
+        {% if atom.section == null %}
+        {% else %}
+          <div class="caesium__meta">
+            <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+              <li> <span class="timestamp gs-u-mb">
+              <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+              <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                <a href="#">{{ atom.section }}</a> </span>
+              </li>
+            </ul>
+          </div>
+        {% endif %}
+        {% if atom.contributorName == null %}
+        {% else %}
+          <div class="contributor gs-u-mt">
+            <div class="contributor__avatar">
+            <img class="avatar avatar--medium" src="{{ baseurl }}/assets/img/byline_image/exported/square_trans/{{ atom.contributorAvatar }}" alt="" height="" width=""></div>
+            <div class="contributor__body">
+              <span class="contributor__name gel-english">{{ atom.contributorName }}</span>
+              <span class="contributor__title brevier--no-touch">{{ atom.contributorTitle }}</span>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+{% endfor %}
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="group-2 gel-layout__item gel-3/4@l gel-3/5@xxl">
+        <div class="gel-layout gel-layout--flex">
+          <!-- Item 03 -->
+          <div class="gel-layout__item caesium__item caesium__item--3 gel-1/2@xs gel-1/3@m gel-1/3@l gel-1/3@xxl">
+
+{% for atom_group in site.data.caesium01 %}
+  {% for atom in atom_group.slot03 %}
+    <article class="caesium--slot gs-u-clearfix faux-block-link {{ atom.class }}">
+      {% if atom.image  == null %}
+      {% else %}
+        <div class="media-island gs-u-mb">
+          <div class="caesium__media ">
+            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+              <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+            </div>
+          </div>
+          {% if atom.media-type  == null %}
+          {% else %}
+            <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+              <span class="gs-o-media-icon__icon gel-icon">
+                <svg>
+                  <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                </svg>
+              </span>
+              <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
+            </span>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="caesium__body">
+        <div class="caesium__content">
+          <h3 class="caesium__title faux-block-link__target gel-paragon gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="caesium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+          {% if atom.synopsis  == null %}
+          {% else %}
+            <p class="caesium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
+          {% endif %}
+        </div>
+        {% if atom.section == null %}
+        {% else %}
+          <div class="caesium__meta">
+            <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+              <li> <span class="timestamp gs-u-mb">
+              <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+              <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                <a href="#">{{ atom.section }}</a> </span>
+              </li>
+            </ul>
+          </div>
+        {% endif %}
+        {% if atom.contributorName == null %}
+        {% else %}
+          <div class="contributor gs-u-mt">
+            <div class="contributor__avatar">
+            <img class="avatar avatar--medium" src="{{ baseurl }}/assets/img/byline_image/exported/square_trans/{{ atom.contributorAvatar }}" alt="" height="" width=""></div>
+            <div class="contributor__body">
+              <span class="contributor__name gel-english">{{ atom.contributorName }}</span>
+              <span class="contributor__title brevier--no-touch">{{ atom.contributorTitle }}</span>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+{% endfor %}
+
+
+
+          </div>
+          <!-- Item 04 -->
+          <div class="gel-layout__item caesium__item caesium__item--4 gel-1/2@xs gel-1/3@m gel-1/3@l gel-1/3@xxl">
+
+
+{% for atom_group in site.data.caesium01 %}
+  {% for atom in atom_group.slot04 %}
+    <article class="caesium--slot gs-u-clearfix faux-block-link {{ atom.class }}">
+      {% if atom.image  == null %}
+      {% else %}
+        <div class="media-island gs-u-mb">
+          <div class="caesium__media ">
+            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+              <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+            </div>
+          </div>
+          {% if atom.media-type  == null %}
+          {% else %}
+            <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+              <span class="gs-o-media-icon__icon gel-icon">
+                <svg>
+                  <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                </svg>
+              </span>
+              <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
+            </span>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="caesium__body">
+        <div class="caesium__content">
+          <h3 class="caesium__title faux-block-link__target gel-paragon gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="caesium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+          {% if atom.synopsis  == null %}
+          {% else %}
+            <p class="caesium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
+          {% endif %}
+        </div>
+        {% if atom.section == null %}
+        {% else %}
+          <div class="caesium__meta">
+            <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+              <li> <span class="timestamp gs-u-mb">
+              <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+              <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                <a href="#">{{ atom.section }}</a> </span>
+              </li>
+            </ul>
+          </div>
+        {% endif %}
+        {% if atom.contributorName == null %}
+        {% else %}
+          <div class="contributor gs-u-mt">
+            <div class="contributor__avatar">
+            <img class="avatar avatar--medium" src="{{ baseurl }}/assets/img/byline_image/exported/square_trans/{{ atom.contributorAvatar }}" alt="" height="" width=""></div>
+            <div class="contributor__body">
+              <span class="contributor__name gel-english">{{ atom.contributorName }}</span>
+              <span class="contributor__title brevier--no-touch">{{ atom.contributorTitle }}</span>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+{% endfor %}
+
+
+
+          </div>
+          <!-- Item 05 -->
+          <div class="gel-layout__item caesium__item caesium__item--5 gel-1/2@xs gel-1/3@m gel-1/3@l gel-1/3@xxl">
+
+
+{% for atom_group in site.data.caesium01 %}
+  {% for atom in atom_group.slot05 %}
+    <article class="caesium--slot gs-u-clearfix faux-block-link {{ atom.class }}">
+      {% if atom.image  == null %}
+      {% else %}
+        <div class="media-island gs-u-mb">
+          <div class="caesium__media ">
+            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+              <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+            </div>
+          </div>
+          {% if atom.media-type  == null %}
+          {% else %}
+            <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+              <span class="gs-o-media-icon__icon gel-icon">
+                <svg>
+                  <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                </svg>
+              </span>
+              <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
+            </span>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="caesium__body">
+        <div class="caesium__content">
+          <h3 class="caesium__title faux-block-link__target gel-paragon gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="caesium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+          {% if atom.synopsis  == null %}
+          {% else %}
+            <p class="caesium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
+          {% endif %}
+        </div>
+        {% if atom.section == null %}
+        {% else %}
+          <div class="caesium__meta">
+            <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+              <li> <span class="timestamp gs-u-mb">
+              <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+              <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                <a href="#">{{ atom.section }}</a> </span>
+              </li>
+            </ul>
+          </div>
+        {% endif %}
+        {% if atom.contributorName == null %}
+        {% else %}
+          <div class="contributor gs-u-mt">
+            <div class="contributor__avatar">
+            <img class="avatar avatar--medium" src="{{ baseurl }}/assets/img/byline_image/exported/square_trans/{{ atom.contributorAvatar }}" alt="" height="" width=""></div>
+            <div class="contributor__body">
+              <span class="contributor__name gel-english">{{ atom.contributorName }}</span>
+              <span class="contributor__title brevier--no-touch">{{ atom.contributorTitle }}</span>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+{% endfor %}
+
+
+          </div>
+        </div>
+      </div>
+      <div class="group-3 gel-layout__item gel-1/3@m  gel-1/4@l gel-1/5@xxl">
+        <div class="gel-layout gel-layout--flex">
+          <!-- Item 06 -->
+          <div class="gel-layout__item caesium__item caesium__item--5">
+
+
+{% for atom_group in site.data.caesium01 %}
+  {% for atom in atom_group.slot06 %}
+    <article class="caesium--slot gs-u-clearfix faux-block-link {{ atom.class }}">
+      {% if atom.image  == null %}
+      {% else %}
+        <div class="media-island gs-u-mb">
+          <div class="caesium__media ">
+            <div class="gs-o-responsive-image gs-o-responsive-image--16by9">
+              <img src="{{ atom.image }}" class="sp-image-replace" width="240">
+            </div>
+          </div>
+          {% if atom.media-type  == null %}
+          {% else %}
+            <span class="gs-o-media-icon--small  gs-o-media-icon media-island__icon--bl media-island__icon">
+              <span class="gs-o-media-icon__icon gel-icon">
+                <svg>
+                  <use xlink:href="#gel-icon-{{ atom.media-type }}"></use>
+                </svg>
+              </span>
+              <span class="gs-o-media-island__duration brevier--no-touch">{{ atom.media-duration }}</span>
+            </span>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="caesium__body">
+        <div class="caesium__content">
+          <h3 class="caesium__title faux-block-link__target gel-paragon gs-u-mb"> <a class="title-link" target="_blank" href="{{ atom.url }}"> <span class="caesium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+          {% if atom.synopsis  == null %}
+          {% else %}
+            <p class="caesium__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
+          {% endif %}
+        </div>
+        {% if atom.section == null %}
+        {% else %}
+          <div class="caesium__meta">
+            <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+              <li> <span class="timestamp gs-u-mb">
+              <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+              <li>  <span class="section-tag--nested-link brevier--no-touch section-tag">
+                <a href="#">{{ atom.section }}</a> </span>
+              </li>
+            </ul>
+          </div>
+        {% endif %}
+        {% if atom.contributorName == null %}
+        {% else %}
+          <div class="contributor gs-u-mt">
+            <div class="contributor__avatar">
+            <img class="avatar avatar--medium" src="{{ baseurl }}/assets/img/byline_image/exported/square_trans/{{ atom.contributorAvatar }}" alt="" height="" width=""></div>
+            <div class="contributor__body">
+              <span class="contributor__name gel-english">{{ atom.contributorName }}</span>
+              <span class="contributor__title brevier--no-touch">{{ atom.contributorTitle }}</span>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+{% endfor %}
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <!--///–––––––––––––––––––––––––––––––––*\
+      //    # RIVER
+      //\*––––––––––––––––––––––––––––––––––––*/-->
+      <div class="gel-layout__item gel-2/3@m gel-1/1@l gel-1/5@xxl">
+        <div class="caesium__river gs-u-mb@s gs-u-mt-@xxl gs-u-mb-@xxl">
+          <div class="gel-layout gel-layout--flex">
+
+
+           {% for atom_group in site.data.caesium01 %}
+            {% for atom in atom_group.river %}
+        <div class="gel-layout__item caesium__item caesium__item--river river__item--{{ atom.id }} gel-1/3@m gel-1/4@l gel-1/1@xxl {{ atom.visibility-classes }}">
+          <article class="gs-u-clearfix faux-block-link {{ atom.class }}">
+            <div class="caesium__body">
+              <div class="caesium__content">
+                <h3 class="caesium__title faux-block-link__target gel-english"> <a class="title-link" href="{{ atom.url }}" target="_blank"> <span class="caesium__title-text title-link__title-text">{{ atom.headline }}</span> </a> </h3>
+                 <p class="lead-promo__summary gel-long-primer gs-u-mt">{{ atom.synopsis }}</p>
+              </div>
+
+              <div class="caesium__meta">
+                <ul class="gs-o-list-inline gs-o-list-inline--divided brevier--no-touch">
+                  <li> <span class="timestamp">
+                    <i class="timestamp__icon gelicon gelicon--duration"></i><time class="relative-time">{{ atom.time }}</time> </span>  </li>
+                  <li>  <span class="section-tag--nested-link brevier--no-touch  section-tag">
+                    <a href="{{ atom.section }}">{{ atom.section }}</a> </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </article>
+        </div>
+    {% endfor %}
+          {% endfor %}
+
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- END 5 items group -->
+</div>
+</section>

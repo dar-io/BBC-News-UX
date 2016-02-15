@@ -137,7 +137,7 @@
 .iodine__item--1{
   @include mq($from:gel-bp-xxl) {
     .media__island{
-      min-height: 509px;
+      min-height: 435px;
     }
     .iodine__meta{
       position:absolute;
@@ -189,4 +189,10 @@
   .weather{
     float: right;
   }
+}
+
+  @include mq($from:gel-bp-l, $until:gel-bp-xxl) {
+.icon--medium-image, .icon--medium-video, .icon--medium-audio {
+    left: 72px;
+}
 }

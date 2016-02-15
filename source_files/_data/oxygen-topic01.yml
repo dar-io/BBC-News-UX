@@ -3,7 +3,7 @@
 
 - header-title:
     - header-title:       "US Election"
-      url:                "http://www.bbc.co.uk/news/election/us2016"
+      url:                "/BBC-News-UX/prototype/us-elections-2016.html"
       class:              "us-election"
 
 - background-image:

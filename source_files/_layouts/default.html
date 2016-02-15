@@ -4,7 +4,7 @@ layout: compress
 {% include cldr/baseurl.html %}
 
 <!DOCTYPE html>
-<html class="no-js {% unless page.disable-1280 %}b-pw-1280{% endunless %} ctm">
+<html class="font-face no-js {% unless page.disable-1280 %}b-pw-1280{% endunless %} ctm">
 <head>
     <meta charset="utf-8" />
     {% include core/orb/head.html %}
@@ -19,15 +19,16 @@ layout: compress
     <link rel="stylesheet" href="{{ baseurl }}/assets/css/news/wide.css" />
     {% endunless %}
 </head>
-<body>
+<body class="signedIn">
+
   {% include core/orb/bodyfirst.html %}
 
     {{ content }}
 
-    {% include core/bodylast.html %}
-
 
     <script src="{{ baseurl }}/assets/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="{{ baseurl }}/assets/js/vendor/store2.min.js"></script>
     <script src="{{ baseurl }}/assets/js/main.js"></script>
+    <script src="{{ baseurl }}/assets/js/app.js"></script>
 </body>
 </html>

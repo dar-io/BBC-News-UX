@@ -75,14 +75,14 @@
 
 <div class="neon-header--title">
 <div class="slice-header--title gel-great-primer">Set your location</div>
-<a class="weather__rendered-link" href="{{ baseurl }}/prototype/02-HP-signed-in.html">
+<a class="weather__rendered-link disabled" href="#" data-toggle-add-topic="location-set">
   <button type="button" class="hp-settings__location-button ls-ui-comp btn-locate icon-locate" title="Use my current location">
 
   </button>
     </a>
 </div>
 
- <article class="neon--slot gs-u-clearfix faux-block-link">
+ <article class="neon--slot gs-u-clearfix">
 
 <div class="weather upsell">
   <a class="weather__rendered-link" href="http://www.bbc.co.uk/weather/2643743" title="Go to the Weather for London">
@@ -123,7 +123,7 @@
 
 <div class="local-search gs-u-mt++">
 <p class="brevier--no-touch gs-u-mb">To get local News & Weather near you:</p>
-<form class="b-f" id="orb-search-form" action="{{ baseurl }}/prototype/02-HP-signed-in.html">
+<form class="b-f disable" id="orb-search-form" action="#" data-toggle-add-topic="location-set">
 <div>
  <input id="orb-search-q"  list="locations" placeholder="Enter a UK Town or postcode">
  <button type="submit"  list="locations" id="orb-search-button" alt="Search the BBC">
@@ -131,7 +131,6 @@
 </button>
 
   <datalist id="locations">
-    <option value="pages/homepage.html">
     <option value="London, Greater London" >
     <option value="City of London, Greater London">
     <option value="London Biggin Hill Airport, Greater London">

@@ -1,19 +1,19 @@
-#BACKGROUND IMAGE
+  #BACKGROUND IMAGE
 
 #SLOT ONE
 - slot01:
     - animOrder:          "1"
-      image:              "http://ichef.bbci.co.uk/curationkit-ichef/624x216/cpsprodpb/3575/production/_88158631_torture_getty_624.jpg"
-      headline:           "Syria 'exterminating detainees' - report"
-      synopsis:           "The Syrian government has carried out a state policy of extermination against thousands of detainees, UN human rights investigators say."
+      image:              "http://c.files.bbci.co.uk/48A4/production/_88269581_88269580.jpg"
+      headline:           "HSBC to keep HQ in London"
+      synopsis:           "UK banking giant HSBC decides to keep its headquarters in London, following a review into whether to move elsewhere."
       time:               "30m"
-      section:            "Middle East"
+      section:            " From the section Business"
       media-type:          #video/audio/image --empty wont show the icon--
       media-duration:     "2:30"
-      url:                "http://www.bbc.co.uk/news/world-middle-east-35521801"
+      url:                "http://www.bbc.com/news/business-35575793"
 
-      index-AlsoOne:      "Syria's disappeared"
-      index-AlsoTwo:      "Artist's images of detention"
+      index-AlsoOne:      "Ahmed: Was it all a bluff?"
+      index-AlsoTwo:      " HSBC to 'freeze global pay in 2016'"
 
       contributorAvatar:  ""
       contributorName:    ""
@@ -22,14 +22,14 @@
 #SLOT TWO
 - slot02:
     - animOrder:          "1"
-      image:              "http://ichef.bbci.co.uk/news/400/cpsprodpb/AD4C/production/_88146344_88146343.jpg"
-      headline:           "Why did North Korea launch a rocket?"
-      synopsis:           "Bruce Bennett looks at the reasons why North Korean may have decided to launch a long-range rocket"
+      image:              "http://c.files.bbci.co.uk/C109/production/_88271494_88271473.jpg"
+      headline:           "The Revenant rules at Baftas"
+      synopsis:
       time:               "30m"
-      section:            "Asia"
+      section:            "Entertainment & Arts"
       media-type:          #video/audio/image --empty wont show the icon--
       media-duration:     "2:30"
-      url:                "http://www.bbc.co.uk/news/world-asia-35516199"
+      url:                "http://www.bbc.com/news/entertainment-arts-35559488"
 
 
 #SLOT THREE
@@ -62,22 +62,24 @@
 #KEYPOINTS LIVE
 - keypointsHeadline:
     - headline:          "BBC Local Live: Storm hits South West"
+      url:                "http://www.bbc.co.uk/news/live/uk-england-devon-35507384?limit=31"
+
 
 - keypoints-live:
     - headline:           "Storm Imogen causes disruption across the South West"
       time:               "16:27" #duration format 00:00
       media-type:         "text" #media/text
-      url:                "/post01"
+      url:                "http://www.bbc.co.uk/news/uk-35516741"
 
     - headline:           "RSPCA Inspector goes missing while working in west Cornwall"
       time:               "16:18" #duration format 00:00
       media-type:         "text" #media/text
-      url:                "/post01"
+      url:                "http://www.bbc.co.uk/news/uk-england-cornwall-35530078"
 
     - headline:           "All trains in and out of Cornwall cancelled as tree hits main line: Passengers evacuated"
       time:               "16:08" #duration format 00:00
       media-type:         "text" #media/text
-      url:                "/post01"
+      url:                "http://www.bbc.co.uk/news/uk-politics-eu-referendum-35519210"
 
 
 

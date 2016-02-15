@@ -10,6 +10,9 @@
  * 1. IX fix to get hand cursor
  */
 
+a:hover .index-alsos__title-text{
+  color: $link-hover;
+}
 
 .title-link:visited .title-link__title-text {
     color: #686868;

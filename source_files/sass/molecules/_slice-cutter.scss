@@ -25,7 +25,7 @@ padding-bottom: double($gel-alt-spacing-unit);
 }
 
 
-.oxygen--wrap + .slice-cutter, .topic-collection + .slice-cutter{
+.iodine--wrap + .topic-collection, .oxygen--wrap + .slice-cutter, .topic-collection + .slice-cutter{
   margin-top:0;
   .slice-cutter--keyline:after{
     display: none;

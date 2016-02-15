@@ -1,0 +1,48 @@
+- classes:
+  - animOrder:            "1"
+    leadPromoPositionClass: "iodine__lead-promo--right" #other class - iodine__lead-promo--left
+
+- header:
+  - animOrder:            "1"
+    section-title:        "Newsbeat"
+    see-all:              "See all"
+    url:                  "#Newsbeat"
+
+#SLOT One
+- slot01:
+    - animOrder:          "1"
+      class:              "newsbeat"
+      image:              "http://ichef.bbci.co.uk/news/780/cpsprodpb/12E0B/production/_88232377_kanye_season3_getty.jpg"
+      headline:           "What happened at Kanye's album launch"
+      synopsis:
+      time:               "21m"
+      section:            "NEWSBEAT"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.co.uk/newsbeat/article/35557312/the-life-of-pablo-what-happened-at-kanyes-album-launch"
+
+#SLOT TWO
+- slot02:
+    - animOrder:          "1"
+      class:              "newsbeat"
+      image:              "http://ichef.bbci.co.uk/news/780/cpsprodpb/3E6E/production/_88228951_legohouse_thinkstockphotos-507961232.jpg"
+      headline:           "'You'll spend £64k on rent before you buy'"
+      synopsis:
+      time:               "51m"
+      section:            "NEWSBEAT"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "1:17"
+      url:                "http://www.bbc.co.uk/newsbeat/article/35554985/youll-spend-64k-on-rent-before-you-buy"
+
+#SLOT Three
+- slot03:
+    - animOrder:          "1"
+      class:              "newsbeat"
+      image:              "http://ichef.bbci.co.uk/news/780/cpsprodpb/161C3/production/_88236509_hand_thinkstockphotos-183961596.jpg"
+      headline:           "'Third of women' in controlling relationships"
+      synopsis:
+      time:               "2h"
+      section:            "NEWSBEAT"
+      media-type:          #video/audio/image --empty wont show the icon--
+      media-duration:     "2:30"
+      url:                "http://www.bbc.co.uk/newsbeat/article/35111353/sneak-attack-is-a-major-artist-about-to-drop-a-new-album"

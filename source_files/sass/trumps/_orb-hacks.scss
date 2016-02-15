@@ -10,3 +10,66 @@
 #orb-footer {
     box-sizing: content-box;
 }
+
+.topic-page--header{
+  position:relative;
+}
+.topic-page--add-button{
+  position: absolute;
+  top: 29px;
+  left: 260px;
+}
+.topic-page{
+  overflow: hidden;
+}
+
+.topic-page--body{
+  text-align: center;
+}
+
+.news .find-local-wide__link--icon-only {
+    padding-left: 2px !important;
+    text-indent: -5000px;
+    white-space: nowrap;
+
+
+}
+
+.find-local-wide__location+.find-local-wide__link {
+    margin-left: 12px;
+}
+
+.news .find-local-wide {
+    a{color: #fff; }
+    display: block;
+    float: right;
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.68421;
+    margin-top: 13px;
+}
+
+.news .find-local-wide__link {
+    background: url("../img/news--icons-sprite.png") no-repeat right -5902px;
+    cursor: pointer;
+    height: 32px;
+    padding-left: 12px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    &:hover{
+      text-decoration: underline;
+    }
+}
+
+.news .find-local-wide__link {
+    border: 1px solid #bb4545;
+    border-color: #bb4545;
+}
+.news .find-local-wide__link {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+

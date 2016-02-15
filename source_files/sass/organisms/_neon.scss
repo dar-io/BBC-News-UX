@@ -1,7 +1,9 @@
 
 .neon--wrap{
   background-color: #F4F4F4;
+  margin-bottom: double($gel-alt-spacing-unit);
 }
+
 
 .neon__title-text{
   color: #fff;
@@ -27,9 +29,9 @@
   height: 274px;
   &:after{
     content: '';
-    background-image:url(../img/organisms/mynews/upsell.png);
+    background-image:url(../img/organisms/mynews/upsell.jpg);
     height: 274px;
-    width: 918px;
+    width: 1280px;
     position: absolute;
     bottom: 0;
     right: 0;
