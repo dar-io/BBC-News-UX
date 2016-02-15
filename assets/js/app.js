@@ -102,11 +102,11 @@
       setTopicAdded( topic );
 
       // Display notification after a topic is added
-      $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideDown('fast');
+      $( '.t-' + topic + ' [data-toggle-add-topic="' + topic + '"]' + ' .display-tool-tip' ).slideDown('fast');
         window.setTimeout(close3,5000);
 
       function close3() {
-        $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideToggle('fast');
+        $( '.t-' + topic + ' [data-toggle-add-topic="' + topic + '"]' + ' .display-tool-tip' ).slideToggle('fast');
         }
     }
 
