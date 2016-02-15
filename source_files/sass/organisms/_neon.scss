@@ -59,7 +59,7 @@
 .neon__body{
     height: 232px;
  @include mq($from:gel-bp-m){
-   width: gel-columns(8/12);
+   width: gel-columns(7/12);
     }
 
   @include mq($from:gel-bp-xxl){

@@ -28,7 +28,6 @@
     }
   }
 
-
 ///*------------------------------------*\
 //    # RIVER DISPLAYS HEADLINES ONLY
 //\*------------------------------------*/
@@ -44,8 +43,8 @@
     }
 
   .curium__item--river{
-    padding-top: $gel-spacing-unit;
-    padding-bottom: $gel-spacing-unit;
+    padding-top: double($gel-spacing-unit);
+    padding-bottom: double($gel-spacing-unit);
   }
 
   @include mq($from:gel-bp-m, $until:gel-bp-l) {

@@ -7,7 +7,7 @@
   &:before{
     content: '';
     display: block;
-    background-color: $nw-c-red;
+    background-color: $white;
     height: 2px;
     width: 72px;
     position: absolute;
@@ -15,7 +15,7 @@
   }
   &.topic--slice{
      &:before{
-      background-color: $nw-c-red;
+      background-color: $white;
      }
   }
 }
