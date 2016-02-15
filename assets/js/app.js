@@ -5,7 +5,7 @@
   // "use strict";
 
   // Disable default behaviour for all links that have the 'disabled' class.
-  $('.disabled').on('click touchstart', false);
+  $('.disabled').on('click', false);
 
   // Clear localStorage on ESC
   $(document).on('keyup', function(e) {
