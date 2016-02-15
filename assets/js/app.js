@@ -2,10 +2,10 @@
 //
 
 (function(w, $, store, undefined) {
-  "use strict";
+  // "use strict";
 
   // Disable default behaviour for all links that have the 'disabled' class.
-  $('.disabled').on('click', false);
+  $('.disabled').on('click touchstart', false);
 
   // Clear localStorage on ESC
   $(document).on('keyup', function(e) {
@@ -55,37 +55,7 @@
 // }
 
 
-     $('#orb-search-form[data-toggle-add-topic]').on('submit', function(e) {
-      event.preventDefault();
-    // Get the topic name from the data attribute
-    var topic        = $(this).data('toggle-add-topic');
-
-    // Check to see if it has already been added, so we know whether to add or remove
-    var isTopicAdded = addedTopics[ topic ];
-
-    if( isTopicAdded ) {
-      setTopicRemoved( topic );
-
-
-
-    } else {
-      setTopicAdded( topic );
-
-      // Display notification after a topic is added
-      $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideDown('fast');
-        window.setTimeout(close3,5000);
-
-      function close3() {
-        $( '.t-' + [topic] + ' [data-toggle-add-topic="' + [topic] + '"]' + ' .display-tool-tip' ).slideToggle('fast');
-        }
-    }
-
-
-  });
-
-
-
-     $('a[data-toggle-add-topic]').on('click', function(e) {
+  $('#orb-search-form[data-toggle-add-topic]').on('submit', function(e) {
       event.preventDefault();
     // Get the topic name from the data attribute
     var topic        = $(this).data('toggle-add-topic');
@@ -103,11 +73,41 @@
 
       // Display notification after a topic is added
       $( '.t-' + topic + ' [data-toggle-add-topic="' + topic + '"]' + ' .display-tool-tip' ).slideDown('fast');
-        window.setTimeout(close3,5000);
+      w.setTimeout(close3,5000);
+
+    }
+
+    function close3() {
+      $( '.t-' + topic + ' [data-toggle-add-topic="' + topic + '"]' + ' .display-tool-tip' ).slideToggle('fast');
+    }
+
+  });
+
+
+
+    $('a[data-toggle-add-topic]').on('click', function(e) {
+      event.preventDefault();
+    // Get the topic name from the data attribute
+    var topic        = $(this).data('toggle-add-topic');
+
+    // Check to see if it has already been added, so we know whether to add or remove
+    var isTopicAdded = addedTopics[ topic ];
+
+    if( isTopicAdded ) {
+      setTopicRemoved( topic );
+
+
+
+    } else {
+      setTopicAdded( topic );
+
+      // Display notification after a topic is added
+      $( '.t-' + topic + ' [data-toggle-add-topic="' + topic + '"]' + ' .display-tool-tip' ).slideDown('fast');
+        window.setTimeout(close3,4000);
 
       function close3() {
         $( '.t-' + topic + ' [data-toggle-add-topic="' + topic + '"]' + ' .display-tool-tip' ).slideToggle('fast');
-        }
+      }
     }
 
 
