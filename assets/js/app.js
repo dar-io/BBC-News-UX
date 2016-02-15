@@ -32,7 +32,9 @@
     addedTopics['us-election']   = false;
     addedTopics['eu-referendum'] = false;
     addedTopics['oscars-2016']   = false;
+    addedTopics['baftas-2016']  = false;
     addedTopics['location-set']  = false;
+
 
     // And then sync them with localStorage
     store.set('addedTopicsLocal', addedTopics);
